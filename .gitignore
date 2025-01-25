@@ -1,0 +1,65 @@
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+__pycache__/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+
+# Build directories
+target/
+build/
+dist/
+out/
+
+# Dependency directories
+node_modules/
+venv/
+env/
+.env/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package files
+*.zip
+*.tar.gz
+*.rar
+
+# Local configuration
+.env
+.env.local
+config.local.js
+
+# Coverage reports
+coverage/
+.coverage
+htmlcov/
+
+# Temporary files
+*.swp
+*.swo
+*~
