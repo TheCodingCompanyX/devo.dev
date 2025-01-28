@@ -63,17 +63,21 @@ if __name__ == "__main__":
             print("Feedback has been found, press y to use it")
             if input() != "y":
                 feedback = ""
+            else:
+                with open('feedback.txt', 'r') as f:
+                    feedback = f.read()
 
     for iteration in range(MAX_ITERATIONS):
+        print("Press Enter to write code")
+        input()
+
+        with open('feedback.txt', 'r') as f:
+            feedback = f.read()
         code = write_code("./reference/reference.png", process_json(figma_data), feedback, "", URL, [])
         
         #feedback = test_UI(URL, SCREENSHOT_PATH, device=device)
-        with open('feedback.txt', 'w') as f:
-            f.write(feedback)
-        print("waiting for feedback changes")
-        with open('feedback.txt', 'r') as f:
-            feedback = f.read()
-        # chat_history.append({"role": "assistant", "content": [{"type": "text", "text": str(code)}]})
-        # chat_history.append({"role": "user", "content": [{"type": "text", "text": feedback}]})
+        #with open('feedback.txt', 'w') as f:
+        #    f.write(feedback)
+        
         if feedback=="":
             break

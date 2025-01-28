@@ -114,6 +114,10 @@ def download_and_save_images(basedir, figma_url, format="svg"):
             image_content = img_response.content
             file_extension = format
 
+        # Create the directory if it doesn't exist
+        if not os.path.exists(basedir):
+            os.makedirs(basedir)
+            ma
         # Save the image locally
         with open(f"{basedir}/{image_name}.{file_extension}", "wb" if format != "svg" else "w") as img_file:
             if format == "svg":
