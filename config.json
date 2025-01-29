@@ -1,8 +1,6 @@
 {
     "keys_to_remove": [
       "id",
-      "absoluteRenderBounds",
-      "absoluteBoundingBox",
       "lastModified",
       "thumbnailUrl",
       "role",
@@ -32,7 +30,12 @@
       "schemaVersion",
       "styles",
       "styleOverrideTable",
-      "lineIndentations"
+      "lineIndentations",
+      "overrides",
+      "absoluteRenderBounds",
+      "type",
+      "componentId",
+      "componentProperties"
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},
@@ -73,7 +76,11 @@
       {"absoluteBoundingBox": null},
       {"type": "TEXT"},
       {"showShadowBehindNode": false},
-      {"strokeAlign": "INSIDE"}
+      {"strokeAlign": "INSIDE"},
+      {"rectangleCornerRadii": [0.0,0.0,0.0,0.0]},
+      {"strokeJoin": "ROUND"},
+      {"strokeCap": "ROUND"},
+      {"preserveRatio": true}
     ]
   }
   

@@ -1,0 +1,609 @@
+{
+  "document": {
+    "name": "Document",
+    "children": [
+      {
+        "name": "Page 1",
+        "children": [
+          {
+            "name": "Nav Bar Top",
+            "children": [
+              {
+                "name": "Profil & Notification",
+                "children": [
+                  {
+                    "name": "Like",
+                    "children": [
+                      {
+                        "name": "vuesax/bold/heart",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/heart",
+                            "children": [
+                              {
+                                "name": "heart",
+                                "children": [
+                                  {
+                                    "name": "Vector",
+                                    "absoluteBoundingBox": {
+                                      "x": 1184.0,
+                                      "y": 53.1,
+                                      "width": 20.0,
+                                      "height": 17.8
+                                    },
+                                    "fillColor": "#596780"
+                                  },
+                                  {
+                                    "name": "Vector",
+                                    "rotation": -3.14,
+                                    "opacity": 0.0,
+                                    "absoluteBoundingBox": {
+                                      "x": 1182.0,
+                                      "y": 50.0,
+                                      "width": 24.0,
+                                      "height": 24.0
+                                    }
+                                  }
+                                ],
+                                "backgroundColor": "#000000",
+                                "absoluteBoundingBox": {
+                                  "x": 1182.0,
+                                  "y": 50.0,
+                                  "width": 24.0,
+                                  "height": 24.0
+                                }
+                              }
+                            ],
+                            "backgroundColor": "#000000",
+                            "absoluteBoundingBox": {
+                              "x": 1182.0,
+                              "y": 50.0,
+                              "width": 24.0,
+                              "height": 24.0
+                            }
+                          }
+                        ],
+                        "backgroundColor": "#FFFFFF",
+                        "absoluteBoundingBox": {
+                          "x": 1182.0,
+                          "y": 50.0,
+                          "width": 24.0,
+                          "height": 24.0
+                        },
+                        "fillColor": "#FFFFFF"
+                      },
+                      {
+                        "name": "button",
+                        "opacity": 0.8,
+                        "cornerRadius": 90.0,
+                        "cornerSmoothing": 0.6,
+                        "absoluteBoundingBox": {
+                          "x": 1172.0,
+                          "y": 40.0,
+                          "width": 44.0,
+                          "height": 44.0
+                        },
+                        "strokeColor": "#C3D4E9"
+                      }
+                    ],
+                    "backgroundColor": "#000000",
+                    "absoluteBoundingBox": {
+                      "x": 1172.0,
+                      "y": 40.0,
+                      "width": 44.0,
+                      "height": 44.0
+                    }
+                  },
+                  {
+                    "name": "Notification",
+                    "children": [
+                      {
+                        "name": "vuesax/bold/notification",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/notification",
+                            "children": [
+                              {
+                                "name": "notification",
+                                "children": [
+                                  {
+                                    "name": "Vector",
+                                    "absoluteBoundingBox": {
+                                      "x": 1250.31,
+                                      "y": 52.0,
+                                      "width": 15.38,
+                                      "height": 17.0
+                                    },
+                                    "fillColor": "#596780"
+                                  },
+                                  {
+                                    "name": "Vector",
+                                    "absoluteBoundingBox": {
+                                      "x": 1255.18,
+                                      "y": 70.0,
+                                      "width": 5.65,
+                                      "height": 2.0
+                                    },
+                                    "fillColor": "#596780"
+                                  },
+                                  {
+                                    "name": "Vector",
+                                    "rotation": -3.14,
+                                    "opacity": 0.0,
+                                    "absoluteBoundingBox": {
+                                      "x": 1246.0,
+                                      "y": 50.0,
+                                      "width": 24.0,
+                                      "height": 24.0
+                                    }
+                                  }
+                                ],
+                                "backgroundColor": "#000000",
+                                "absoluteBoundingBox": {
+                                  "x": 1246.0,
+                                  "y": 50.0,
+                                  "width": 24.0,
+                                  "height": 24.0
+                                }
+                              }
+                            ],
+                            "backgroundColor": "#000000",
+                            "absoluteBoundingBox": {
+                              "x": 1246.0,
+                              "y": 50.0,
+                              "width": 24.0,
+                              "height": 24.0
+                            }
+                          }
+                        ],
+                        "backgroundColor": "#FFFFFF",
+                        "absoluteBoundingBox": {
+                          "x": 1246.0,
+                          "y": 50.0,
+                          "width": 24.0,
+                          "height": 24.0
+                        },
+                        "fillColor": "#FFFFFF"
+                      },
+                      {
+                        "name": "button",
+                        "opacity": 0.8,
+                        "cornerRadius": 90.0,
+                        "cornerSmoothing": 0.6,
+                        "absoluteBoundingBox": {
+                          "x": 1236.0,
+                          "y": 40.0,
+                          "width": 44.0,
+                          "height": 44.0
+                        },
+                        "strokeColor": "#C3D4E9"
+                      },
+                      {
+                        "name": "Notif",
+                        "absoluteBoundingBox": {
+                          "x": 1267.0,
+                          "y": 42.0,
+                          "width": 11.0,
+                          "height": 11.0
+                        },
+                        "arcData": {
+                          "startingAngle": 0.0,
+                          "endingAngle": 6.28,
+                          "innerRadius": 0.0
+                        },
+                        "fillColor": "#FF4423"
+                      }
+                    ],
+                    "backgroundColor": "#000000",
+                    "absoluteBoundingBox": {
+                      "x": 1236.0,
+                      "y": 40.0,
+                      "width": 44.0,
+                      "height": 44.0
+                    }
+                  },
+                  {
+                    "name": "Settings",
+                    "children": [
+                      {
+                        "name": "vuesax/bold/setting-2",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/setting-2",
+                            "children": [
+                              {
+                                "name": "setting-2",
+                                "children": [
+                                  {
+                                    "name": "Vector",
+                                    "absoluteBoundingBox": {
+                                      "x": 1312.0,
+                                      "y": 52.56,
+                                      "width": 20.01,
+                                      "height": 18.88
+                                    },
+                                    "fillColor": "#596780"
+                                  },
+                                  {
+                                    "name": "Vector",
+                                    "rotation": -3.14,
+                                    "opacity": 0.0,
+                                    "absoluteBoundingBox": {
+                                      "x": 1310.0,
+                                      "y": 50.0,
+                                      "width": 24.0,
+                                      "height": 24.0
+                                    }
+                                  }
+                                ],
+                                "backgroundColor": "#000000",
+                                "absoluteBoundingBox": {
+                                  "x": 1310.0,
+                                  "y": 50.0,
+                                  "width": 24.0,
+                                  "height": 24.0
+                                }
+                              }
+                            ],
+                            "backgroundColor": "#000000",
+                            "absoluteBoundingBox": {
+                              "x": 1310.0,
+                              "y": 50.0,
+                              "width": 24.0,
+                              "height": 24.0
+                            }
+                          }
+                        ],
+                        "backgroundColor": "#FFFFFF",
+                        "absoluteBoundingBox": {
+                          "x": 1310.0,
+                          "y": 50.0,
+                          "width": 24.0,
+                          "height": 24.0
+                        },
+                        "fillColor": "#FFFFFF"
+                      },
+                      {
+                        "name": "button",
+                        "opacity": 0.8,
+                        "cornerRadius": 90.0,
+                        "cornerSmoothing": 0.6,
+                        "absoluteBoundingBox": {
+                          "x": 1300.0,
+                          "y": 40.0,
+                          "width": 44.0,
+                          "height": 44.0
+                        },
+                        "strokeColor": "#C3D4E9"
+                      }
+                    ],
+                    "backgroundColor": "#000000",
+                    "absoluteBoundingBox": {
+                      "x": 1300.0,
+                      "y": 40.0,
+                      "width": 44.0,
+                      "height": 44.0
+                    }
+                  },
+                  {
+                    "name": "Profil",
+                    "children": [
+                      {
+                        "name": "Image",
+                        "fills": [
+                          {
+                            "scaleMode": "FILL",
+                            "imageRef": "f1f56cb57c6c5d88e94501a481b5f732536c2851"
+                          }
+                        ],
+                        "cornerRadius": 90.0,
+                        "cornerSmoothing": 0.6,
+                        "absoluteBoundingBox": {
+                          "x": 1364.0,
+                          "y": 40.0,
+                          "width": 44.0,
+                          "height": 44.0
+                        }
+                      }
+                    ],
+                    "cornerRadius": 90.0,
+                    "backgroundColor": "#000000",
+                    "absoluteBoundingBox": {
+                      "x": 1364.0,
+                      "y": 40.0,
+                      "width": 44.0,
+                      "height": 44.0
+                    }
+                  }
+                ],
+                "backgroundColor": "#000000",
+                "itemSpacing": 20.0,
+                "absoluteBoundingBox": {
+                  "x": 1172.0,
+                  "y": 40.0,
+                  "width": 236.0,
+                  "height": 44.0
+                }
+              },
+              {
+                "name": "Logo",
+                "strokeAlign": "OUTSIDE",
+                "absoluteBoundingBox": {
+                  "x": 60.0,
+                  "y": 40.0,
+                  "width": 148.0,
+                  "height": 44.0
+                },
+                "characters": "MORENT",
+                "style": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontPostScriptName": "PlusJakartaSans-Bold",
+                  "fontStyle": "Bold",
+                  "fontWeight": 700,
+                  "fontSize": 32.0,
+                  "textAlignHorizontal": "LEFT",
+                  "textAlignVertical": "CENTER",
+                  "letterSpacing": -0.96,
+                  "lineHeightPx": 48.0,
+                  "lineHeightPercent": 119.05,
+                  "lineHeightPercentFontSize": 150.0,
+                  "lineHeightUnit": "FONT_SIZE_%"
+                },
+                "fillColor": "#3563E9"
+              },
+              {
+                "name": "Search",
+                "children": [
+                  {
+                    "name": "Button",
+                    "cornerRadius": 70.0,
+                    "cornerSmoothing": 0.6,
+                    "absoluteBoundingBox": {
+                      "x": 272.0,
+                      "y": 40.0,
+                      "width": 492.0,
+                      "height": 44.0
+                    },
+                    "fillColor": "#FFFFFF",
+                    "strokeColor": "#C3D4E9"
+                  },
+                  {
+                    "name": "Search something here",
+                    "strokeAlign": "OUTSIDE",
+                    "absoluteBoundingBox": {
+                      "x": 336.0,
+                      "y": 52.0,
+                      "width": 149.0,
+                      "height": 20.0
+                    },
+                    "characters": "Search something here",
+                    "style": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontPostScriptName": "PlusJakartaSans-Medium",
+                      "fontStyle": "Medium",
+                      "fontWeight": 500,
+                      "fontSize": 14.0,
+                      "textAlignHorizontal": "JUSTIFIED",
+                      "textAlignVertical": "CENTER",
+                      "letterSpacing": -0.28,
+                      "lineHeightPx": 21.0,
+                      "lineHeightPercent": 119.05,
+                      "lineHeightPercentFontSize": 150.0,
+                      "lineHeightUnit": "FONT_SIZE_%"
+                    },
+                    "fillColor": "#596780"
+                  },
+                  {
+                    "name": "search-normal",
+                    "children": [
+                      {
+                        "name": "vuesax/linear/search-normal",
+                        "children": [
+                          {
+                            "name": "search-normal",
+                            "children": [
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "absoluteBoundingBox": {
+                                  "x": 294.0,
+                                  "y": 52.0,
+                                  "width": 19.0,
+                                  "height": 19.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "absoluteBoundingBox": {
+                                  "x": 312.0,
+                                  "y": 70.0,
+                                  "width": 2.0,
+                                  "height": 2.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "opacity": 0.0,
+                                "absoluteBoundingBox": {
+                                  "x": 292.0,
+                                  "y": 50.0,
+                                  "width": 24.0,
+                                  "height": 24.0
+                                }
+                              }
+                            ],
+                            "backgroundColor": "#000000",
+                            "absoluteBoundingBox": {
+                              "x": 292.0,
+                              "y": 50.0,
+                              "width": 24.0,
+                              "height": 24.0
+                            }
+                          }
+                        ],
+                        "backgroundColor": "#000000",
+                        "absoluteBoundingBox": {
+                          "x": 292.0,
+                          "y": 50.0,
+                          "width": 24.0,
+                          "height": 24.0
+                        }
+                      }
+                    ],
+                    "backgroundColor": "#FFFFFF",
+                    "absoluteBoundingBox": {
+                      "x": 292.0,
+                      "y": 50.0,
+                      "width": 24.0,
+                      "height": 24.0
+                    },
+                    "fillColor": "#FFFFFF"
+                  },
+                  {
+                    "name": "vuesax/linear/filter",
+                    "children": [
+                      {
+                        "name": "vuesax/linear/filter",
+                        "children": [
+                          {
+                            "name": "filter",
+                            "children": [
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "strokeMiterAngle": 11.48,
+                                "absoluteBoundingBox": {
+                                  "x": 736.0,
+                                  "y": 56.5,
+                                  "width": 6.0,
+                                  "height": 0.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "strokeMiterAngle": 11.48,
+                                "absoluteBoundingBox": {
+                                  "x": 722.0,
+                                  "y": 56.5,
+                                  "width": 4.0,
+                                  "height": 0.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "strokeMiterAngle": 11.48,
+                                "absoluteBoundingBox": {
+                                  "x": 726.5,
+                                  "y": 53.0,
+                                  "width": 7.0,
+                                  "height": 7.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "strokeMiterAngle": 11.48,
+                                "absoluteBoundingBox": {
+                                  "x": 738.0,
+                                  "y": 67.5,
+                                  "width": 4.0,
+                                  "height": 0.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "strokeMiterAngle": 11.48,
+                                "absoluteBoundingBox": {
+                                  "x": 722.0,
+                                  "y": 67.5,
+                                  "width": 6.0,
+                                  "height": 0.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "strokeWeight": 1.5,
+                                "strokeMiterAngle": 11.48,
+                                "absoluteBoundingBox": {
+                                  "x": 730.5,
+                                  "y": 64.0,
+                                  "width": 7.0,
+                                  "height": 7.0
+                                },
+                                "strokeColor": "#596780"
+                              },
+                              {
+                                "name": "Vector",
+                                "opacity": 0.0,
+                                "absoluteBoundingBox": {
+                                  "x": 720.0,
+                                  "y": 50.0,
+                                  "width": 24.0,
+                                  "height": 24.0
+                                }
+                              }
+                            ],
+                            "backgroundColor": "#000000",
+                            "absoluteBoundingBox": {
+                              "x": 720.0,
+                              "y": 50.0,
+                              "width": 24.0,
+                              "height": 24.0
+                            }
+                          }
+                        ],
+                        "backgroundColor": "#000000",
+                        "absoluteBoundingBox": {
+                          "x": 720.0,
+                          "y": 50.0,
+                          "width": 24.0,
+                          "height": 24.0
+                        }
+                      }
+                    ],
+                    "backgroundColor": "#000000",
+                    "absoluteBoundingBox": {
+                      "x": 720.0,
+                      "y": 50.0,
+                      "width": 24.0,
+                      "height": 24.0
+                    }
+                  }
+                ],
+                "backgroundColor": "#000000",
+                "absoluteBoundingBox": {
+                  "x": 272.0,
+                  "y": 40.0,
+                  "width": 492.0,
+                  "height": 44.0
+                }
+              }
+            ],
+            "backgroundColor": "#FFFFFF",
+            "absoluteBoundingBox": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1440.0,
+              "height": 124.0
+            },
+            "fillColor": "#FFFFFF",
+            "strokeColor": "#C3D4E9"
+          }
+        ],
+        "backgroundColor": "#F5F5F5"
+      }
+    ]
+  },
+  "name": "Untitled"
+}
