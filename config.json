@@ -1,6 +1,5 @@
 {
     "keys_to_remove": [
-      "id",
       "lastModified",
       "thumbnailUrl",
       "role",
@@ -80,7 +79,8 @@
       {"rectangleCornerRadii": [0.0,0.0,0.0,0.0]},
       {"strokeJoin": "ROUND"},
       {"strokeCap": "ROUND"},
-      {"preserveRatio": true}
+      {"preserveRatio": true},
+      {"lineHeightUnit": "FONT_SIZE_%"}
     ]
   }
   

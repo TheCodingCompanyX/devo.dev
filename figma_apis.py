@@ -70,7 +70,7 @@ def fetch_figma_image(file_key, node_id, format="png", scale=2):
     image_url = image_data['images'][node_id.replace("-", ":")]
 
 
-    print(f"Image URL: {image_url}")
+    #print(f"Image URL: {image_url}")
     
     # Download the image from the URL
     img_response = requests.get(image_url)
@@ -93,10 +93,11 @@ def download_and_save_images(basedir, figma_url, format="svg"):
     - image_data (dict): Dictionary of image IDs and their corresponding image URLs.
     - format (str): The image format to save (e.g., png, jpeg, svg).
         """
+    node_ids = []
     for image_id, value in image_data.items():
         image_name = value['name']  # Extract the image name
         image_url = value['image_url']  # Extract the image URL
-        print(f"Downloading image: {image_name} from {image_url}")
+        #print(f"Downloading image: {image_name} from {image_url}")
         
         # Send the request to get the image URL
         img_response = requests.get(image_url)
@@ -121,6 +122,9 @@ def download_and_save_images(basedir, figma_url, format="svg"):
         with open(f"{basedir}/{image_name}.{file_extension}", "wb" if format != "svg" else "w") as img_file:
             img_file.write(image_content)
             print(f"Saved image {image_name}.{file_extension} to {basedir}")
+            node_ids.append(image_id.replace(":", "-")) 
+
+    return node_ids
            
 
 def fetch_image_ids_from_node(file_key, node_id, format="png", scale=2):
