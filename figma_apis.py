@@ -70,7 +70,7 @@ def fetch_figma_image(file_key, node_id, format="png", scale=2):
     image_url = image_data['images'][node_id.replace("-", ":")]
 
 
-    print(f"Image URL: {image_url}")
+    #print(f"Image URL: {image_url}")
     
     # Download the image from the URL
     img_response = requests.get(image_url)
@@ -83,10 +83,9 @@ def fetch_figma_image(file_key, node_id, format="png", scale=2):
     return img_response.content
 
 
-
 def download_and_save_images(basedir, figma_url, format="svg"):
     file_key, node_id = parse_figma_url(figma_url)
-    image_data = fetch_image_from_node(file_key, node_id, format="png") 
+    image_data = fetch_image_ids_from_node(file_key, node_id, format="png") 
     """
     Downloads and saves all images from the provided image data.
 
@@ -94,10 +93,11 @@ def download_and_save_images(basedir, figma_url, format="svg"):
     - image_data (dict): Dictionary of image IDs and their corresponding image URLs.
     - format (str): The image format to save (e.g., png, jpeg, svg).
         """
+    node_ids = []
     for image_id, value in image_data.items():
         image_name = value['name']  # Extract the image name
         image_url = value['image_url']  # Extract the image URL
-        print(f"Downloading image: {image_name} from {image_url}")
+        #print(f"Downloading image: {image_name} from {image_url}")
         
         # Send the request to get the image URL
         img_response = requests.get(image_url)
@@ -117,15 +117,17 @@ def download_and_save_images(basedir, figma_url, format="svg"):
         # Create the directory if it doesn't exist
         if not os.path.exists(basedir):
             os.makedirs(basedir)
-            ma
+            
         # Save the image locally
         with open(f"{basedir}/{image_name}.{file_extension}", "wb" if format != "svg" else "w") as img_file:
-            if format == "svg":
-                img_file.write(image_content)
-            else:
-                img_file.write(image_content)
+            img_file.write(image_content)
+            print(f"Saved image {image_name}.{file_extension} to {basedir}")
+            node_ids.append(image_id.replace(":", "-")) 
 
-def fetch_image_from_node(file_key, node_id, format="png", scale=2):
+    return node_ids
+           
+
+def fetch_image_ids_from_node(file_key, node_id, format="png", scale=2):
     """
     Fetches all image elements (bitmaps and vectors) of a specific node from Figma.
 
@@ -190,9 +192,9 @@ def fetch_image_from_node(file_key, node_id, format="png", scale=2):
                     if response.status_code != 200:
                         raise Exception(f"Error: {response.status_code}, {response.text}")
                     
-                print(f"Node: {node['name']}")
-                print(f"Node ID: {node['id']}")
-                print(f"Node Type: {node['type']}")
+                # print(f"Node: {node['name']}")
+                # print(f"Node ID: {node['id']}")
+                # print(f"Node Type: {node['type']}")
                     
         if not all_children_are_vectors:
             if 'document' in node:

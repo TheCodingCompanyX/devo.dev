@@ -120,7 +120,9 @@ def create_prompt(feedback, error, figma_data):
           if os.path.isdir(f"{path}/{file}"):
               continue
           code += f"./{file} "
-        return f"Style Info: {figma_data}\n\nAssets to use: {code}\n\n{initial_code}\n\nUse Next.js and Tailwinds to create accurate components for the given design"
+        formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
+        cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
+        return f"Style Info: {cleaned_figma_string}\n\nAssets to use: {code}\n\n{initial_code}\n\nUse Next.js and Tailwinds to create accurate components for the given design"
 
 def generate_code(image_path, figma_data, feedback, error, chat_history):
     final_prompt = create_prompt(feedback, error, figma_data)
@@ -185,7 +187,8 @@ def write_code(image_path, figma_data, feedback, error, URL, chat_history):
         #Wait for user input
         user_input = input("Enter 'y' to fix the errors: ")
         if user_input.lower() != 'y':
-            time.sleep(2)
+            time.sleep(5)
+            continue
         #logging.info("Errors found in the UI. Generating new code.")
         code = generate_code(image_path, {}, "", error, [])
         parse_chatgpt_output(code)
