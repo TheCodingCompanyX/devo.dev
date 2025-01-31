@@ -137,6 +137,28 @@ def remove_children_by_ids(json_data, target_ids):
     # Return primitive values as is
     return json_data
 
+
+def replace_keys(json_data, key_mapping):
+    """
+    Recursively replaces keys in a JSON structure based on a mapping.
+    
+    Args:
+        json_data (dict/list): The JSON data structure to process
+        key_mapping (dict): A dictionary mapping old keys to new keys
+        
+    Returns:
+        The modified JSON structure with keys replaced based on the mapping
+    """
+    if isinstance(json_data, dict):
+        # Replace keys based on the mapping
+        return {key_mapping.get(key, key): replace_keys(value, key_mapping) for key, value in json_data.items()}
+    
+    elif isinstance(json_data, list):
+        # Process each item in the list
+        return [replace_keys(item, key_mapping) for item in json_data]
+    
+    # Return primitive values as is
+    return json_data
     
 def process_json(data, config):
     """Process the JSON data."""
@@ -144,6 +166,7 @@ def process_json(data, config):
     cleaned_data = remove_key_value_pairs(cleaned_data, config)
     cleaned_data = round_floats(cleaned_data)
     cleaned_data = shorten_keys(cleaned_data)   
+    cleaned_data = replace_keys(cleaned_data, {"absoluteBoundingBox": "size"})
     return cleaned_data
 
 

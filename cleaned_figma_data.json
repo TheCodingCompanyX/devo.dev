@@ -14,7 +14,7 @@
                 "id": "4:35",
                 "name": "T Y P E",
                 "strokeAlign": "OUTSIDE",
-                "absoluteBoundingBox": {
+                "size": {
                   "x": 510.0,
                   "y": 594.0,
                   "width": 104.0,
@@ -55,8 +55,9 @@
                               {
                                 "id": "I4:38;1178:39690",
                                 "name": "tick-square",
+                                "clipsContent": false,
                                 "backgroundColor": "#000000",
-                                "absoluteBoundingBox": {
+                                "size": {
                                   "x": 510.0,
                                   "y": 642.0,
                                   "width": 24.0,
@@ -64,8 +65,9 @@
                                 }
                               }
                             ],
+                            "clipsContent": false,
                             "backgroundColor": "#000000",
-                            "absoluteBoundingBox": {
+                            "size": {
                               "x": 510.0,
                               "y": 642.0,
                               "width": 24.0,
@@ -73,8 +75,9 @@
                             }
                           }
                         ],
+                        "clipsContent": false,
                         "backgroundColor": "#FFFFFF",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 642.0,
                           "width": 24.0,
@@ -86,7 +89,7 @@
                         "id": "4:39",
                         "name": "Sport (10)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 642.0,
                           "width": 144.0,
@@ -106,12 +109,57 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 642.0,
                       "width": 176.0,
@@ -133,8 +181,9 @@
                               {
                                 "id": "I4:41;1178:39690",
                                 "name": "tick-square",
+                                "clipsContent": false,
                                 "backgroundColor": "#000000",
-                                "absoluteBoundingBox": {
+                                "size": {
                                   "x": 510.0,
                                   "y": 698.0,
                                   "width": 24.0,
@@ -142,8 +191,9 @@
                                 }
                               }
                             ],
+                            "clipsContent": false,
                             "backgroundColor": "#000000",
-                            "absoluteBoundingBox": {
+                            "size": {
                               "x": 510.0,
                               "y": 698.0,
                               "width": 24.0,
@@ -151,8 +201,9 @@
                             }
                           }
                         ],
+                        "clipsContent": false,
                         "backgroundColor": "#FFFFFF",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 698.0,
                           "width": 24.0,
@@ -164,7 +215,7 @@
                         "id": "4:42",
                         "name": "SUV (12)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 698.0,
                           "width": 80.0,
@@ -184,12 +235,55 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:15",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#90A3BF"
+                          }
+                        },
                         "fillColor": "#596780"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 698.0,
                       "width": 112.0,
@@ -203,8 +297,9 @@
                       {
                         "id": "4:44",
                         "name": "Ceklist",
+                        "clipsContent": true,
                         "backgroundColor": "#000000",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 754.0,
                           "width": 24.0,
@@ -215,7 +310,7 @@
                         "id": "4:46",
                         "name": "MPV (16)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 754.0,
                           "width": 88.0,
@@ -235,12 +330,55 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 754.0,
                       "width": 120.0,
@@ -254,8 +392,9 @@
                       {
                         "id": "4:48",
                         "name": "Ceklist",
+                        "clipsContent": true,
                         "backgroundColor": "#000000",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 810.0,
                           "width": 24.0,
@@ -266,7 +405,7 @@
                         "id": "4:50",
                         "name": "Sedan (20)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 810.0,
                           "width": 112.0,
@@ -286,12 +425,57 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 810.0,
                       "width": 144.0,
@@ -305,8 +489,9 @@
                       {
                         "id": "4:52",
                         "name": "Ceklist",
+                        "clipsContent": true,
                         "backgroundColor": "#000000",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 866.0,
                           "width": 24.0,
@@ -317,7 +502,7 @@
                         "id": "4:54",
                         "name": "Coupe (14)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 866.0,
                           "width": 112.0,
@@ -337,12 +522,57 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 866.0,
                       "width": 144.0,
@@ -356,8 +586,9 @@
                       {
                         "id": "4:56",
                         "name": "Ceklist",
+                        "clipsContent": true,
                         "backgroundColor": "#000000",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 922.0,
                           "width": 24.0,
@@ -368,7 +599,7 @@
                         "id": "4:58",
                         "name": "Hatchback (14)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 922.0,
                           "width": 144.0,
@@ -388,12 +619,61 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 922.0,
                       "width": 176.0,
@@ -401,9 +681,11 @@
                     }
                   }
                 ],
+                "clipsContent": false,
                 "backgroundColor": "#000000",
+                "layoutMode": "VERTICAL",
                 "itemSpacing": 32.0,
-                "absoluteBoundingBox": {
+                "size": {
                   "x": 510.0,
                   "y": 642.0,
                   "width": 176.0,
@@ -411,9 +693,11 @@
                 }
               }
             ],
+            "clipsContent": false,
             "backgroundColor": "#000000",
+            "layoutMode": "VERTICAL",
             "itemSpacing": 28.0,
-            "absoluteBoundingBox": {
+            "size": {
               "x": 510.0,
               "y": 594.0,
               "width": 176.0,
@@ -428,7 +712,7 @@
                 "id": "4:60",
                 "name": "C A P A C I T Y",
                 "strokeAlign": "OUTSIDE",
-                "absoluteBoundingBox": {
+                "size": {
                   "x": 510.0,
                   "y": 1002.0,
                   "width": 104.0,
@@ -469,8 +753,9 @@
                               {
                                 "id": "I4:63;1178:39690",
                                 "name": "tick-square",
+                                "clipsContent": false,
                                 "backgroundColor": "#000000",
-                                "absoluteBoundingBox": {
+                                "size": {
                                   "x": 510.0,
                                   "y": 1050.0,
                                   "width": 24.0,
@@ -478,8 +763,9 @@
                                 }
                               }
                             ],
+                            "clipsContent": false,
                             "backgroundColor": "#000000",
-                            "absoluteBoundingBox": {
+                            "size": {
                               "x": 510.0,
                               "y": 1050.0,
                               "width": 24.0,
@@ -487,8 +773,9 @@
                             }
                           }
                         ],
+                        "clipsContent": false,
                         "backgroundColor": "#FFFFFF",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 1050.0,
                           "width": 24.0,
@@ -500,7 +787,7 @@
                         "id": "4:64",
                         "name": "2 Person (10)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 1050.0,
                           "width": 144.0,
@@ -520,12 +807,60 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 1050.0,
                       "width": 176.0,
@@ -539,8 +874,9 @@
                       {
                         "id": "4:66",
                         "name": "Ceklist",
+                        "clipsContent": true,
                         "backgroundColor": "#000000",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 1106.0,
                           "width": 24.0,
@@ -551,7 +887,7 @@
                         "id": "4:68",
                         "name": "4 Person (14)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 1106.0,
                           "width": 127.0,
@@ -571,12 +907,60 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:15",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#90A3BF"
+                          }
+                        },
                         "fillColor": "#596780"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 1106.0,
                       "width": 159.0,
@@ -590,8 +974,9 @@
                       {
                         "id": "4:70",
                         "name": "Ceklist",
+                        "clipsContent": true,
                         "backgroundColor": "#000000",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 1162.0,
                           "width": 24.0,
@@ -602,7 +987,7 @@
                         "id": "4:72",
                         "name": "6 Person (12)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 1162.0,
                           "width": 120.0,
@@ -622,12 +1007,34 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          3,
+                          3,
+                          3,
+                          3,
+                          3,
+                          3,
+                          3,
+                          3
+                        ],
+                        "styleOverrideTable": {
+                          "3": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "inheritFillStyleId": "0:17",
+                            "fillColor": "#596780"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 1162.0,
                       "width": 152.0,
@@ -649,8 +1056,9 @@
                               {
                                 "id": "I4:74;1178:39690",
                                 "name": "tick-square",
+                                "clipsContent": false,
                                 "backgroundColor": "#000000",
-                                "absoluteBoundingBox": {
+                                "size": {
                                   "x": 510.0,
                                   "y": 1218.0,
                                   "width": 24.0,
@@ -658,8 +1066,9 @@
                                 }
                               }
                             ],
+                            "clipsContent": false,
                             "backgroundColor": "#000000",
-                            "absoluteBoundingBox": {
+                            "size": {
                               "x": 510.0,
                               "y": 1218.0,
                               "width": 24.0,
@@ -667,8 +1076,9 @@
                             }
                           }
                         ],
+                        "clipsContent": false,
                         "backgroundColor": "#FFFFFF",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 1218.0,
                           "width": 24.0,
@@ -680,7 +1090,7 @@
                         "id": "4:75",
                         "name": "8 or More (16)",
                         "strokeAlign": "OUTSIDE",
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 542.0,
                           "y": 1218.0,
                           "width": 144.0,
@@ -700,12 +1110,61 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
+                        "characterStyleOverrides": [
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          5,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4,
+                          4
+                        ],
+                        "styleOverrideTable": {
+                          "5": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritFillStyleId": "0:17",
+                            "inheritTextStyleId": "4:32",
+                            "fillColor": "#596780"
+                          },
+                          "4": {
+                            "fontFamily": "Plus Jakarta Sans",
+                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                            "fontStyle": "SemiBold",
+                            "fontWeight": 600,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 20.0,
+                            "letterSpacing": -0.0,
+                            "lineHeightPx": 30.0,
+                            "lineHeightPercent": 119.0,
+                            "lineHeightPercentFontSize": 150.0,
+                            "inheritTextStyleId": "4:32"
+                          }
+                        },
                         "fillColor": "#90A3BF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
+                    "layoutMode": "HORIZONTAL",
                     "itemSpacing": 8.0,
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 1218.0,
                       "width": 176.0,
@@ -713,9 +1172,11 @@
                     }
                   }
                 ],
+                "clipsContent": false,
                 "backgroundColor": "#000000",
+                "layoutMode": "VERTICAL",
                 "itemSpacing": 32.0,
-                "absoluteBoundingBox": {
+                "size": {
                   "x": 510.0,
                   "y": 1050.0,
                   "width": 176.0,
@@ -723,9 +1184,11 @@
                 }
               }
             ],
+            "clipsContent": false,
             "backgroundColor": "#000000",
+            "layoutMode": "VERTICAL",
             "itemSpacing": 28.0,
-            "absoluteBoundingBox": {
+            "size": {
               "x": 510.0,
               "y": 1002.0,
               "width": 176.0,
@@ -740,7 +1203,7 @@
                 "id": "4:77",
                 "name": "P R I C E",
                 "strokeAlign": "OUTSIDE",
-                "absoluteBoundingBox": {
+                "size": {
                   "x": 510.0,
                   "y": 1298.0,
                   "width": 104.0,
@@ -774,7 +1237,7 @@
                         "id": "4:80",
                         "name": "Line2",
                         "cornerRadius": 12.0,
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 1350.0,
                           "width": 296.0,
@@ -786,7 +1249,7 @@
                         "id": "4:81",
                         "name": "Line1",
                         "cornerRadius": 12.0,
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 510.0,
                           "y": 1350.0,
                           "width": 220.0,
@@ -798,7 +1261,7 @@
                         "id": "4:82",
                         "name": "Mark",
                         "strokeWeight": 4.0,
-                        "absoluteBoundingBox": {
+                        "size": {
                           "x": 720.0,
                           "y": 1346.0,
                           "width": 20.0,
@@ -813,8 +1276,9 @@
                         "strokeColor": "#FFFFFF"
                       }
                     ],
+                    "clipsContent": false,
                     "backgroundColor": "#000000",
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 1346.0,
                       "width": 296.0,
@@ -825,7 +1289,7 @@
                     "id": "4:83",
                     "name": "Max. $100.00",
                     "strokeAlign": "OUTSIDE",
-                    "absoluteBoundingBox": {
+                    "size": {
                       "x": 510.0,
                       "y": 1378.0,
                       "width": 296.0,
@@ -848,9 +1312,11 @@
                     "fillColor": "#596780"
                   }
                 ],
+                "clipsContent": false,
                 "backgroundColor": "#000000",
+                "layoutMode": "VERTICAL",
                 "itemSpacing": 12.0,
-                "absoluteBoundingBox": {
+                "size": {
                   "x": 510.0,
                   "y": 1346.0,
                   "width": 296.0,
@@ -858,9 +1324,11 @@
                 }
               }
             ],
+            "clipsContent": false,
             "backgroundColor": "#000000",
+            "layoutMode": "VERTICAL",
             "itemSpacing": 28.0,
-            "absoluteBoundingBox": {
+            "size": {
               "x": 510.0,
               "y": 1298.0,
               "width": 296.0,
@@ -868,6 +1336,7 @@
             }
           }
         ],
+        "clipsContent": true,
         "individualStrokeWeights": {
           "top": 0.0,
           "right": 1.0,
@@ -875,7 +1344,7 @@
           "left": 0.0
         },
         "backgroundColor": "#FFFFFF",
-        "absoluteBoundingBox": {
+        "size": {
           "x": 478.0,
           "y": 562.0,
           "width": 360.0,

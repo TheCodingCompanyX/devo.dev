@@ -41,7 +41,7 @@ if __name__ == "__main__":
     #wait for user input
     print("Press y to download images")
     #if input() == "y":
-    node_ids_of_images = download_and_save_images("../samplereactproject/playground", figma_url)
+    node_ids_of_images = download_and_save_images("../samplereactproject/app/playground", figma_url)
 
     # Load the configuration
     with open("config.json", "r") as config_file:
@@ -65,21 +65,26 @@ if __name__ == "__main__":
         else:
             #wait for user input
             print("Feedback has been found, press y to use it")
-            if input() != "y":
-                feedback = ""
-            else:
+            if input() == "y":
                 with open('feedback.txt', 'r') as f:
                     feedback = f.read()
+            else:
+                feedback = ""
 
     for iteration in range(MAX_ITERATIONS):
-        print("Press Enter to write code")
-        input()
         
         code = write_code("./reference.png", processed_json, feedback, "", URL, [])
         
+        #Another Debug Point Here
+
         feedback = test_UI(processed_json, base_dir)
         with open('feedback.txt', 'w') as f:
             f.write(feedback)
+
+        #Add Debug Point Here for feedback editing
+        with open('feedback.txt', 'r') as f:
+            feedback = f.read()
         
+
         if feedback=="":
             break

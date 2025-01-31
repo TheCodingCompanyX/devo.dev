@@ -10,31 +10,27 @@
       "linkAccess",
       "prototypeStartNodeID",
       "flowStartingPoints",
-      "prototypeDevice",
       "boundVariables",
       "layoutGrow",
       "counterAxisSizingMode",
-      "layoutMode",
       "primaryAxisSizingMode",
       "layoutAlign",
       "layoutVersion",
-      "characterStyleOverrides",
       "lineTypes",
-      "clipsContent",
       "layoutSizingVertical",
       "layoutSizingHorizontal",
       "counterAxisAlignItems",
       "components",
       "componentSets",
       "schemaVersion",
-      "styles",
-      "styleOverrideTable",
       "lineIndentations",
       "overrides",
       "absoluteRenderBounds",
       "type",
       "componentId",
-      "componentProperties"
+      "componentProperties",
+      "styles",
+      
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},
@@ -80,7 +76,9 @@
       {"strokeJoin": "ROUND"},
       {"strokeCap": "ROUND"},
       {"preserveRatio": true},
-      {"lineHeightUnit": "FONT_SIZE_%"}
+      {"lineHeightUnit": "FONT_SIZE_%"},
+      {"characterStyleOverrides": []},
+      {"styleOverrideTable": {}}
     ]
   }
   

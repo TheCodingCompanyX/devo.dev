@@ -187,7 +187,8 @@ def write_code(image_path, figma_data, feedback, error, URL, chat_history):
         #Wait for user input
         user_input = input("Enter 'y' to fix the errors: ")
         if user_input.lower() != 'y':
-            time.sleep(2)
+            time.sleep(5)
+            continue
         #logging.info("Errors found in the UI. Generating new code.")
         code = generate_code(image_path, {}, "", error, [])
         parse_chatgpt_output(code)

@@ -91,25 +91,22 @@ def get_design_feedback(figma_data, base_dir):
 
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
-        full_prompt = f"""
-        Given the Figma design specifications: {cleaned_figma_string} and the code's output: {code}. Which UI elements in the code's output do not match the design?
-        """
+        full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode: \n{code}. Given the design and the code. Highlight major issues in the code where there is a significant mismatch. Do not give me code changes, only highlight issues and things to change. If there are no issues, please mention that there are no issues. Note that the sizes in the design are indicative and not exact."""
         print(full_prompt)
-        # response = client.chat.completions.create(
-        # model="o1-mini", 
-        # messages=[
-        #     {"role": "user", 
-        #      "content":  [
-        #         {"type": "text", "text": full_prompt}
-        #     ]},
-        # ],
-        # )
+        response = client.chat.completions.create(
+        model="o1-mini", 
+        messages=[
+            {"role": "user", 
+             "content":  [
+                {"type": "text", "text": full_prompt}
+            ]},
+        ],
+        )
 
-        response = "hu"
 
-        result = response #.choices[0].message.content
+        result = response.choices[0].message.content
         print(result)
-        return result
+        return result.replace("**", "")
         
     except Exception as e:
         print(f"Error getting UI feedback: {e}")
