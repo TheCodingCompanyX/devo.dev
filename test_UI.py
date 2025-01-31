@@ -93,18 +93,16 @@ def get_design_feedback(figma_data, base_dir, image_path="reference.png"):
 
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
-        full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode: \n{code}. Given the design and the code. Highlight major issues in the code where there is a significant mismatch. Do not give me code changes, only highlight issues and things to change. If there are no issues, please mention that there are no issues. Note that the sizes in the design are indicative and not exact."""
+        full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode:\n{code}\nThe given design data has the style and positions of a UI component that needs to be built. The sizes are not to be used as is. Just use them to help you with padding, spacing and alignment. \nIf there are any styling and spacing issues in the code where there is a significant mismatch between the designs and code, highlight those. Ignore minor differences."""
         print(full_prompt)
         response = client.chat.completions.create(
-        model="gpt-4o", 
+        model="o1-mini", 
         messages=[
             {"role": "user", 
              "content":  [
-                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(image_path)}"}},
                 {"type": "text", "text": full_prompt}
             ]},
-        ],
-        temperature=0.0
+        ]
         )
 
 

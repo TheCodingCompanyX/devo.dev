@@ -122,7 +122,9 @@ def create_prompt(feedback, error, figma_data):
           code += f"./{file} "
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
-        return f"Style Info: {cleaned_figma_string}\n\nAssets to use: {code}\n\n{initial_code}\n\nUse Next.js and Tailwinds to create accurate components for the given design"
+        if code == "":
+          return f"Style Info: {cleaned_figma_string}\n\nAssets to use: None\n\n{initial_code}\n\nUse Next.js and Tailwinds to create responsive components for the given design. The size of the elements given is not to be used as is. Use them only for padding, spacing and alignment. The code should be fully functional. No placeholders."
+        return f"Style Info: {cleaned_figma_string}\n\nAssets to use: {code}\n\n{initial_code}\n\nUse Next.js and Tailwinds to create responsive components for the given design. The size of the elements given is not to be used as is. Use them only for padding, spacing and alignment. The code should be fully functional. No placeholders."
 
 def generate_code(image_path, figma_data, feedback, error, chat_history):
     final_prompt = create_prompt(feedback, error, figma_data)
@@ -169,7 +171,9 @@ def generate_code(image_path, figma_data, feedback, error, chat_history):
 
     response = client.chat.completions.create(
         model=selected_model,
-        messages=message
+        messages=message,
+        temperature=0.1,
+        top_p=0.9,
     )
     result = response.choices[0].message.content
     print(result)

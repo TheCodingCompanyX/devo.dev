@@ -13,7 +13,7 @@ global figma_url
 
 route = "playground"
 base_dir = "../samplereactproject/app/"+route
-figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=lvuG5RBb7Xwv7NNy-0"
+figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-79&t=lfRV7L5YpT1WEhOn-0"
 device = "web"
 client = OpenAI()
 
