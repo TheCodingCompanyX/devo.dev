@@ -30,7 +30,7 @@
       "componentId",
       "componentProperties",
       "styles",
-      
+      "id"
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},
