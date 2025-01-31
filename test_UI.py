@@ -73,8 +73,10 @@ def get_ui_feedback(screenshot_path, design_image_path):
         #logging.error(f"Error getting UI feedback: {e}")
         raise
 
-def get_design_feedback(figma_data, base_dir):
+def get_design_feedback(figma_data, base_dir, image_path="reference.png"):
     """Use GPT-4 to provide feedback on the design."""
+    base64_image = encode_image(image_path)
+
     try:
         path = base_dir
         files = os.listdir(path)
@@ -94,13 +96,15 @@ def get_design_feedback(figma_data, base_dir):
         full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode: \n{code}. Given the design and the code. Highlight major issues in the code where there is a significant mismatch. Do not give me code changes, only highlight issues and things to change. If there are no issues, please mention that there are no issues. Note that the sizes in the design are indicative and not exact."""
         print(full_prompt)
         response = client.chat.completions.create(
-        model="o1-mini", 
+        model="gpt-4o", 
         messages=[
             {"role": "user", 
              "content":  [
+                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(image_path)}"}},
                 {"type": "text", "text": full_prompt}
             ]},
         ],
+        temperature=0.0
         )
 
 

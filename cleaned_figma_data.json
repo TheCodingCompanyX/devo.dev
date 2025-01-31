@@ -3,15 +3,12 @@
   "nodes": {
     "4:33": {
       "document": {
-        "id": "4:33",
         "name": "Nav Bar Side",
         "children": [
           {
-            "id": "4:34",
             "name": "T Y P E",
             "children": [
               {
-                "id": "4:35",
                 "name": "T Y P E",
                 "strokeAlign": "OUTSIDE",
                 "size": {
@@ -37,23 +34,18 @@
                 "fillColor": "#90A3BF"
               },
               {
-                "id": "4:36",
                 "name": "T Y P E",
                 "children": [
                   {
-                    "id": "4:37",
                     "name": "Sport",
                     "children": [
                       {
-                        "id": "4:38",
                         "name": "vuesax/bold/tick-square",
                         "children": [
                           {
-                            "id": "I4:38;1178:39689",
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "id": "I4:38;1178:39690",
                                 "name": "tick-square",
                                 "clipsContent": false,
                                 "backgroundColor": "#000000",
@@ -86,7 +78,6 @@
                         "fillColor": "#FFFFFF"
                       },
                       {
-                        "id": "4:39",
                         "name": "Sport (10)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -109,19 +100,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -167,19 +145,15 @@
                     }
                   },
                   {
-                    "id": "4:40",
                     "name": "SUV",
                     "children": [
                       {
-                        "id": "4:41",
                         "name": "vuesax/bold/tick-square",
                         "children": [
                           {
-                            "id": "I4:41;1178:39689",
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "id": "I4:41;1178:39690",
                                 "name": "tick-square",
                                 "clipsContent": false,
                                 "backgroundColor": "#000000",
@@ -212,7 +186,6 @@
                         "fillColor": "#FFFFFF"
                       },
                       {
-                        "id": "4:42",
                         "name": "SUV (12)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -235,17 +208,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -291,11 +253,9 @@
                     }
                   },
                   {
-                    "id": "4:43",
                     "name": "MPV",
                     "children": [
                       {
-                        "id": "4:44",
                         "name": "Ceklist",
                         "clipsContent": true,
                         "backgroundColor": "#000000",
@@ -307,7 +267,6 @@
                         }
                       },
                       {
-                        "id": "4:46",
                         "name": "MPV (16)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -330,17 +289,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -386,11 +334,9 @@
                     }
                   },
                   {
-                    "id": "4:47",
                     "name": "Sedan",
                     "children": [
                       {
-                        "id": "4:48",
                         "name": "Ceklist",
                         "clipsContent": true,
                         "backgroundColor": "#000000",
@@ -402,7 +348,6 @@
                         }
                       },
                       {
-                        "id": "4:50",
                         "name": "Sedan (20)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -425,19 +370,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -483,11 +415,9 @@
                     }
                   },
                   {
-                    "id": "4:51",
                     "name": "Coupe",
                     "children": [
                       {
-                        "id": "4:52",
                         "name": "Ceklist",
                         "clipsContent": true,
                         "backgroundColor": "#000000",
@@ -499,7 +429,6 @@
                         }
                       },
                       {
-                        "id": "4:54",
                         "name": "Coupe (14)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -522,19 +451,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -580,11 +496,9 @@
                     }
                   },
                   {
-                    "id": "4:55",
                     "name": "Hatchback",
                     "children": [
                       {
-                        "id": "4:56",
                         "name": "Ceklist",
                         "clipsContent": true,
                         "backgroundColor": "#000000",
@@ -596,7 +510,6 @@
                         }
                       },
                       {
-                        "id": "4:58",
                         "name": "Hatchback (14)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -619,23 +532,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -705,11 +601,9 @@
             }
           },
           {
-            "id": "4:59",
             "name": "C A P A C I T Y",
             "children": [
               {
-                "id": "4:60",
                 "name": "C A P A C I T Y",
                 "strokeAlign": "OUTSIDE",
                 "size": {
@@ -735,23 +629,18 @@
                 "fillColor": "#90A3BF"
               },
               {
-                "id": "4:61",
                 "name": "C A P A C I T Y",
                 "children": [
                   {
-                    "id": "4:62",
                     "name": "2 Person",
                     "children": [
                       {
-                        "id": "4:63",
                         "name": "vuesax/bold/tick-square",
                         "children": [
                           {
-                            "id": "I4:63;1178:39689",
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "id": "I4:63;1178:39690",
                                 "name": "tick-square",
                                 "clipsContent": false,
                                 "backgroundColor": "#000000",
@@ -784,7 +673,6 @@
                         "fillColor": "#FFFFFF"
                       },
                       {
-                        "id": "4:64",
                         "name": "2 Person (10)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -807,22 +695,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -868,11 +740,9 @@
                     }
                   },
                   {
-                    "id": "4:65",
                     "name": "4 Person",
                     "children": [
                       {
-                        "id": "4:66",
                         "name": "Ceklist",
                         "clipsContent": true,
                         "backgroundColor": "#000000",
@@ -884,7 +754,6 @@
                         }
                       },
                       {
-                        "id": "4:68",
                         "name": "4 Person (14)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -907,22 +776,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -968,11 +821,9 @@
                     }
                   },
                   {
-                    "id": "4:69",
                     "name": "6 Person",
                     "children": [
                       {
-                        "id": "4:70",
                         "name": "Ceklist",
                         "clipsContent": true,
                         "backgroundColor": "#000000",
@@ -984,7 +835,6 @@
                         }
                       },
                       {
-                        "id": "4:72",
                         "name": "6 Person (12)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -1007,16 +857,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          3,
-                          3,
-                          3,
-                          3,
-                          3,
-                          3,
-                          3,
-                          3
-                        ],
                         "styleOverrideTable": {
                           "3": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -1042,19 +882,15 @@
                     }
                   },
                   {
-                    "id": "4:73",
                     "name": "8 or More",
                     "children": [
                       {
-                        "id": "4:74",
                         "name": "vuesax/bold/tick-square",
                         "children": [
                           {
-                            "id": "I4:74;1178:39689",
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "id": "I4:74;1178:39690",
                                 "name": "tick-square",
                                 "clipsContent": false,
                                 "backgroundColor": "#000000",
@@ -1087,7 +923,6 @@
                         "fillColor": "#FFFFFF"
                       },
                       {
-                        "id": "4:75",
                         "name": "8 or More (16)",
                         "strokeAlign": "OUTSIDE",
                         "size": {
@@ -1110,23 +945,6 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "characterStyleOverrides": [
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          5,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4,
-                          4
-                        ],
                         "styleOverrideTable": {
                           "5": {
                             "fontFamily": "Plus Jakarta Sans",
@@ -1196,11 +1014,9 @@
             }
           },
           {
-            "id": "4:76",
             "name": "P R I C E",
             "children": [
               {
-                "id": "4:77",
                 "name": "P R I C E",
                 "strokeAlign": "OUTSIDE",
                 "size": {
@@ -1226,15 +1042,12 @@
                 "fillColor": "#90A3BF"
               },
               {
-                "id": "4:78",
                 "name": "P R I C E  R A N G E",
                 "children": [
                   {
-                    "id": "4:79",
                     "name": "P R I C E  R A N G E",
                     "children": [
                       {
-                        "id": "4:80",
                         "name": "Line2",
                         "cornerRadius": 12.0,
                         "size": {
@@ -1246,7 +1059,6 @@
                         "fillColor": "#90A3BF"
                       },
                       {
-                        "id": "4:81",
                         "name": "Line1",
                         "cornerRadius": 12.0,
                         "size": {
@@ -1258,7 +1070,6 @@
                         "fillColor": "#3563E9"
                       },
                       {
-                        "id": "4:82",
                         "name": "Mark",
                         "strokeWeight": 4.0,
                         "size": {
@@ -1286,7 +1097,6 @@
                     }
                   },
                   {
-                    "id": "4:83",
                     "name": "Max. $100.00",
                     "strokeAlign": "OUTSIDE",
                     "size": {

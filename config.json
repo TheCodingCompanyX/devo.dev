@@ -30,7 +30,8 @@
       "componentId",
       "componentProperties",
       "styles",
-      "id"
+      "id",
+      "characterStyleOverrides"
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},
