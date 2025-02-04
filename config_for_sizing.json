@@ -1,5 +1,6 @@
 {
     "keys_to_remove": [
+      "absoluteBoundingBox", 
       "lastModified",
       "thumbnailUrl",
       "role",
@@ -79,7 +80,8 @@
       {"preserveRatio": true},
       {"lineHeightUnit": "FONT_SIZE_%"},
       {"characterStyleOverrides": []},
-      {"styleOverrideTable": {}}
+      {"styleOverrideTable": {}},
+      {"clipsContent": false}
     ]
   }
   

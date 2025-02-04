@@ -8,34 +8,17 @@
           {
             "name": "Line2",
             "cornerRadius": 12.0,
-            "size": {
-              "x": -111.0,
-              "y": 1460.0,
-              "width": 296.0,
-              "height": 12.0
-            },
             "fillColor": "#90A3BF"
           },
           {
             "name": "Line1",
             "cornerRadius": 12.0,
-            "size": {
-              "x": -111.0,
-              "y": 1460.0,
-              "width": 220.0,
-              "height": 12.0
-            },
             "fillColor": "#3563E9"
           },
+          
           {
             "name": "Mark",
             "strokeWeight": 4.0,
-            "size": {
-              "x": 99.0,
-              "y": 1456.0,
-              "width": 20.0,
-              "height": 20.0
-            },
             "arcData": {
               "startingAngle": 0.0,
               "endingAngle": 6.0,
@@ -45,14 +28,7 @@
             "strokeColor": "#FFFFFF"
           }
         ],
-        "clipsContent": false,
-        "backgroundColor": "#000000",
-        "size": {
-          "x": -111.0,
-          "y": 1456.0,
-          "width": 296.0,
-          "height": 20.0
-        }
+        "backgroundColor": "#000000"
       }
     }
   }
