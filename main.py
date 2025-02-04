@@ -77,7 +77,8 @@ if __name__ == "__main__":
         
         #Another Debug Point Here
 
-        feedback = test_UI(processed_json, base_dir)
+        # uncomment when needed
+        #feedback = test_UI(processed_json, base_dir)
         with open('feedback.txt', 'w') as f:
             f.write(feedback)
 
