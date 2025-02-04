@@ -2,7 +2,7 @@ import base64, openai
 from utils import encode_image
 import os
 import time
-from playwright.sync_api import sync_playwright
+#from playwright.sync_api import sync_playwright
 
 client = openai.Client()
 
@@ -40,38 +40,38 @@ def take_screenshot(url, output_path, device):
 
 
 #This function is now NOT used
-def get_ui_feedback(screenshot_path, design_image_path):
-    """Use GPT-4 Vision to analyze the UI and provide feedback."""
-    try:
-        path = "../samplereactproject/app/playground"
-        files = os.listdir(path)
-        for file in files:
-          if os.path.isdir(f"{path}/{file}"):
-              continue
-          if file.endswith(".svg") or file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
-              continue
-          with open(f"{path}/{file}", "r") as f:
-              code += f"{file}\n```\n"
-              code += f.read()
-              code += "\n```\n"
-        response = client.chat.completions.create(
-        model="gpt-4", 
-        messages=[
-            {"role": "user", 
-             "content":  [
-                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(design_image_path)}"}},
-                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(screenshot_path)}"}},
-                {"type": "text", "text": "Given the ideal design (1) and the code's output(2). Which UI elements in the code's output do not match the design?"}
-            ]},
-        ],
-        )
-        intermediate_result = response.choices[0].message.content
-        print(intermediate_result)
-        return intermediate_result
+# def get_ui_feedback(screenshot_path, design_image_path):
+#     """Use GPT-4 Vision to analyze the UI and provide feedback."""
+#     try:
+#         path = "../samplereactproject/app/playground"
+#         files = os.listdir(path)
+#         for file in files:
+#           if os.path.isdir(f"{path}/{file}"):
+#               continue
+#           if file.endswith(".svg") or file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+#               continue
+#           with open(f"{path}/{file}", "r") as f:
+#               code += f"{file}\n```\n"
+#               code += f.read()
+#               code += "\n```\n"
+#         response = client.chat.completions.create(
+#         model="gpt-4", 
+#         messages=[
+#             {"role": "user", 
+#              "content":  [
+#                 {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(design_image_path)}"}},
+#                 {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(screenshot_path)}"}},
+#                 {"type": "text", "text": "Given the ideal design (1) and the code's output(2). Which UI elements in the code's output do not match the design?"}
+#             ]},
+#         ],
+#         )
+#         intermediate_result = response.choices[0].message.content
+#         print(intermediate_result)
+#         return intermediate_result
         
-    except Exception as e:
-        #logging.error(f"Error getting UI feedback: {e}")
-        raise
+#     except Exception as e:
+#         #logging.error(f"Error getting UI feedback: {e}")
+#         raise
 
 def get_design_feedback(figma_data, base_dir, image_path="reference.png"):
     """Use GPT-4 to provide feedback on the design."""
