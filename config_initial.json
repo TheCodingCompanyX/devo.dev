@@ -1,5 +1,6 @@
 {
     "keys_to_remove": [
+      "absoluteBoundingBox", 
       "lastModified",
       "thumbnailUrl",
       "role",
@@ -31,7 +32,11 @@
       "componentProperties",
       "styles",
       "id",
-      "characterStyleOverrides"
+      "characterStyleOverrides",
+      "arcData",
+      "inheritFillStyleId",
+      "inheritTextStyleId",
+      "styleOverrideTable"
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},
@@ -79,7 +84,16 @@
       {"preserveRatio": true},
       {"lineHeightUnit": "FONT_SIZE_%"},
       {"characterStyleOverrides": []},
-      {"styleOverrideTable": {}}
+      {"styleOverrideTable": {}},
+      {"clipsContent": false},
+      {"type": "INSTANCE"},
+      {"backgroundColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }},
+      {"letterSpacing": -0.0}
     ]
   }
   

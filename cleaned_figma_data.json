@@ -4,19 +4,25 @@
     "4:33": {
       "document": {
         "name": "Nav Bar Side",
+        "clipsContent": true,
+        "individualStrokeWeights": {
+          "top": 0.0,
+          "right": 1.0,
+          "bottom": 0.0,
+          "left": 0.0
+        },
+        "backgroundColor": "#FFFFFF",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#F2F4F6",
         "children": [
           {
             "name": "T Y P E",
+            "layoutMode": "VERTICAL",
+            "itemSpacing": 28.0,
             "children": [
               {
                 "name": "T Y P E",
                 "strokeAlign": "OUTSIDE",
-                "size": {
-                  "x": 510.0,
-                  "y": 594.0,
-                  "width": 104.0,
-                  "height": 20.0
-                },
                 "characters": "T Y P E",
                 "style": {
                   "fontFamily": "Plus Jakarta Sans",
@@ -35,57 +41,32 @@
               },
               {
                 "name": "T Y P E",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 32.0,
                 "children": [
                   {
                     "name": "Sport",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
                         "children": [
                           {
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "name": "tick-square",
-                                "clipsContent": false,
-                                "backgroundColor": "#000000",
-                                "size": {
-                                  "x": 510.0,
-                                  "y": 642.0,
-                                  "width": 24.0,
-                                  "height": 24.0
-                                }
+                                "name": "tick-square"
                               }
-                            ],
-                            "clipsContent": false,
-                            "backgroundColor": "#000000",
-                            "size": {
-                              "x": 510.0,
-                              "y": 642.0,
-                              "width": 24.0,
-                              "height": 24.0
-                            }
+                            ]
                           }
-                        ],
-                        "clipsContent": false,
-                        "backgroundColor": "#FFFFFF",
-                        "size": {
-                          "x": 510.0,
-                          "y": 642.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        },
-                        "fillColor": "#FFFFFF"
+                        ]
                       },
                       {
                         "name": "Sport (10)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 642.0,
-                          "width": 144.0,
-                          "height": 24.0
-                        },
                         "characters": "Sport  (10)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -100,100 +81,33 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 642.0,
-                      "width": 176.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "SUV",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
                         "children": [
                           {
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "name": "tick-square",
-                                "clipsContent": false,
-                                "backgroundColor": "#000000",
-                                "size": {
-                                  "x": 510.0,
-                                  "y": 698.0,
-                                  "width": 24.0,
-                                  "height": 24.0
-                                }
+                                "name": "tick-square"
                               }
-                            ],
-                            "clipsContent": false,
-                            "backgroundColor": "#000000",
-                            "size": {
-                              "x": 510.0,
-                              "y": 698.0,
-                              "width": 24.0,
-                              "height": 24.0
-                            }
+                            ]
                           }
-                        ],
-                        "clipsContent": false,
-                        "backgroundColor": "#FFFFFF",
-                        "size": {
-                          "x": 510.0,
-                          "y": 698.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        },
-                        "fillColor": "#FFFFFF"
+                        ]
                       },
                       {
                         "name": "SUV (12)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 698.0,
-                          "width": 80.0,
-                          "height": 24.0
-                        },
                         "characters": "SUV  (12)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -208,73 +122,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:15",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#90A3BF"
-                          }
-                        },
                         "fillColor": "#596780"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 698.0,
-                      "width": 112.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "MPV",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "Ceklist",
-                        "clipsContent": true,
-                        "backgroundColor": "#000000",
-                        "size": {
-                          "x": 510.0,
-                          "y": 754.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        }
+                        "clipsContent": true
                       },
                       {
                         "name": "MPV (16)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 754.0,
-                          "width": 88.0,
-                          "height": 24.0
-                        },
                         "characters": "MPV  (16)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -289,73 +152,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 754.0,
-                      "width": 120.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "Sedan",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "Ceklist",
-                        "clipsContent": true,
-                        "backgroundColor": "#000000",
-                        "size": {
-                          "x": 510.0,
-                          "y": 810.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        }
+                        "clipsContent": true
                       },
                       {
                         "name": "Sedan (20)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 810.0,
-                          "width": 112.0,
-                          "height": 24.0
-                        },
                         "characters": "Sedan  (20)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -370,73 +182,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 810.0,
-                      "width": 144.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "Coupe",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "Ceklist",
-                        "clipsContent": true,
-                        "backgroundColor": "#000000",
-                        "size": {
-                          "x": 510.0,
-                          "y": 866.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        }
+                        "clipsContent": true
                       },
                       {
                         "name": "Coupe (14)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 866.0,
-                          "width": 112.0,
-                          "height": 24.0
-                        },
                         "characters": "Coupe  (14)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -451,73 +212,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 866.0,
-                      "width": 144.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "Hatchback",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "Ceklist",
-                        "clipsContent": true,
-                        "backgroundColor": "#000000",
-                        "size": {
-                          "x": 510.0,
-                          "y": 922.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        }
+                        "clipsContent": true
                       },
                       {
                         "name": "Hatchback (14)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 922.0,
-                          "width": 144.0,
-                          "height": 24.0
-                        },
                         "characters": "Hatchback  (14)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -532,86 +242,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 922.0,
-                      "width": 176.0,
-                      "height": 24.0
-                    }
+                    ]
                   }
-                ],
-                "clipsContent": false,
-                "backgroundColor": "#000000",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 32.0,
-                "size": {
-                  "x": 510.0,
-                  "y": 642.0,
-                  "width": 176.0,
-                  "height": 304.0
-                }
+                ]
               }
-            ],
-            "clipsContent": false,
-            "backgroundColor": "#000000",
-            "layoutMode": "VERTICAL",
-            "itemSpacing": 28.0,
-            "size": {
-              "x": 510.0,
-              "y": 594.0,
-              "width": 176.0,
-              "height": 352.0
-            }
+            ]
           },
           {
             "name": "C A P A C I T Y",
+            "layoutMode": "VERTICAL",
+            "itemSpacing": 28.0,
             "children": [
               {
                 "name": "C A P A C I T Y",
                 "strokeAlign": "OUTSIDE",
-                "size": {
-                  "x": 510.0,
-                  "y": 1002.0,
-                  "width": 104.0,
-                  "height": 20.0
-                },
                 "characters": "C A P A C I T Y",
                 "style": {
                   "fontFamily": "Plus Jakarta Sans",
@@ -630,57 +276,32 @@
               },
               {
                 "name": "C A P A C I T Y",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 32.0,
                 "children": [
                   {
                     "name": "2 Person",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
                         "children": [
                           {
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "name": "tick-square",
-                                "clipsContent": false,
-                                "backgroundColor": "#000000",
-                                "size": {
-                                  "x": 510.0,
-                                  "y": 1050.0,
-                                  "width": 24.0,
-                                  "height": 24.0
-                                }
+                                "name": "tick-square"
                               }
-                            ],
-                            "clipsContent": false,
-                            "backgroundColor": "#000000",
-                            "size": {
-                              "x": 510.0,
-                              "y": 1050.0,
-                              "width": 24.0,
-                              "height": 24.0
-                            }
+                            ]
                           }
-                        ],
-                        "clipsContent": false,
-                        "backgroundColor": "#FFFFFF",
-                        "size": {
-                          "x": 510.0,
-                          "y": 1050.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        },
-                        "fillColor": "#FFFFFF"
+                        ]
                       },
                       {
                         "name": "2 Person (10)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 1050.0,
-                          "width": 144.0,
-                          "height": 24.0
-                        },
                         "characters": "2 Person  (10)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -695,73 +316,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 1050.0,
-                      "width": 176.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "4 Person",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "Ceklist",
-                        "clipsContent": true,
-                        "backgroundColor": "#000000",
-                        "size": {
-                          "x": 510.0,
-                          "y": 1106.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        }
+                        "clipsContent": true
                       },
                       {
                         "name": "4 Person (14)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 1106.0,
-                          "width": 127.0,
-                          "height": 24.0
-                        },
                         "characters": "4 Person  (14)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -776,73 +346,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:15",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#90A3BF"
-                          }
-                        },
                         "fillColor": "#596780"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 1106.0,
-                      "width": 159.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "6 Person",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "Ceklist",
-                        "clipsContent": true,
-                        "backgroundColor": "#000000",
-                        "size": {
-                          "x": 510.0,
-                          "y": 1162.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        }
+                        "clipsContent": true
                       },
                       {
                         "name": "6 Person (12)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 1162.0,
-                          "width": 120.0,
-                          "height": 24.0
-                        },
                         "characters": "6 Person  (12)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -857,80 +376,33 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "3": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "inheritFillStyleId": "0:17",
-                            "fillColor": "#596780"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 1162.0,
-                      "width": 152.0,
-                      "height": 24.0
-                    }
+                    ]
                   },
                   {
                     "name": "8 or More",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
                     "children": [
                       {
                         "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
                         "children": [
                           {
                             "name": "vuesax/bold/tick-square",
                             "children": [
                               {
-                                "name": "tick-square",
-                                "clipsContent": false,
-                                "backgroundColor": "#000000",
-                                "size": {
-                                  "x": 510.0,
-                                  "y": 1218.0,
-                                  "width": 24.0,
-                                  "height": 24.0
-                                }
+                                "name": "tick-square"
                               }
-                            ],
-                            "clipsContent": false,
-                            "backgroundColor": "#000000",
-                            "size": {
-                              "x": 510.0,
-                              "y": 1218.0,
-                              "width": 24.0,
-                              "height": 24.0
-                            }
+                            ]
                           }
-                        ],
-                        "clipsContent": false,
-                        "backgroundColor": "#FFFFFF",
-                        "size": {
-                          "x": 510.0,
-                          "y": 1218.0,
-                          "width": 24.0,
-                          "height": 24.0
-                        },
-                        "fillColor": "#FFFFFF"
+                        ]
                       },
                       {
                         "name": "8 or More (16)",
                         "strokeAlign": "OUTSIDE",
-                        "size": {
-                          "x": 542.0,
-                          "y": 1218.0,
-                          "width": 144.0,
-                          "height": 24.0
-                        },
                         "characters": "8 or More  (16)",
                         "style": {
                           "fontFamily": "Plus Jakarta Sans",
@@ -945,86 +417,22 @@
                           "lineHeightPercent": 119.0,
                           "lineHeightPercentFontSize": 150.0
                         },
-                        "styleOverrideTable": {
-                          "5": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritFillStyleId": "0:17",
-                            "inheritTextStyleId": "4:32",
-                            "fillColor": "#596780"
-                          },
-                          "4": {
-                            "fontFamily": "Plus Jakarta Sans",
-                            "fontPostScriptName": "PlusJakartaSans-SemiBold",
-                            "fontStyle": "SemiBold",
-                            "fontWeight": 600,
-                            "textAutoResize": "WIDTH_AND_HEIGHT",
-                            "fontSize": 20.0,
-                            "letterSpacing": -0.0,
-                            "lineHeightPx": 30.0,
-                            "lineHeightPercent": 119.0,
-                            "lineHeightPercentFontSize": 150.0,
-                            "inheritTextStyleId": "4:32"
-                          }
-                        },
                         "fillColor": "#90A3BF"
                       }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 8.0,
-                    "size": {
-                      "x": 510.0,
-                      "y": 1218.0,
-                      "width": 176.0,
-                      "height": 24.0
-                    }
+                    ]
                   }
-                ],
-                "clipsContent": false,
-                "backgroundColor": "#000000",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 32.0,
-                "size": {
-                  "x": 510.0,
-                  "y": 1050.0,
-                  "width": 176.0,
-                  "height": 192.0
-                }
+                ]
               }
-            ],
-            "clipsContent": false,
-            "backgroundColor": "#000000",
-            "layoutMode": "VERTICAL",
-            "itemSpacing": 28.0,
-            "size": {
-              "x": 510.0,
-              "y": 1002.0,
-              "width": 176.0,
-              "height": 240.0
-            }
+            ]
           },
           {
             "name": "P R I C E",
+            "layoutMode": "VERTICAL",
+            "itemSpacing": 28.0,
             "children": [
               {
                 "name": "P R I C E",
                 "strokeAlign": "OUTSIDE",
-                "size": {
-                  "x": 510.0,
-                  "y": 1298.0,
-                  "width": 104.0,
-                  "height": 20.0
-                },
                 "characters": "P R I C E",
                 "style": {
                   "fontFamily": "Plus Jakarta Sans",
@@ -1045,66 +453,31 @@
                 "name": "P R I C E  R A N G E",
                 "children": [
                   {
-                    "name": "P R I C E  R A N G E",
-                    "children": [
-                      {
-                        "name": "Line2",
-                        "cornerRadius": 12.0,
-                        "size": {
-                          "x": 510.0,
-                          "y": 1350.0,
-                          "width": 296.0,
-                          "height": 12.0
-                        },
-                        "fillColor": "#90A3BF"
-                      },
-                      {
-                        "name": "Line1",
-                        "cornerRadius": 12.0,
-                        "size": {
-                          "x": 510.0,
-                          "y": 1350.0,
-                          "width": 220.0,
-                          "height": 12.0
-                        },
-                        "fillColor": "#3563E9"
-                      },
-                      {
-                        "name": "Mark",
-                        "strokeWeight": 4.0,
-                        "size": {
-                          "x": 720.0,
-                          "y": 1346.0,
-                          "width": 20.0,
-                          "height": 20.0
-                        },
-                        "arcData": {
-                          "startingAngle": 0.0,
-                          "endingAngle": 6.0,
-                          "innerRadius": 0.0
-                        },
-                        "fillColor": "#3563E9",
-                        "strokeColor": "#FFFFFF"
-                      }
-                    ],
-                    "clipsContent": false,
-                    "backgroundColor": "#000000",
-                    "size": {
-                      "x": 510.0,
-                      "y": 1346.0,
-                      "width": 296.0,
-                      "height": 20.0
-                    }
+                    "name": "Line2",
+                    "cornerRadius": 12.0,
+                    "fillColor": "#90A3BF"
                   },
+                  {
+                    "name": "Line1",
+                    "cornerRadius": 12.0,
+                    "fillColor": "#3563E9"
+                  },
+                  {
+                    "name": "Mark",
+                    "strokeWeight": 4.0,
+                    "fillColor": "#3563E9",
+                    "strokeColor": "#FFFFFF"
+                  }
+                ]
+              },
+              {
+                "name": "P R I C E  R A N G E",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 12.0,
+                "children": [
                   {
                     "name": "Max. $100.00",
                     "strokeAlign": "OUTSIDE",
-                    "size": {
-                      "x": 510.0,
-                      "y": 1378.0,
-                      "width": 296.0,
-                      "height": 24.0
-                    },
                     "characters": "Max. $100.00",
                     "style": {
                       "fontFamily": "Plus Jakarta Sans",
@@ -1121,47 +494,11 @@
                     },
                     "fillColor": "#596780"
                   }
-                ],
-                "clipsContent": false,
-                "backgroundColor": "#000000",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 12.0,
-                "size": {
-                  "x": 510.0,
-                  "y": 1346.0,
-                  "width": 296.0,
-                  "height": 56.0
-                }
+                ]
               }
-            ],
-            "clipsContent": false,
-            "backgroundColor": "#000000",
-            "layoutMode": "VERTICAL",
-            "itemSpacing": 28.0,
-            "size": {
-              "x": 510.0,
-              "y": 1298.0,
-              "width": 296.0,
-              "height": 104.0
-            }
+            ]
           }
-        ],
-        "clipsContent": true,
-        "individualStrokeWeights": {
-          "top": 0.0,
-          "right": 1.0,
-          "bottom": 0.0,
-          "left": 0.0
-        },
-        "backgroundColor": "#FFFFFF",
-        "size": {
-          "x": 478.0,
-          "y": 562.0,
-          "width": 360.0,
-          "height": 1600.0
-        },
-        "fillColor": "#FFFFFF",
-        "strokeColor": "#F2F4F6"
+        ]
       }
     }
   }

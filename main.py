@@ -13,7 +13,7 @@ global figma_url
 
 route = "playground"
 base_dir = "../samplereactproject/app/"+route
-figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=lvuG5RBb7Xwv7NNy-0"
+figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=mK5DWXLw9GU5Ootj-0"
 device = "web"
 client = OpenAI()
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     node_ids_of_images = download_and_save_images("../samplereactproject/app/playground", figma_url)
 
     # Load the configuration
-    with open("config.json", "r") as config_file:
+    with open("config_initial.json", "r") as config_file:
         config = json.load(config_file) 
 
     #Convert - to :  in node_ids_of_images
