@@ -32,7 +32,11 @@
       "componentProperties",
       "styles",
       "id",
-      "characterStyleOverrides"
+      "characterStyleOverrides",
+      "arcData",
+      "inheritFillStyleId",
+      "inheritTextStyleId",
+      "styleOverrideTable"
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},
@@ -81,7 +85,15 @@
       {"lineHeightUnit": "FONT_SIZE_%"},
       {"characterStyleOverrides": []},
       {"styleOverrideTable": {}},
-      {"clipsContent": false}
+      {"clipsContent": false},
+      {"type": "INSTANCE"},
+      {"backgroundColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }},
+      {"letterSpacing": -0.0}
     ]
   }
   

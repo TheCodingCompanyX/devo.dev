@@ -48,7 +48,7 @@ def get_ui_feedback(screenshot_path, design_image_path):
         for file in files:
           if os.path.isdir(f"{path}/{file}"):
               continue
-          if file.endswith(".svg") or file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+          if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
           with open(f"{path}/{file}", "r") as f:
               code += f"{file}\n```\n"
@@ -84,7 +84,7 @@ def get_design_feedback(figma_data, base_dir, image_path="reference.png"):
         for file in files:
           if os.path.isdir(f"{path}/{file}"):
               continue
-          if file.endswith(".svg") or file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+          if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
           with open(f"{path}/{file}", "r") as f:
               code += f"{file}\n```\n"
@@ -93,7 +93,7 @@ def get_design_feedback(figma_data, base_dir, image_path="reference.png"):
 
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
-        full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode:\n{code}\nThe given design data has the styles of a UI component that needs to be built.  If there are any styling issues in the code where there is a significant mismatch between the designs and code, highlight those. Ignore minor differences. If there are no issues return NONE"""
+        full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode:\n{code}\nThe given design data has the measurements and styles of the responsive UI components that need to be built.\nThe measurements have X, Y, Height and Width. These should NOT be used as-is. Based on the measurements, use your judgment to check the margins, paddings, height, width and alignment are correct and that the component is responsive.\nList only major issues with the code, such as stylings and spacing. Highlight issues precisely, do not suggest code changes."""
         print(full_prompt)
         response = client.chat.completions.create(
         model="o1-mini", 

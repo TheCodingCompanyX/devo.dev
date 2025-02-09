@@ -1,34 +1,504 @@
 {
   "name": "Untitled",
   "nodes": {
-    "4:79": {
+    "4:33": {
       "document": {
-        "name": "P R I C E  R A N G E",
+        "name": "Nav Bar Side",
+        "clipsContent": true,
+        "individualStrokeWeights": {
+          "top": 0.0,
+          "right": 1.0,
+          "bottom": 0.0,
+          "left": 0.0
+        },
+        "backgroundColor": "#FFFFFF",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#F2F4F6",
         "children": [
           {
-            "name": "Line2",
-            "cornerRadius": 12.0,
-            "fillColor": "#90A3BF"
+            "name": "T Y P E",
+            "layoutMode": "VERTICAL",
+            "itemSpacing": 28.0,
+            "children": [
+              {
+                "name": "T Y P E",
+                "strokeAlign": "OUTSIDE",
+                "characters": "T Y P E",
+                "style": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                  "fontStyle": "SemiBold",
+                  "fontWeight": 600,
+                  "fontSize": 12.0,
+                  "textAlignHorizontal": "LEFT",
+                  "textAlignVertical": "CENTER",
+                  "letterSpacing": -0.0,
+                  "lineHeightPx": 15.0,
+                  "lineHeightPercent": 100.0,
+                  "lineHeightUnit": "INTRINSIC_%"
+                },
+                "fillColor": "#90A3BF"
+              },
+              {
+                "name": "T Y P E",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 32.0,
+                "children": [
+                  {
+                    "name": "Sport",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/tick-square",
+                            "children": [
+                              {
+                                "name": "tick-square"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Sport (10)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "Sport  (10)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "SUV",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/tick-square",
+                            "children": [
+                              {
+                                "name": "tick-square"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SUV (12)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "SUV  (12)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#596780"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "MPV",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "Ceklist",
+                        "clipsContent": true
+                      },
+                      {
+                        "name": "MPV (16)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "MPV  (16)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Sedan",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "Ceklist",
+                        "clipsContent": true
+                      },
+                      {
+                        "name": "Sedan (20)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "Sedan  (20)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Coupe",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "Ceklist",
+                        "clipsContent": true
+                      },
+                      {
+                        "name": "Coupe (14)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "Coupe  (14)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Hatchback",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "Ceklist",
+                        "clipsContent": true
+                      },
+                      {
+                        "name": "Hatchback (14)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "Hatchback  (14)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
-            "name": "Line1",
-            "cornerRadius": 12.0,
-            "fillColor": "#3563E9"
+            "name": "C A P A C I T Y",
+            "layoutMode": "VERTICAL",
+            "itemSpacing": 28.0,
+            "children": [
+              {
+                "name": "C A P A C I T Y",
+                "strokeAlign": "OUTSIDE",
+                "characters": "C A P A C I T Y",
+                "style": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                  "fontStyle": "SemiBold",
+                  "fontWeight": 600,
+                  "fontSize": 12.0,
+                  "textAlignHorizontal": "LEFT",
+                  "textAlignVertical": "CENTER",
+                  "letterSpacing": -0.0,
+                  "lineHeightPx": 15.0,
+                  "lineHeightPercent": 100.0,
+                  "lineHeightUnit": "INTRINSIC_%"
+                },
+                "fillColor": "#90A3BF"
+              },
+              {
+                "name": "C A P A C I T Y",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 32.0,
+                "children": [
+                  {
+                    "name": "2 Person",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/tick-square",
+                            "children": [
+                              {
+                                "name": "tick-square"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "2 Person (10)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "2 Person  (10)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "4 Person",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "Ceklist",
+                        "clipsContent": true
+                      },
+                      {
+                        "name": "4 Person (14)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "4 Person  (14)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#596780"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "6 Person",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "Ceklist",
+                        "clipsContent": true
+                      },
+                      {
+                        "name": "6 Person (12)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "6 Person  (12)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-Medium",
+                          "fontStyle": "Medium",
+                          "fontWeight": 500,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "8 or More",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8.0,
+                    "children": [
+                      {
+                        "name": "vuesax/bold/tick-square",
+                        "backgroundColor": "#FFFFFF",
+                        "fillColor": "#FFFFFF",
+                        "children": [
+                          {
+                            "name": "vuesax/bold/tick-square",
+                            "children": [
+                              {
+                                "name": "tick-square"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "8 or More (16)",
+                        "strokeAlign": "OUTSIDE",
+                        "characters": "8 or More  (16)",
+                        "style": {
+                          "fontFamily": "Plus Jakarta Sans",
+                          "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                          "fontStyle": "SemiBold",
+                          "fontWeight": 600,
+                          "fontSize": 20.0,
+                          "textAlignHorizontal": "JUSTIFIED",
+                          "textAlignVertical": "CENTER",
+                          "letterSpacing": -0.0,
+                          "lineHeightPx": 30.0,
+                          "lineHeightPercent": 119.0,
+                          "lineHeightPercentFontSize": 150.0
+                        },
+                        "fillColor": "#90A3BF"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
-          
           {
-            "name": "Mark",
-            "strokeWeight": 4.0,
-            "arcData": {
-              "startingAngle": 0.0,
-              "endingAngle": 6.0,
-              "innerRadius": 0.0
-            },
-            "fillColor": "#3563E9",
-            "strokeColor": "#FFFFFF"
+            "name": "P R I C E",
+            "layoutMode": "VERTICAL",
+            "itemSpacing": 28.0,
+            "children": [
+              {
+                "name": "P R I C E",
+                "strokeAlign": "OUTSIDE",
+                "characters": "P R I C E",
+                "style": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                  "fontStyle": "SemiBold",
+                  "fontWeight": 600,
+                  "fontSize": 12.0,
+                  "textAlignHorizontal": "LEFT",
+                  "textAlignVertical": "CENTER",
+                  "letterSpacing": -0.0,
+                  "lineHeightPx": 15.0,
+                  "lineHeightPercent": 100.0,
+                  "lineHeightUnit": "INTRINSIC_%"
+                },
+                "fillColor": "#90A3BF"
+              },
+              {
+                "name": "P R I C E  R A N G E",
+                "children": [
+                  {
+                    "name": "Line2",
+                    "cornerRadius": 12.0,
+                    "fillColor": "#90A3BF"
+                  },
+                  {
+                    "name": "Line1",
+                    "cornerRadius": 12.0,
+                    "fillColor": "#3563E9"
+                  },
+                  {
+                    "name": "Mark",
+                    "strokeWeight": 4.0,
+                    "fillColor": "#3563E9",
+                    "strokeColor": "#FFFFFF"
+                  }
+                ]
+              },
+              {
+                "name": "P R I C E  R A N G E",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 12.0,
+                "children": [
+                  {
+                    "name": "Max. $100.00",
+                    "strokeAlign": "OUTSIDE",
+                    "characters": "Max. $100.00",
+                    "style": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                      "fontStyle": "SemiBold",
+                      "fontWeight": 600,
+                      "fontSize": 20.0,
+                      "textAlignHorizontal": "JUSTIFIED",
+                      "textAlignVertical": "CENTER",
+                      "letterSpacing": -0.0,
+                      "lineHeightPx": 30.0,
+                      "lineHeightPercent": 119.0,
+                      "lineHeightPercentFontSize": 150.0
+                    },
+                    "fillColor": "#596780"
+                  }
+                ]
+              }
+            ]
           }
-        ],
-        "backgroundColor": "#000000"
+        ]
       }
     }
   }

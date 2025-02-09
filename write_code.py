@@ -13,7 +13,7 @@ import time
 
 initial_code = """
 You are writing code for a Next.js project with Tailwinds Css.
-The filepaths of the icons/pictures to use have been provided, import them. 
+The filepaths of the icons/pictures to use have been provided, use them. 
 The styling information is also given. Use it.
 You will output the file contents for the components necessary to achive the user goal. 
 
@@ -39,7 +39,9 @@ export default function Page() {
 
 Do not comment on what every file does.
 Please note that the code should be fully functional. No placeholders.
-Make sure to name the parent component's filename as `page.js`
+Make sure to name the parent component's filename as `page.js`.
+Use Next.js and Tailwinds to create responsive components for the given design.
+Note: The size of the elements given is not to be used as is. It is just given for you to make judgement. Use your own judgement for the creating responsive and flexible components.
 """
 
 incorporate_feedback = """
@@ -123,8 +125,8 @@ def create_prompt(feedback, error, figma_data):
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
         if code == "":
-          return f"Style Info: {cleaned_figma_string}\n\nAssets to use: None\n\n{initial_code}\n\nUse Next.js and Tailwinds to create responsive components for the given design. The size of the elements given is not to be used as is. Use them only for padding, spacing and alignment. The code should be fully functional. No placeholders."
-        return f"Style Info: {cleaned_figma_string}\n\nAssets to use: {code}\n\n{initial_code}\n\nUse Next.js and Tailwinds to create responsive components for the given design. The size of the elements given is not to be used as is. Use them only for padding, spacing and alignment. The code should be fully functional. No placeholders."
+          return f"Style Info: {cleaned_figma_string}\n\nAssets to use: None\n\n{initial_code}"
+        return f"Style Info: {cleaned_figma_string}\n\nAssets to use: {code}\n\n{initial_code}"
 
 def generate_code(image_path, figma_data, feedback, error, chat_history):
     final_prompt = create_prompt(feedback, error, figma_data)

@@ -137,6 +137,31 @@ def remove_children_by_ids(json_data, target_ids):
     # Return primitive values as is
     return json_data
 
+def move_children_to_last(json_data):
+    """
+    Recursively moves the 'children' key to the last position in each node's dictionary.
+
+    Args:
+        json_data (dict/list): The JSON data structure to process
+
+    Returns:
+        The modified JSON structure with 'children' moved to the last position
+    """
+    if isinstance(json_data, dict):
+        # If 'children' key exists, move it to the last position
+        if 'children' in json_data:
+            children = json_data.pop('children')
+            json_data['children'] = children
+
+        # Process children recursively
+        return {key: move_children_to_last(value) for key, value in json_data.items()}
+
+    elif isinstance(json_data, list):
+        # Process each item in the list
+        return [move_children_to_last(item) for item in json_data]
+
+    # Return primitive values as is
+    return json_data
 
 def replace_keys(json_data, key_mapping):
     """
@@ -162,87 +187,54 @@ def replace_keys(json_data, key_mapping):
     
 def process_json(data, config):
     """Process the JSON data."""
-    cleaned_data = replace_color_with_hex(data)
-    cleaned_data = remove_key_value_pairs(cleaned_data, config)
+    cleaned_data = remove_key_value_pairs(data, config)
+    cleaned_data = replace_color_with_hex(cleaned_data)
     cleaned_data = round_floats(cleaned_data)
     cleaned_data = shorten_keys(cleaned_data)   
     cleaned_data = replace_keys(cleaned_data, {"absoluteBoundingBox": "size"})
+    cleaned_data = move_children_to_last(cleaned_data)
     return cleaned_data
 
 
-# if __name__ == "__main__":
-#     figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=pwknSbxDUhSPqQuA-0"
+if __name__ == "__main__":
+    figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-79&t=lfRV7L5YpT1WEhOn-0"
+    figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=O7tq2a5w21t3SRwh-0"
+    from figma_apis import parse_figma_url, fetch_figma_data
 
-#     from figma_apis import parse_figma_url, fetch_figma_data
-
-#     try:
-#         file_key, node_id = parse_figma_url(figma_url)
-#         print(f"File Key: {file_key}, Node ID: {node_id}")  
+    try:
+        file_key, node_id = parse_figma_url(figma_url)
+        print(f"File Key: {file_key}, Node ID: {node_id}")  
         
-#         # Fetch data from Figma API
-#         figma_data = fetch_figma_data(file_key, node_id)
-#         print("Figma Data Retrieved")
+        # Fetch data from Figma API
+        figma_data = fetch_figma_data(file_key, node_id)
+        print("Figma Data Retrieved")
 
-#         with open('figma_data.json', 'w') as f:
-#             f.write(json.dumps(figma_data, indent=4))
+        with open('figma_data.json', 'w') as f:
+            f.write(json.dumps(figma_data, indent=4))
         
        
 
-#     except Exception as e:
-#         print(f"Error: {e}")
+    except Exception as e:
+        print(f"Error: {e}")
 
 
-#     # Load the JSON data
-#     with open("figma_data.json", "r") as json_file:
-#         data = json.load(json_file)
+    # Load the JSON data
+    with open("figma_data.json", "r") as json_file:
+        data = json.load(json_file)
 
         
-#     # Load the configuration
-#     with open("config.json", "r") as config_file:
-#         config = json.load(config_file) 
+    # Load the configuration
+    with open("config_for_sizing.json", "r") as config_file:
+        config = json.load(config_file) 
 
-#     # Process the JSON data
-#     cleaned_data = process_json(data, config)
+    # Process the JSON data
+    cleaned_data = process_json(data, config)
 
-#     # Save the cleaned JSON data
-#     with open("cleaned_figma_data.json", "w") as cleaned_json_file:
-#         json.dump(cleaned_data, cleaned_json_file, indent=2)
+    # Save the cleaned JSON data
+    with open("cleaned_figma_data.json", "w") as cleaned_json_file:
+        json.dump(cleaned_data, cleaned_json_file, indent=2)
     
-#     formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" 
-#                           for key, value in cleaned_data.items())
+    formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" 
+                          for key, value in cleaned_data.items())
     
-#     print(formatted_str.replace(",", "").replace("'", ""))
-
-
-# Example usage:
-if __name__ == "__main__":
-    # Sample JSON structure
-    sample_json = {
-        "id": "root",
-        "children": [
-            {
-                "id": "child1",
-                "name": "First Child",
-                "children": [
-                    {
-                        "id": "grandchild1",
-                        "name": "Grand Child 1"
-                    }
-                ]
-            },
-            {
-                "id": "child2",
-                "name": "Second Child",
-                "children": []
-            }
-        ]
-    }
-    
-    # IDs whose children should be removed
-    ids_to_clean = ["child1"]
-    
-    # Process the JSON
-    result = remove_children_by_ids(sample_json, ids_to_clean)
-
-    # Print the result
-    print(json.dumps(result, indent=2))
+    print(formatted_str.replace(",", "").replace("'", ""))
