@@ -95,7 +95,7 @@ def create_prompt(feedback, error, figma_data):
         for file in files:
             if os.path.isdir(f"{path}/{file}"):
                 continue
-            if file.endswith(".svg") or file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+            if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
             with open(f"{path}/{file}", "r") as f:
                 code += f"{file}\n```\n"
@@ -108,7 +108,7 @@ def create_prompt(feedback, error, figma_data):
         for file in files:
           if os.path.isdir(f"{path}/{file}"):
               continue
-          if file.endswith(".svg") or file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+          if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
           with open(f"{path}/{file}", "r") as f:
               code += f"{file}\n```\n"

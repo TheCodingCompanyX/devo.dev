@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     for iteration in range(MAX_ITERATIONS):
         
-        #code = write_code("./reference.png", processed_json, feedback, "", URL, [])
+        code = write_code("./reference.png", processed_json, feedback, "", URL, [])
         
         #Another Debug Point Here
 
