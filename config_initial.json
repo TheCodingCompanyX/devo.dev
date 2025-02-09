@@ -36,7 +36,8 @@
       "arcData",
       "inheritFillStyleId",
       "inheritTextStyleId",
-      "styleOverrideTable"
+      "styleOverrideTable",
+      "strokeAlign"
     ],
     "key_value_pairs_to_remove": [
       {"scrollBehavior":"SCROLLS"},

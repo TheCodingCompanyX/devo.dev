@@ -2,6 +2,8 @@ import re
 import requests
 import os
 import json
+from PIL import Image
+from io import BytesIO
 
 # Constants
 FIGMA_API_BASE_URL = "https://api.figma.com/v1"
@@ -37,7 +39,7 @@ def fetch_figma_data(file_key, node_id=None):
     
     return response.json()
 
-def fetch_figma_image(file_key, node_id, format="png", scale=2):
+def fetch_figma_image(file_key, node_id):
     """
     Fetches an image of a specific node from Figma.
     
@@ -83,9 +85,9 @@ def fetch_figma_image(file_key, node_id, format="png", scale=2):
     return img_response.content
 
 
-def download_and_save_images(basedir, figma_url, format="svg"):
+def download_and_save_images(basedir, figma_url):
     file_key, node_id = parse_figma_url(figma_url)
-    image_data = fetch_image_ids_from_node(file_key, node_id, format="png") 
+    image_data = fetch_image_ids_from_node(file_key, node_id) 
     """
     Downloads and saves all images from the provided image data.
 
@@ -97,15 +99,22 @@ def download_and_save_images(basedir, figma_url, format="svg"):
     for image_id, value in image_data.items():
         image_name = value['name']  # Extract the image name
         image_url = value['image_url']  # Extract the image URL
-        #print(f"Downloading image: {image_name} from {image_url}")
+        print(f"Downloading image: {image_name} from {image_url}")
         
         # Send the request to get the image URL
-        img_response = requests.get(image_url)
+        headers = {
+            "X-FIGMA-TOKEN": figma_token
+        }
+        img_response = requests.get(image_url, headers=headers)
         
         if img_response.status_code != 200:
             print(f"Failed to download image {image_id} (status code: {img_response.status_code})")
             continue
-
+        
+        image = Image.open(BytesIO(img_response.content))
+        print(image.format)
+        format = image.format.lower()
+        
         # Get the image content (either SVG or binary)
         if format == "svg":
             image_content = img_response.text
@@ -162,12 +171,17 @@ def fetch_image_ids_from_node(file_key, node_id, format="png", scale=2):
         all_children_are_vectors = False
         if 'type' in node:
             if node['type'] == 'RECTANGLE' and 'fills' in node:
+                print(f"Node: {node['name']}")
                 # Check if the element has an image fill (bitmap)
                 for fill in node['fills']:
                     if fill.get('type') == 'IMAGE':
-                        image_id = fill['imageRef']
+                        image_id = node['id']
                         image_url = f"{FIGMA_API_BASE_URL}/images/{file_key}?ids={image_id}&format={format}&scale=2"
-                        image_data[image_id] = {'name': node['name'], 'image_url': image_url}
+                        response = requests.get(image_url, headers=headers)
+                        if response.status_code != 200:
+                            raise Exception(f"Error: {response.status_code}, {response.text}")
+                        image_url = response.json()['images'][image_id]
+                        image_data[image_id] = { 'name': node['name'], 'image_url': image_url };
             
             #if node['type'] == 'BOOLEAN_OPERATION' or node['type'] == 'FRAME' or node['type'] == 'GROUP':
             #check if node has children
@@ -213,7 +227,7 @@ def fetch_image_ids_from_node(file_key, node_id, format="png", scale=2):
 
 # Main execution
 if __name__ == "__main__":
-    figma_url = "https://www.figma.com/design/QzCWHjcaXXWZyEquCGKJlg/Untitled?node-id=1-70&t=psk1Vu2veMoAvXRJ-0"
+    figma_url = "https://www.figma.com/design/QzCWHjcaXXWZyEquCGKJlg/Untitled?node-id=33-20&t=SNAofFOFUMtNT7KZ-0"
 
     try:
         file_key, node_id = parse_figma_url(figma_url)
@@ -234,7 +248,7 @@ if __name__ == "__main__":
 
         
         # Download and save all images
-        download_and_save_images(basedir="", figma_url=figma_url)  # Change format as needed
+        download_and_save_images(basedir=".", figma_url=figma_url)  # Change format as needed
        
 
     except Exception as e:
