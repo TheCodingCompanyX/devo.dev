@@ -7,7 +7,7 @@ from check_errors import fetch_nextjs_error
 import os, time, json
 from figma_apis import parse_figma_url, fetch_figma_data, fetch_figma_image, download_and_save_images
 from clean_json import process_json, remove_children_by_ids
-from test_UI import test_UI
+# from test_UI import test_UI
 
 global figma_url
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
         img_file.write(fetch_figma_image(file_key, node_id))
     
     #wait for user input
-    print("Press y to download images")
+    #print("Press y to download images")
     #if input() == "y":
     node_ids_of_images = download_and_save_images("../samplereactproject/app/playground", figma_url)
 
@@ -77,7 +77,8 @@ if __name__ == "__main__":
         
         #Another Debug Point Here
 
-        feedback = test_UI(processed_json, base_dir)
+        # uncomment when needed
+        #feedback = test_UI(processed_json, base_dir)
         with open('feedback.txt', 'w') as f:
             f.write(feedback)
 
