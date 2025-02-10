@@ -3,13 +3,7 @@ from utils import encode_image
 from openai import OpenAI
 client = OpenAI()
 import os
-teststring = 'page.js\n```jsx\nimport React from \'react\';\nimport \'./styles.css\';\n\nexport default function Page() {\n  return (\n    <div className="bg-gray-100 h-screen flex justify-center items-center">\n      <div className="bg-white shadow-md rounded-lg p-8 max-w-md w-full">\n        <div className="bg-coffee-pattern h-24 w-full rounded-t-lg"></div>\n        <h1 className="text-3xl font-bold text-center mt-6">Welcome back!</h1>\n        <p className="text-center text-gray-600 mb-8">Login to your account.</p>\n        <form>\n          <div className="mb-4">\n            <label className="block text-gray-700">Username</label>\n            <input\n              type="text"\n              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-coffee focus:ring-coffee"\n            />\n          </div>\n          <div className="mb-4">\n            <label className="block text-gray-700">Phone Number</label>\n            <input\n              type="text"\n              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-coffee focus:ring-coffee"\n            />\n          </div>\n          <button className="w-full py-2 mt-6 bg-gradient-to-r from-orange-400 to-orange-700 text-white rounded-md hover:from-orange-500 hover:to-orange-800 focus:outline-none focus:ring-2 focus:ring-coffee focus:ring-opacity-50">\n            Login\n          </button>\n        </form>\n      </div>\n    </div>\n  );\n}\n```\n\nstyles.css\n```css\n.bg-coffee-pattern {\n  background-image: url(\'coffee-pattern.png\');\n  background-size: cover;\n  border-bottom-left-radius: 0.5rem;\n  border-bottom-right-radius: 0.5rem;\n}\n\n.focus\\:border-coffee {\n  border-color: #d39b68;\n}\n\n.focus\\:ring-coffee {\n  box-shadow: 0 0 0 0.2rem rgba(211, 155, 104, 0.25);\n}\n```\n\nYou would need to include the `coffee-pattern.png` image in your public folder or adjust the path in the `styles.css` accordingly.'
-base_dir = "../samplereactproject/app/playground"
-from check_errors import fetch_nextjs_error 
-from folder_structure import generate_folder_structure
 from file_parser import parse_chatgpt_output
-global figma_url
-import time
 
 initial_prompt = """
 You are writing code for a Next.js project with Tailwinds Css.
@@ -66,145 +60,87 @@ export default function Page() {
 Please note that the code should be fully functional. No placeholders.
 """
 
-fix_errors = """
-You will output the full content of the files which need to be updated to fix the errors.
-Represent files like so:
-
-FILENAME    
-```
-CODE    
-```
-
-Example representation of a file:
-page.js
-```
-export default function Page() {
-    return <div>page is the parent component</div>; 
-}   
-```
-Do not comment on what every file does. Please note that the code should be fully functional. No placeholders.
-"""
-
     
-def create_prompt(feedback, error, figma_data):
-    with open("rules.txt", "r") as f:
-        rules = f.read()
+def create_prompt(feedback, figma_data, route):
+  with open("rules.txt", "r") as f:
+      rules = f.read()
 
-    empty_string = ""
-    if error:
-        #Open code files from path
-        path = "../samplereactproject/app/playground"
-        files = os.listdir(path)
-        for file in files:
-            if os.path.isdir(f"{path}/{file}"):
-                continue
-            if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
-              continue
-            with open(f"{path}/{file}", "r") as f:
-                empty_string += f"{file}\n```\n"
-                empty_string += f.read()
-        folder_structure = generate_folder_structure("../samplereactproject/app/playground")
-        return f"{fix_errors}\n{rules}\n{folder_structure}\n\n{empty_string}\n\n{error}"
-    if feedback:
-        path = "../samplereactproject/app/playground"
-        files = os.listdir(path)
-        for file in files:
-          if os.path.isdir(f"{path}/{file}"):
-              continue
-          if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
-              continue
-          with open(f"{path}/{file}", "r") as f:
-              empty_string += f"{file}\n```\n"
-              empty_string += f.read()
-              empty_string += "\n```\n"
-        return f"{incorporate_feedback}\n{rules}\n{empty_string}\n\n{feedback}"
-    else:   
-        path = "../samplereactproject/app/playground"
-        files = os.listdir(path)
-        for file in files:
-          if os.path.isdir(f"{path}/{file}"):
-              continue
-          empty_string += f"./{file} "
-        formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
-        cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
-        if empty_string == "":
-          return f"Style Info: {cleaned_figma_string}\n{rules}\nAssets to use: None\n\n{initial_prompt}"
-        return f"Style Info: {cleaned_figma_string}\n{rules}\nAssets to use: {empty_string}\n\n{initial_prompt}"
+  empty_string = ""
+  if feedback:
+    files = os.listdir(route)
+    for file in files:
+      if os.path.isdir(f"{route}/{file}"):
+          continue
+      if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+          continue
+      with open(f"{route}/{file}", "r") as f:
+          empty_string += f"{file}\n```\n"
+          empty_string += f.read()
+          empty_string += "\n```\n"
+    return f"{incorporate_feedback}\n{rules}\n{empty_string}\n\n{feedback}"
+  else:   
+    files = os.listdir(route)
+    for file in files:
+      if os.path.isdir(f"{route}/{file}"):
+          continue
+      empty_string += f"./{file} "
+    formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
+    cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
+    if empty_string == "":
+      return f"Style Info: {cleaned_figma_string}\n{rules}\nAssets to use: None\n\n{initial_prompt}"
+    return f"Style Info: {cleaned_figma_string}\n{rules}\nAssets to use: {empty_string}\n\n{initial_prompt}"
 
-def generate_code(image_path, figma_data, feedback, error, chat_history):
-    final_prompt = create_prompt(feedback, error, figma_data)
-    message = []
-    base64_image = encode_image(image_path)
-    if feedback: #There is feedback
-        if chat_history:
-          if len(chat_history) <3:
-            message = chat_history[-2:-1]
-          elif len(chat_history) >= 3 and len(chat_history) < 5:
-            message = chat_history[-4:-1]
-          else:
-            message = chat_history[-6:-1]
-        else:
-            message = []
-        message.append({"role": "user", "content":  [
-            {"type": "text", "text": final_prompt},
-            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(image_path)}"}},
-        ]})
-        selected_model = "gpt-4o"
-    elif error:
-        message = [
-            {"role": "user", "content":  [
-                {"type": "text", "text": final_prompt},
-                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(image_path)}"}},
-            ]},
-        ]
-        selected_model = "gpt-4o"
-    else :
-        message = [
-            {"role": "user", "content":  [
-                {"type": "text", "text": final_prompt},
-                {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
-            ]},
-        ]
-        selected_model = "gpt-4o"
-        
-    print("Chat History:")
-    print(chat_history)
-    
-    print(final_prompt)
-    print(selected_model)
-    print("Thinking about code...")
+def generate_code(image_path, figma_data, feedback, chat_history, route):
+  final_prompt = create_prompt(feedback, figma_data, route)
+  message = []
+  base64_image = encode_image(image_path)
+  if feedback: 
+    if chat_history:
+      if len(chat_history) <3:
+        message = chat_history[-2:-1]
+      elif len(chat_history) >= 3 and len(chat_history) < 5:
+        message = chat_history[-4:-1]
+      else:
+        message = chat_history[-6:-1]
+    else:
+        message = []
+    message.append({"role": "user", "content":  [
+        {"type": "text", "text": final_prompt},
+        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{encode_image(image_path)}"}},
+    ]})
+    selected_model = "gpt-4o"
+  else :
+    message = [
+      {"role": "user", "content":  [
+          {"type": "text", "text": final_prompt},
+          {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
+      ]},
+    ]
+    selected_model = "gpt-4o"
+      
+  print("Chat History:")
+  print(chat_history)
+  
+  print(final_prompt)
+  print(selected_model)
+  print("Thinking about code...")
 
-    response = client.chat.completions.create(
-        model=selected_model,
-        messages=message,
-        temperature=0.1,
-        top_p=0.9,
-    )
-    result = response.choices[0].message.content
-    print(result)
-    return str(result)
+  response = client.chat.completions.create(
+    model=selected_model,
+    messages=message,
+    temperature=0.1,
+    top_p=0.9,
+  )
+  result = response.choices[0].message.content
+  print(result)
+  return str(result)
 
-def write_code(image_path, figma_data, feedback, error, URL, chat_history):
-    """Generate React code based on the provided prompt and image."""
-    code = generate_code(image_path, figma_data, feedback, error, chat_history)
-    parse_chatgpt_output(code)
-    time.sleep(5)
-    error = fetch_nextjs_error(URL)  
-    while error:
-        print("Errors found in the UI. Would you like me to fix it?")
-        print(error)
-        #Wait for user input
-        user_input = input("Enter 'y' to fix the errors: ")
-        if user_input.lower() != 'y':
-            time.sleep(5)
-            continue
-        #logging.info("Errors found in the UI. Generating new code.")
-        code = generate_code(image_path, {}, "", error, [])
-        parse_chatgpt_output(code)
-        error = fetch_nextjs_error(URL)
-    return code
+def write_code(image_path, figma_data, feedback, URL, chat_history, route):
+  """Generate React code based on the provided prompt and image."""
+  code = generate_code(image_path, figma_data, feedback, chat_history, route)
+  parse_chatgpt_output(code)
+  return code
 
-#parse_chatgpt_output(teststring)
 
 # Example usage
 chat_output = """

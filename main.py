@@ -7,19 +7,28 @@ from test_UI import test_UI
 
 global figma_url
 
+base_dir = os.getcwd()
+print("Current working directory: " + base_dir)
+
 route = "playground"
-base_dir = "../samplereactproject/app/"+route
+
+if not os.path.exists("figma_url.txt"):
+    with open("figma_url.txt", "w") as f:
+        f.write("")
 
 with open("figma_url.txt", "r") as f:
     figma_url = f.read().strip()
 
 if figma_url == "":
     figma_url = input("Enter Figma URL: ")
+    with open("figma_url.txt", "w") as f:
+        f.write(figma_url)
 else:
     print("Figma URL found in figma_url.txt: " + figma_url)
-    print("Press y to use this URL, press any other key to enter a new URL")
-    if input() != "y":
-        figma_url = input("Enter New Figma URL: ")
+    print("Press Enter to use this URL or type in the new URL")
+    new_url = input()
+    if new_url != "":
+        figma_url = new_url
         with open("figma_url.txt", "w") as f:
             f.write(figma_url)
 
@@ -27,6 +36,19 @@ client = OpenAI()
 
 URL = "http://localhost:3000/"+route
 
+if not os.path.exists("rules.txt"):
+    with open("rules.txt", "w") as f:
+        f.write("")
+
+with open("rules.txt", "r") as f:
+    rules = f.read().strip()
+
+    if rules == "":
+        print("No rules found, please enter rules in rules.txt")
+    else:
+        print("Rules found in rules.txt: " + rules)
+        print("Press Enter to use these rules") 
+        input()
 
 # Main workflow
 if __name__ == "__main__":
@@ -42,27 +64,37 @@ if __name__ == "__main__":
         img_file.write(fetch_figma_image(file_key, node_id))
 
     print("Reference image saved at './reference.png\n\n")
+
+    print("Where should devo write the code? Press Enter to use '/app/playground', or enter a new path like '/app/your_folder'")
+    route = input()
+    if route == "":
+        route = "/app/playground"
+        #Check if you have write permissions
+
+    if not os.path.exists('./'+route):
+        os.makedirs('./'+route)
     
-    #wait for user input
-    print("Press y to download images")
-    if input() == "y":
-        node_ids_of_images = download_and_save_images("../samplereactproject/app/playground", figma_url)
+  
+    node_ids_of_images = download_and_save_images('./'+route, figma_url)
 
     #print paths of images
-    print("Images have been downloaded")
+    print("Images have been downloaded at "+route)
 
-    # Load the configuration
-    with open("config_initial.json", "r") as config_file:
-        config = json.load(config_file) 
+    from config_initial import config
 
     #Convert - to :  in node_ids_of_images
     node_ids_of_images = [node_id.replace("-", ":") for node_id in node_ids_of_images]  
     processed_json = remove_children_by_ids(figma_data, node_ids_of_images)
     processed_json = process_json(processed_json, config)
 
-    # Save the cleaned JSON data
-    with open("cleaned_figma_data.json", "w") as cleaned_json_file:
-        json.dump(processed_json, cleaned_json_file, indent=2)
+
+    # # Save the cleaned JSON data
+    # with open("cleaned_figma_data.json", "w") as cleaned_json_file:
+    #     json.dump(processed_json, cleaned_json_file, indent=2)
+
+    if not os.path.exists('feedback.txt'):
+        with open('feedback.txt', 'w') as f:
+            f.write("")
 
     with open('feedback.txt', 'r') as f:
         feedback = f.read()
@@ -79,21 +111,27 @@ if __name__ == "__main__":
 
     for iteration in range(20):
 
-        print("Press Enter to write code")
-        input()
-        
-        code = write_code("./reference.png", processed_json, feedback, "", URL, [])
-        
-        #Another Debug Point Here
+        #Tasks
+        #1. Write fresh new code
+        #2. Test the code for design issues and generate feedback
+        #3. Test the code for functionality and generate feedback
+        #4. Do API Integration
+        #5. Generate Empty File Structure
+        #6. Auto Complete the existing code
+        #7. Fix Errors
+        #8. Modify existing code to match new design/make it responsive
 
-        print("Code written successfully\n\n")
+        print("Press Enter to write code, press any key to skip to testing")
+        if input() == "":
+            code = write_code("./reference.png", processed_json, feedback, URL, [], './'+route)
+            print("\n\nCode written successfully\n\n")
 
-        print("Press Y to test UI, press any other key to skip testing")
-        if input().lower == "y":
-            feedback = test_UI(processed_json, base_dir)
+        print("Press Enter to test UI, press any other key to skip to coding")
+        if input() == "":
+            feedback = test_UI(processed_json, base_dir, './'+route)
             with open('feedback.txt', 'w') as f:
                 f.write(feedback)
-            print("Check feedback.txt for feedback. You can edit the feedback now\n\n")
+            print("\n\nCheck feedback.txt for feedback. You can edit the feedback now\n\n")
 
         print("Press enter to continue, press q to quit")
         if input() == "q":
