@@ -1,20 +1,15 @@
-import os
 from openai import OpenAI
-
 from write_code import write_code
-#from test_UI import test_UI
-from check_errors import fetch_nextjs_error
-import os, time, json
+import os, json
 from figma_apis import parse_figma_url, fetch_figma_data, fetch_figma_image, download_and_save_images
 from clean_json import process_json, remove_children_by_ids
-# from test_UI import test_UI
+from test_UI import test_UI
 
 global figma_url
 
 route = "playground"
 base_dir = "../samplereactproject/app/"+route
 figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=mK5DWXLw9GU5Ootj-0"
-device = "web"
 client = OpenAI()
 
 # Constants

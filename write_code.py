@@ -11,7 +11,7 @@ from file_parser import parse_chatgpt_output
 global figma_url
 import time
 
-initial_code = """
+initial_prompt = """
 You are writing code for a Next.js project with Tailwinds Css.
 The filepaths of the icons/pictures to use have been provided, use them. 
 The styling information is also given. Use it.
@@ -87,7 +87,10 @@ Do not comment on what every file does. Please note that the code should be full
 
     
 def create_prompt(feedback, error, figma_data):
-    code = ""
+    with open("rules.txt", "r") as f:
+        rules = f.read()
+
+    empty_string = ""
     if error:
         #Open code files from path
         path = "../samplereactproject/app/playground"
@@ -98,10 +101,10 @@ def create_prompt(feedback, error, figma_data):
             if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
             with open(f"{path}/{file}", "r") as f:
-                code += f"{file}\n```\n"
-                code += f.read()
+                empty_string += f"{file}\n```\n"
+                empty_string += f.read()
         folder_structure = generate_folder_structure("../samplereactproject/app/playground")
-        return f"{fix_errors}\n\n{folder_structure}\n\n{code}\n\n{error}"
+        return f"{fix_errors}\n{rules}\n{folder_structure}\n\n{empty_string}\n\n{error}"
     if feedback:
         path = "../samplereactproject/app/playground"
         files = os.listdir(path)
@@ -111,22 +114,22 @@ def create_prompt(feedback, error, figma_data):
           if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
           with open(f"{path}/{file}", "r") as f:
-              code += f"{file}\n```\n"
-              code += f.read()
-              code += "\n```\n"
-        return f"{incorporate_feedback}\n\n{code}\n\n{feedback}"
+              empty_string += f"{file}\n```\n"
+              empty_string += f.read()
+              empty_string += "\n```\n"
+        return f"{incorporate_feedback}\n{rules}\n{empty_string}\n\n{feedback}"
     else:   
         path = "../samplereactproject/app/playground"
         files = os.listdir(path)
         for file in files:
           if os.path.isdir(f"{path}/{file}"):
               continue
-          code += f"./{file} "
+          empty_string += f"./{file} "
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "")
-        if code == "":
-          return f"Style Info: {cleaned_figma_string}\n\nAssets to use: None\n\n{initial_code}"
-        return f"Style Info: {cleaned_figma_string}\n\nAssets to use: {code}\n\n{initial_code}"
+        if empty_string == "":
+          return f"Style Info: {cleaned_figma_string}\n{rules}\nAssets to use: None\n\n{initial_prompt}"
+        return f"Style Info: {cleaned_figma_string}\n{rules}\nAssets to use: {empty_string}\n\n{initial_prompt}"
 
 def generate_code(image_path, figma_data, feedback, error, chat_history):
     final_prompt = create_prompt(feedback, error, figma_data)
