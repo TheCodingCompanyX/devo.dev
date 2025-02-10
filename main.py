@@ -1,27 +1,54 @@
-import os
 from openai import OpenAI
-
 from write_code import write_code
-#from test_UI import test_UI
-from check_errors import fetch_nextjs_error
-import os, time, json
+import os, json
 from figma_apis import parse_figma_url, fetch_figma_data, fetch_figma_image, download_and_save_images
 from clean_json import process_json, remove_children_by_ids
-# from test_UI import test_UI
+from test_UI import test_UI
 
 global figma_url
 
+base_dir = os.getcwd()
+print("Current working directory: " + base_dir)
+
 route = "playground"
-base_dir = "../samplereactproject/app/"+route
-figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=mK5DWXLw9GU5Ootj-0"
-device = "web"
+
+if not os.path.exists("figma_url.txt"):
+    with open("figma_url.txt", "w") as f:
+        f.write("")
+
+with open("figma_url.txt", "r") as f:
+    figma_url = f.read().strip()
+
+if figma_url == "":
+    figma_url = input("Enter Figma URL: ")
+    with open("figma_url.txt", "w") as f:
+        f.write(figma_url)
+else:
+    print("Figma URL found in figma_url.txt: " + figma_url)
+    print("Press Enter to use this URL or type in the new URL")
+    new_url = input()
+    if new_url != "":
+        figma_url = new_url
+        with open("figma_url.txt", "w") as f:
+            f.write(figma_url)
+
 client = OpenAI()
 
-# Constants
-MAX_ITERATIONS = 20
 URL = "http://localhost:3000/"+route
 
-#global chat_history
+if not os.path.exists("rules.txt"):
+    with open("rules.txt", "w") as f:
+        f.write("")
+
+with open("rules.txt", "r") as f:
+    rules = f.read().strip()
+
+    if rules == "":
+        print("No rules found, please enter rules in rules.txt")
+    else:
+        print("Rules found in rules.txt: " + rules)
+        print("Press Enter to use these rules") 
+        input()
 
 # Main workflow
 if __name__ == "__main__":
@@ -33,31 +60,42 @@ if __name__ == "__main__":
     with open('figma_data.json', 'w') as f:
         f.write(json.dumps(figma_data, indent=4))
         
-    # if os.path.exists('reference.png'):
-    #     os.rename('reference.png', 'reference.png'+str(time.time())+'.png')
     with open('reference.png', 'wb') as img_file:
         img_file.write(fetch_figma_image(file_key, node_id))
-    
-    #wait for user input
-    #print("Press y to download images")
-    #if input() == "y":
-    node_ids_of_images = download_and_save_images("../samplereactproject/app/playground", figma_url)
 
-    # Load the configuration
-    with open("config_initial.json", "r") as config_file:
-        config = json.load(config_file) 
+    print("Reference image saved at './reference.png\n\n")
+
+    print("Where should devo write the code? Press Enter to use '/app/playground', or enter a new path like '/app/your_folder'")
+    route = input()
+    if route == "":
+        route = "/app/playground"
+        #Check if you have write permissions
+
+    if not os.path.exists('./'+route):
+        os.makedirs('./'+route)
+    
+  
+    node_ids_of_images = download_and_save_images('./'+route, figma_url)
+
+    #print paths of images
+    print("Images have been downloaded at "+route)
+
+    from config_initial import config
 
     #Convert - to :  in node_ids_of_images
     node_ids_of_images = [node_id.replace("-", ":") for node_id in node_ids_of_images]  
-
     processed_json = remove_children_by_ids(figma_data, node_ids_of_images)
     processed_json = process_json(processed_json, config)
 
-    # Save the cleaned JSON data
-    with open("cleaned_figma_data.json", "w") as cleaned_json_file:
-        json.dump(processed_json, cleaned_json_file, indent=2)
 
-    #feedback = with file open feedback.txt, read the contents
+    # # Save the cleaned JSON data
+    # with open("cleaned_figma_data.json", "w") as cleaned_json_file:
+    #     json.dump(processed_json, cleaned_json_file, indent=2)
+
+    if not os.path.exists('feedback.txt'):
+        with open('feedback.txt', 'w') as f:
+            f.write("")
+
     with open('feedback.txt', 'r') as f:
         feedback = f.read()
         if feedback.strip() == "":
@@ -71,18 +109,34 @@ if __name__ == "__main__":
             else:
                 feedback = ""
 
-    for iteration in range(MAX_ITERATIONS):
-        
-        code = write_code("./reference.png", processed_json, feedback, "", URL, [])
-        
-        #Another Debug Point Here
+    for iteration in range(20):
 
-        # uncomment when needed
-        #feedback = test_UI(processed_json, base_dir)
-        with open('feedback.txt', 'w') as f:
-            f.write(feedback)
+        #Tasks
+        #1. Write fresh new code
+        #2. Test the code for design issues and generate feedback
+        #3. Test the code for functionality and generate feedback
+        #4. Do API Integration
+        #5. Generate Empty File Structure
+        #6. Auto Complete the existing code
+        #7. Fix Errors
+        #8. Modify existing code to match new design/make it responsive
 
-        #Add Debug Point Here for feedback editing
+        print("Press Enter to write code, press any key to skip to testing")
+        if input() == "":
+            code = write_code("./reference.png", processed_json, feedback, URL, [], './'+route)
+            print("\n\nCode written successfully\n\n")
+
+        print("Press Enter to test UI, press any other key to skip to coding")
+        if input() == "":
+            feedback = test_UI(processed_json, base_dir, './'+route)
+            with open('feedback.txt', 'w') as f:
+                f.write(feedback)
+            print("\n\nCheck feedback.txt for feedback. You can edit the feedback now\n\n")
+
+        print("Press enter to continue, press q to quit")
+        if input() == "q":
+            break
+
         with open('feedback.txt', 'r') as f:
             feedback = f.read()
         

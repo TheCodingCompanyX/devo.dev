@@ -1,4 +1,4 @@
-{
+config = {
     "keys_to_remove": [
       "absoluteBoundingBox", 
       "lastModified",
@@ -74,19 +74,19 @@
       {"interactions": []},
       {"blendMode": "PASS_THROUGH"},
       {"type": "FRAME"},
-      {"absoluteRenderBounds": null},
-      {"absoluteBoundingBox": null},
+      {"absoluteRenderBounds": None},
+      {"absoluteBoundingBox": None},
       {"type": "TEXT"},
-      {"showShadowBehindNode": false},
+      {"showShadowBehindNode": False},
       {"strokeAlign": "INSIDE"},
       {"rectangleCornerRadii": [0.0,0.0,0.0,0.0]},
       {"strokeJoin": "ROUND"},
       {"strokeCap": "ROUND"},
-      {"preserveRatio": true},
+      {"preserveRatio": True},
       {"lineHeightUnit": "FONT_SIZE_%"},
       {"characterStyleOverrides": []},
       {"styleOverrideTable": {}},
-      {"clipsContent": false},
+      {"clipsContent": False},
       {"type": "INSTANCE"},
       {"backgroundColor": {
         "r": 0.0,
