@@ -84,11 +84,65 @@ def fetch_figma_image(file_key, node_id):
     # Return the image data in bytes
     return img_response.content
 
-
+def is_a_group_of_overlapping_images(node):
+    if 'children' in node:
+        return all((child['type'] == 'RECTANGLE' and child['fills'][0]['type'] == 'IMAGE') or child['type'] == 'VECTOR' or is_a_group_of_overlapping_images(child) for child in node['children']))
+    return False
 
 def download_and_save_images(basedir, figma_url):
     file_key, node_id = parse_figma_url(figma_url)
-    image_data = fetch_image_ids_from_node(file_key, node_id, figma_token) 
+    headers = {"X-FIGMA-TOKEN": figma_token}
+    endpoint = f"https://api.figma.com/v1/files/{file_key}/nodes"
+    params = {"ids": node_id}
+    
+    response = requests.get(endpoint, headers=headers, params=params)
+    
+    if response.status_code != 200:
+        raise Exception(f"Error: {response.status_code}, {response.text}")
+    
+    data = response.json()
+    node = data['nodes'][node_id.replace("-",":")]
+    
+    image_data = {}
+    
+    def extract_images_from_node(node, format):
+        all_children_are_images = False
+        if 'type' in node:
+            if node['type'] == 'RECTANGLE' and 'fills' in node:
+                for fill in node['fills']:
+                    if fill.get('type') == 'IMAGE':
+                        image_id = node['id']
+                        image_url = f"https://api.figma.com/v1/images/{file_key}?ids={image_id}&format={format}&scale=2"
+                        response = requests.get(image_url, headers=headers)
+                        if response.status_code != 200:
+                            raise Exception(f"Error: {response.status_code}, {response.text}")
+                        image_url = response.json()['images'][image_id]
+                        image_data[image_id] = {'name': node['name'], 'image_url': image_url}
+            
+            if 'children' in node:
+                all_children_are_images = all((child['type'] == 'VECTOR' or is_a_group_of_overlapping_images(child) for child in node['children'])
+                if all_children_are_images:
+                    image_url = f"https://api.figma.com/v1/images/{file_key}?ids={node['id']}&format=svg"
+                    response = requests.get(image_url, headers=headers)
+                    response_result = response.json()
+                    image_url = response_result['images'][node['id'].replace("-", ":")]
+                    if image_url is None:
+                        print(f"Image URL is None for node {node['id']}")
+                        return
+                    image_data[node['id']] = {'name': node['name'], 'image_url': image_url}
+                    if response.status_code != 200:
+                        raise Exception(f"Error: {response.status_code}, {response.text}")
+        
+        if not all_children_are_images:
+            if 'document' in node:
+                for child in node['document']['children']:
+                    extract_images_from_node(child, format)
+            if 'children' in node:
+                for child in node['children']:
+                    extract_images_from_node(child, format)
+    
+    extract_images_from_node(node, format)
+    
     
     node_ids = []
     for image_id, value in image_data.items():
@@ -126,59 +180,6 @@ def download_and_save_images(basedir, figma_url):
 
     return node_ids
 
-def fetch_image_ids_from_node(file_key, node_id, figma_token, format="png", scale=2):
-    headers = {"X-FIGMA-TOKEN": figma_token}
-    endpoint = f"https://api.figma.com/v1/files/{file_key}/nodes"
-    params = {"ids": node_id}
-    
-    response = requests.get(endpoint, headers=headers, params=params)
-    
-    if response.status_code != 200:
-        raise Exception(f"Error: {response.status_code}, {response.text}")
-    
-    data = response.json()
-    node = data['nodes'][node_id.replace("-",":")]
-    
-    image_data = {}
-    
-    def extract_images_from_node(node, format):
-        all_children_are_vectors = False
-        if 'type' in node:
-            if node['type'] == 'RECTANGLE' and 'fills' in node:
-                for fill in node['fills']:
-                    if fill.get('type') == 'IMAGE':
-                        image_id = node['id']
-                        image_url = f"https://api.figma.com/v1/images/{file_key}?ids={image_id}&format={format}&scale=2"
-                        response = requests.get(image_url, headers=headers)
-                        if response.status_code != 200:
-                            raise Exception(f"Error: {response.status_code}, {response.text}")
-                        image_url = response.json()['images'][image_id]
-                        image_data[image_id] = {'name': node['name'], 'image_url': image_url}
-            
-            if 'children' in node:
-                all_children_are_vectors = all(child['type'] == 'VECTOR' for child in node['children'])
-                if all_children_are_vectors:
-                    image_url = f"https://api.figma.com/v1/images/{file_key}?ids={node['id']}&format=svg"
-                    response = requests.get(image_url, headers=headers)
-                    response_result = response.json()
-                    image_url = response_result['images'][node['id'].replace("-", ":")]
-                    if image_url is None:
-                        print(f"Image URL is None for node {node['id']}")
-                        return
-                    image_data[node['id']] = {'name': node['name'], 'image_url': image_url}
-                    if response.status_code != 200:
-                        raise Exception(f"Error: {response.status_code}, {response.text}")
-        
-        if not all_children_are_vectors:
-            if 'document' in node:
-                for child in node['document']['children']:
-                    extract_images_from_node(child, format)
-            if 'children' in node:
-                for child in node['children']:
-                    extract_images_from_node(child, format)
-    
-    extract_images_from_node(node, format)
-    return image_data
 
 
 # Main execution
