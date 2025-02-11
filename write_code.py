@@ -69,6 +69,8 @@ def create_prompt(feedback, figma_data, route):
   if feedback:
     files = os.listdir(route)
     for file in files:
+      if file.startswith("."):
+          continue
       if os.path.isdir(f"{route}/{file}"):
           continue
       if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
@@ -81,6 +83,8 @@ def create_prompt(feedback, figma_data, route):
   else:   
     files = os.listdir(route)
     for file in files:
+      if file.startswith("."):
+          continue
       if os.path.isdir(f"{route}/{file}"):
           continue
       empty_string += f"./{file} "

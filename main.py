@@ -10,7 +10,6 @@ global figma_url
 base_dir = os.getcwd()
 print("Current working directory: " + base_dir)
 
-route = "playground"
 
 if not os.path.exists("figma_url.txt"):
     with open("figma_url.txt", "w") as f:
@@ -34,7 +33,6 @@ else:
 
 client = OpenAI()
 
-URL = "http://localhost:3000/"+route
 
 if not os.path.exists("rules.txt"):
     with open("rules.txt", "w") as f:
@@ -74,23 +72,24 @@ if __name__ == "__main__":
     if not os.path.exists('./'+route):
         os.makedirs('./'+route)
     
-  
-    node_ids_of_images = download_and_save_images('./'+route, figma_url)
-
-    #print paths of images
-    print("Images have been downloaded at "+route)
-
     from config_initial import config
+    print("Press Enter to download images, or type any other key to skip")
+    if input() == "":
+        node_ids_of_images = download_and_save_images('./'+route, figma_url)
 
-    #Convert - to :  in node_ids_of_images
-    node_ids_of_images = [node_id.replace("-", ":") for node_id in node_ids_of_images]  
-    processed_json = remove_children_by_ids(figma_data, node_ids_of_images)
-    processed_json = process_json(processed_json, config)
+        #print paths of images
+        print("Images have been downloaded at "+route)
+        #Convert - to :  in node_ids_of_images
+        node_ids_of_images = [node_id.replace("-", ":") for node_id in node_ids_of_images]  
+        processed_json = remove_children_by_ids(figma_data, node_ids_of_images)
+        processed_json = process_json(processed_json, config)
+
+    else:
+        processed_json = figma_data
+        processed_json = process_json(processed_json, config)
 
 
-    # # Save the cleaned JSON data
-    # with open("cleaned_figma_data.json", "w") as cleaned_json_file:
-    #     json.dump(processed_json, cleaned_json_file, indent=2)
+    
 
     if not os.path.exists('feedback.txt'):
         with open('feedback.txt', 'w') as f:
@@ -123,17 +122,17 @@ if __name__ == "__main__":
 
         print("Press Enter to write code, press any key to skip to testing")
         if input() == "":
-            code = write_code("./reference.png", processed_json, feedback, URL, [], './'+route)
+            code = write_code("./reference.png", processed_json, feedback, "http://localhost:3000/"+route, [], './'+route)
             print("\n\nCode written successfully\n\n")
 
-        print("Press Enter to test UI, press any other key to skip to coding")
+        print("Press Enter to test UI, press any other key to skip to editing feedback")
         if input() == "":
             feedback = test_UI(processed_json, base_dir, './'+route)
             with open('feedback.txt', 'w') as f:
                 f.write(feedback)
             print("\n\nCheck feedback.txt for feedback. You can edit the feedback now\n\n")
 
-        print("Press enter to continue, press q to quit")
+        print("Press enter to continue using given feedback, press q to quit")
         if input() == "q":
             break
 
