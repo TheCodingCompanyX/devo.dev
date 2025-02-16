@@ -86,6 +86,13 @@ def get_design_feedback(figma_data, image_path, route):
               continue
           if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
               continue
+          if file.endswith(".svg"):
+              #only include first line
+              with open(f"{route}/{file}", "r") as f:
+                  code += f"{file}\n```\n"
+                  code += f.read().split("\n")[0]
+                  code += "\n```\n"
+                  continue
           with open(f"{route}/{file}", "r") as f:
               code += f"{file}\n```\n"
               code += f.read()
@@ -93,7 +100,7 @@ def get_design_feedback(figma_data, image_path, route):
 
         formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" for key, value in figma_data.items())
         cleaned_figma_string = formatted_str.replace(",", "").replace("'", "").replace(".0", "")
-        full_prompt = f"""Design reference:\n{cleaned_figma_string}\n\nCode:\n{code}\nThe given design data has the measurements and styles of the responsive UI components that need to be built.\nThe measurements have X, Y, Height and Width. These should NOT be used as-is. Based on the measurements, use your judgment to check the margins, paddings, height, width and alignment are correct and that the component is responsive.\nList only major issues with the code, such as stylings and spacing. Highlight issues precisely, do not suggest code changes."""
+        full_prompt = f"""Design file:\n{cleaned_figma_string}\n\nCode:\n{code}\nYou will be provided with a design file and a current code implementation. Your task is to produce a concise list of issues that highlights actionable discrepancies between the design and the implementation.Your analysis should evaluate measurable values:\nCheck for significant differences in margins, padding, height, width, layout, alignment, and component hierarchy. Only highlight issues if there is a clear mismatch.\nCheck for clear mismatches in colors, styling, font sizes, and responsiveness. Only highlight issues if the discrepancy is significant.\nThe goal is to pinpoint issues that a developer can use to address only the critical mismatches to achieve a pixel-perfect match with the design. Do not highlight sections of the code where the developer has correctly implemented the design.\nPlease generate the list of issues according to the guidelines above."""
         print(full_prompt)
         response = client.chat.completions.create(
         model="o1-mini", 

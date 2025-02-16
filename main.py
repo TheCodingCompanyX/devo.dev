@@ -89,7 +89,8 @@ if __name__ == "__main__":
         processed_json = process_json(processed_json, config)
 
 
-    
+    print("Images have been downloaded at "+route)
+    print("Please check the images, download images manually if needed")
 
     if not os.path.exists('feedback.txt'):
         with open('feedback.txt', 'w') as f:
