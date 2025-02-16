@@ -17,6 +17,9 @@ generate a figma token from your figma.com
 brew install pyenv
 pyenv install 3.10.1
 
+
+pip install -r  requirements.txt
+
 pip install openai==1.58.1
 pip install playwright
 pip install requests
