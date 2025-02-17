@@ -1,6 +1,10 @@
 import os
 import re
 
+
+#This file converts the output of chatgpt into a FilesDict object which is then processed by the files_dict.py file
+
+
 from files_dict import FilesDict
 
 base_dir = "../samplereactproject/app/playground"  # Ensure this is your actual base directory

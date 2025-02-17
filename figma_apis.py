@@ -5,6 +5,9 @@ import json
 from PIL import Image
 from io import BytesIO
 
+#This file downaloads images from figma and saves them in the reference folder
+
+
 # Constants
 FIGMA_API_BASE_URL = "https://api.figma.com/v1"
 figma_token = os.getenv("FIGMA_TOKEN")
@@ -23,6 +26,10 @@ def parse_figma_url(figma_url):
 
 # Function to make API calls
 def fetch_figma_data(file_key, node_id=None):
+    """
+    Fetches JSON data from the Figma API for a specific file and node.
+    """
+
     headers = {
         "X-FIGMA-TOKEN": figma_token
     }
@@ -87,6 +94,21 @@ def fetch_figma_image(file_key, node_id):
 
 
 def download_and_save_images(basedir, figma_url):
+    """
+    Downloads images from a Figma file and saves them to a specified directory.
+
+    Args:
+    - basedir (str): The base directory where images will be saved.
+    - figma_url (str): The Figma file URL.
+
+    Returns:
+    - list: A list of node IDs for the downloaded images.
+
+    Raises:
+    - Exception: If there's an error downloading or saving an image.
+    """
+    
+
     file_key, node_id = parse_figma_url(figma_url)
     image_data = fetch_image_ids_from_node(file_key, node_id, figma_token) 
     

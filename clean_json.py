@@ -187,11 +187,17 @@ def replace_keys(json_data, key_mapping):
     
 def process_json(data, config):
     """Process the JSON data."""
+    #Remove useless key-value pairs
     cleaned_data = remove_key_value_pairs(data, config)
+    #Reduce the JSON structure for colors
     cleaned_data = replace_color_with_hex(cleaned_data)
+    #Remove children from nodes with specified IDs
     cleaned_data = round_floats(cleaned_data)
+    #Shorten keys like fill and then color to fillColor
     cleaned_data = shorten_keys(cleaned_data)   
+    #Replace absoluteBoundingBox with size for easier understanding for AI
     cleaned_data = replace_keys(cleaned_data, {"absoluteBoundingBox": "size"})
+    #Remove children from nodes with specified IDs so that the AI can focus on the main node one by one
     cleaned_data = move_children_to_last(cleaned_data)
     return cleaned_data
 

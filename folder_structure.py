@@ -1,5 +1,7 @@
 import os
 
+#This file generates a texts structure of the folder this can be used by the AI to fix path related errors. We dont use it currently
+
 def generate_folder_structure(root_folder):
     log = []
 
