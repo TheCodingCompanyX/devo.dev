@@ -84,9 +84,15 @@ if __name__ == "__main__":
         processed_json = remove_children_by_ids(figma_data, node_ids_of_images)
         processed_json = process_json(processed_json, config)
 
+        with open('cleaned_figma_data.json', 'w') as f:
+            f.write(json.dumps(processed_json, indent=4))
+
     else:
         processed_json = figma_data
         processed_json = process_json(processed_json, config)
+
+        #with open('cleaned_figma_data.json', 'w') as f:
+        #    f.write(json.dumps(processed_json, indent=4))
 
 
     

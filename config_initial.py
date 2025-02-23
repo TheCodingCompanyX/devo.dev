@@ -1,6 +1,5 @@
 config = {
-    "keys_to_remove": [
-      "absoluteBoundingBox", 
+    "keys_to_remove": [ 
       "lastModified",
       "thumbnailUrl",
       "role",
