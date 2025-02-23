@@ -163,6 +163,25 @@ def move_children_to_last(json_data):
     # Return primitive values as is
     return json_data
 
+def round_numbers(data):
+    # If the data is a dictionary, process each key-value pair recursively.
+    if isinstance(data, dict):
+        return {key: round_numbers(value) for key, value in data.items()}
+    # If it's a list, process each item.
+    elif isinstance(data, list):
+        return [round_numbers(item) for item in data]
+    # If it's a float, check if it represents an integer.
+    elif isinstance(data, float):
+        # Convert to int if the float is an integer (e.g., 20.0 -> 20)
+        if data.is_integer():
+            return int(data)
+        else:
+            # Otherwise, round it normally (you can adjust the rounding precision as needed)
+            return round(data)
+    # Otherwise, leave the data unchanged.
+    else:
+        return data
+
 def replace_keys(json_data, key_mapping):
     """
     Recursively replaces keys in a JSON structure based on a mapping.
@@ -199,6 +218,8 @@ def process_json(data, config):
     cleaned_data = replace_keys(cleaned_data, {"absoluteBoundingBox": "size"})
     #Remove children from nodes with specified IDs so that the AI can focus on the main node one by one
     cleaned_data = move_children_to_last(cleaned_data)
+    #round numbers to 0 decimal places
+    cleaned_data = round_numbers(cleaned_data)
     return cleaned_data
 
 
@@ -228,10 +249,7 @@ if __name__ == "__main__":
     with open("figma_data.json", "r") as json_file:
         data = json.load(json_file)
 
-        
-    # Load the configuration
-    with open("config_for_sizing.json", "r") as config_file:
-        config = json.load(config_file) 
+    import config_initial as config
 
     # Process the JSON data
     cleaned_data = process_json(data, config)
