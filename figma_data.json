@@ -1,4 +1,509 @@
 {
-    "status": 404,
-    "err": "File not found"
+    "name": "Figma basics",
+    "lastModified": "2025-02-16T17:12:20Z",
+    "thumbnailUrl": "https://s3-alpha.figma.com/thumbnails/644533b4-eb79-4baf-982c-f23fce557733?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWCXV6E2AKA%2F20250216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250216T120000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=57a8b07b3263aec130656f38c07e3e2961c515d8be84c959b20eb8bb328f6878",
+    "version": "2185768570962254926",
+    "role": "viewer",
+    "editorType": "figma",
+    "linkAccess": "view",
+    "nodes": {
+        "4368:321181": {
+            "document": {
+                "id": "4368:321181",
+                "name": "Navigation",
+                "type": "FRAME",
+                "scrollBehavior": "SCROLLS",
+                "children": [
+                    {
+                        "id": "4368:321182",
+                        "name": "World Peas",
+                        "type": "TEXT",
+                        "scrollBehavior": "SCROLLS",
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.25882354378700256,
+                                    "g": 0.41960784792900085,
+                                    "b": 0.12156862765550613,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "strokes": [],
+                        "strokeWeight": 1.0,
+                        "strokeAlign": "OUTSIDE",
+                        "absoluteBoundingBox": {
+                            "x": 3136.0,
+                            "y": 1120.0,
+                            "width": 151.0,
+                            "height": 32.0
+                        },
+                        "absoluteRenderBounds": {
+                            "x": 3135.72802734375,
+                            "y": 1120.991943359375,
+                            "width": 149.838134765625,
+                            "height": 23.360107421875
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "LEFT"
+                        },
+                        "characters": "World Peas",
+                        "style": {
+                            "fontFamily": "Newsreader",
+                            "fontPostScriptName": "Newsreader-Medium",
+                            "fontStyle": "Medium",
+                            "fontWeight": 500,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 32.0,
+                            "textAlignHorizontal": "LEFT",
+                            "textAlignVertical": "TOP",
+                            "letterSpacing": -0.32,
+                            "lineHeightPx": 32.0,
+                            "lineHeightPercent": 100.0,
+                            "lineHeightPercentFontSize": 100.0,
+                            "lineHeightUnit": "FONT_SIZE_%"
+                        },
+                        "layoutVersion": 3,
+                        "characterStyleOverrides": [],
+                        "styleOverrideTable": {},
+                        "lineTypes": [
+                            "NONE"
+                        ],
+                        "lineIndentations": [
+                            0
+                        ],
+                        "effects": [],
+                        "interactions": []
+                    },
+                    {
+                        "id": "4368:321183",
+                        "name": "Shop",
+                        "type": "TEXT",
+                        "scrollBehavior": "SCROLLS",
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.0,
+                                    "g": 0.0,
+                                    "b": 0.0,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "strokes": [],
+                        "strokeWeight": 1.0,
+                        "strokeAlign": "OUTSIDE",
+                        "absoluteBoundingBox": {
+                            "x": 3784.0,
+                            "y": 1124.5,
+                            "width": 39.0,
+                            "height": 21.0
+                        },
+                        "absoluteRenderBounds": {
+                            "x": 3784.9326171875,
+                            "y": 1128.70458984375,
+                            "width": 37.225830078125,
+                            "height": 15.068115234375
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "RIGHT"
+                        },
+                        "characters": "Shop",
+                        "style": {
+                            "fontFamily": "Inter",
+                            "fontPostScriptName": null,
+                            "fontStyle": "Regular",
+                            "fontWeight": 400,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 16.0,
+                            "textAlignHorizontal": "CENTER",
+                            "textAlignVertical": "CENTER",
+                            "letterSpacing": 0.0,
+                            "lineHeightPx": 20.799999237060547,
+                            "lineHeightPercent": 107.41783905029297,
+                            "lineHeightPercentFontSize": 130.0,
+                            "lineHeightUnit": "FONT_SIZE_%"
+                        },
+                        "layoutVersion": 3,
+                        "characterStyleOverrides": [],
+                        "styleOverrideTable": {},
+                        "lineTypes": [
+                            "NONE"
+                        ],
+                        "lineIndentations": [
+                            0
+                        ],
+                        "effects": [],
+                        "interactions": []
+                    },
+                    {
+                        "id": "4368:321184",
+                        "name": "Newstand",
+                        "type": "TEXT",
+                        "scrollBehavior": "SCROLLS",
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.0,
+                                    "g": 0.0,
+                                    "b": 0.0,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "strokes": [],
+                        "strokeWeight": 1.0,
+                        "strokeAlign": "OUTSIDE",
+                        "absoluteBoundingBox": {
+                            "x": 3871.0,
+                            "y": 1124.5,
+                            "width": 77.0,
+                            "height": 21.0
+                        },
+                        "absoluteRenderBounds": {
+                            "x": 3872.4873046875,
+                            "y": 1128.8636474609375,
+                            "width": 74.019775390625,
+                            "height": 11.8409423828125
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "RIGHT"
+                        },
+                        "characters": "Newstand",
+                        "style": {
+                            "fontFamily": "Inter",
+                            "fontPostScriptName": null,
+                            "fontStyle": "Regular",
+                            "fontWeight": 400,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 16.0,
+                            "textAlignHorizontal": "CENTER",
+                            "textAlignVertical": "CENTER",
+                            "letterSpacing": 0.0,
+                            "lineHeightPx": 20.799999237060547,
+                            "lineHeightPercent": 107.41783905029297,
+                            "lineHeightPercentFontSize": 130.0,
+                            "lineHeightUnit": "FONT_SIZE_%"
+                        },
+                        "layoutVersion": 3,
+                        "characterStyleOverrides": [],
+                        "styleOverrideTable": {},
+                        "lineTypes": [
+                            "NONE"
+                        ],
+                        "lineIndentations": [
+                            0
+                        ],
+                        "effects": [],
+                        "interactions": []
+                    },
+                    {
+                        "id": "4368:321185",
+                        "name": "Who we are",
+                        "type": "TEXT",
+                        "scrollBehavior": "SCROLLS",
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.0,
+                                    "g": 0.0,
+                                    "b": 0.0,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "strokes": [],
+                        "strokeWeight": 1.0,
+                        "strokeAlign": "OUTSIDE",
+                        "absoluteBoundingBox": {
+                            "x": 3996.0,
+                            "y": 1124.5,
+                            "width": 90.0,
+                            "height": 21.0
+                        },
+                        "absoluteRenderBounds": {
+                            "x": 3996.7314453125,
+                            "y": 1128.8636474609375,
+                            "width": 88.0654296875,
+                            "height": 11.8409423828125
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "RIGHT"
+                        },
+                        "characters": "Who we are",
+                        "style": {
+                            "fontFamily": "Inter",
+                            "fontPostScriptName": null,
+                            "fontStyle": "Regular",
+                            "fontWeight": 400,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 16.0,
+                            "textAlignHorizontal": "CENTER",
+                            "textAlignVertical": "CENTER",
+                            "letterSpacing": 0.0,
+                            "lineHeightPx": 20.799999237060547,
+                            "lineHeightPercent": 107.41783905029297,
+                            "lineHeightPercentFontSize": 130.0,
+                            "lineHeightUnit": "FONT_SIZE_%"
+                        },
+                        "layoutVersion": 3,
+                        "characterStyleOverrides": [],
+                        "styleOverrideTable": {},
+                        "lineTypes": [
+                            "NONE"
+                        ],
+                        "lineIndentations": [
+                            0
+                        ],
+                        "effects": [],
+                        "interactions": []
+                    },
+                    {
+                        "id": "4368:321186",
+                        "name": "My profile",
+                        "type": "TEXT",
+                        "scrollBehavior": "SCROLLS",
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.0,
+                                    "g": 0.0,
+                                    "b": 0.0,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "strokes": [],
+                        "strokeWeight": 1.0,
+                        "strokeAlign": "OUTSIDE",
+                        "absoluteBoundingBox": {
+                            "x": 4134.0,
+                            "y": 1124.5,
+                            "width": 76.0,
+                            "height": 21.0
+                        },
+                        "absoluteRenderBounds": {
+                            "x": 4135.7607421875,
+                            "y": 1128.3182373046875,
+                            "width": 73.0751953125,
+                            "height": 15.4544677734375
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "RIGHT"
+                        },
+                        "characters": "My profile",
+                        "style": {
+                            "fontFamily": "Inter",
+                            "fontPostScriptName": null,
+                            "fontStyle": "Regular",
+                            "fontWeight": 400,
+                            "textAutoResize": "WIDTH_AND_HEIGHT",
+                            "fontSize": 16.0,
+                            "textAlignHorizontal": "CENTER",
+                            "textAlignVertical": "CENTER",
+                            "letterSpacing": 0.0,
+                            "lineHeightPx": 20.799999237060547,
+                            "lineHeightPercent": 107.41783905029297,
+                            "lineHeightPercentFontSize": 130.0,
+                            "lineHeightUnit": "FONT_SIZE_%"
+                        },
+                        "layoutVersion": 3,
+                        "characterStyleOverrides": [],
+                        "styleOverrideTable": {},
+                        "lineTypes": [
+                            "NONE"
+                        ],
+                        "lineIndentations": [
+                            0
+                        ],
+                        "effects": [],
+                        "interactions": []
+                    },
+                    {
+                        "id": "4368:321187",
+                        "name": "Cart button",
+                        "type": "FRAME",
+                        "scrollBehavior": "SCROLLS",
+                        "children": [
+                            {
+                                "id": "4368:321188",
+                                "name": "Basket (3)",
+                                "type": "TEXT",
+                                "scrollBehavior": "SCROLLS",
+                                "blendMode": "PASS_THROUGH",
+                                "fills": [
+                                    {
+                                        "blendMode": "NORMAL",
+                                        "type": "SOLID",
+                                        "color": {
+                                            "r": 1.0,
+                                            "g": 1.0,
+                                            "b": 1.0,
+                                            "a": 1.0
+                                        }
+                                    }
+                                ],
+                                "strokes": [],
+                                "strokeWeight": 1.0,
+                                "strokeAlign": "OUTSIDE",
+                                "absoluteBoundingBox": {
+                                    "x": 4281.0,
+                                    "y": 1124.5,
+                                    "width": 80.0,
+                                    "height": 21.0
+                                },
+                                "absoluteRenderBounds": {
+                                    "x": 4282.25732421875,
+                                    "y": 1127.460205078125,
+                                    "width": 77.0634765625,
+                                    "height": 14.4375
+                                },
+                                "constraints": {
+                                    "vertical": "CENTER",
+                                    "horizontal": "CENTER"
+                                },
+                                "characters": "Basket (3)",
+                                "style": {
+                                    "fontFamily": "Inter",
+                                    "fontPostScriptName": "Inter-SemiBold",
+                                    "fontStyle": "Semi Bold",
+                                    "fontWeight": 600,
+                                    "textAutoResize": "WIDTH_AND_HEIGHT",
+                                    "fontSize": 16.0,
+                                    "textAlignHorizontal": "CENTER",
+                                    "textAlignVertical": "CENTER",
+                                    "letterSpacing": 0.0,
+                                    "lineHeightPx": 20.799999237060547,
+                                    "lineHeightPercent": 107.41783905029297,
+                                    "lineHeightPercentFontSize": 130.0,
+                                    "lineHeightUnit": "FONT_SIZE_%"
+                                },
+                                "layoutVersion": 3,
+                                "characterStyleOverrides": [],
+                                "styleOverrideTable": {},
+                                "lineTypes": [
+                                    "NONE"
+                                ],
+                                "lineIndentations": [
+                                    0
+                                ],
+                                "effects": [],
+                                "interactions": []
+                            }
+                        ],
+                        "blendMode": "PASS_THROUGH",
+                        "clipsContent": true,
+                        "background": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.25882354378700256,
+                                    "g": 0.41960784792900085,
+                                    "b": 0.12156862765550613,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.25882354378700256,
+                                    "g": 0.41960784792900085,
+                                    "b": 0.12156862765550613,
+                                    "a": 1.0
+                                }
+                            }
+                        ],
+                        "strokes": [],
+                        "cornerRadius": 4.0,
+                        "cornerSmoothing": 0.0,
+                        "strokeWeight": 1.0,
+                        "strokeAlign": "INSIDE",
+                        "backgroundColor": {
+                            "r": 0.25882354378700256,
+                            "g": 0.41960784792900085,
+                            "b": 0.12156862765550613,
+                            "a": 1.0
+                        },
+                        "absoluteBoundingBox": {
+                            "x": 4258.0,
+                            "y": 1111.0,
+                            "width": 126.0,
+                            "height": 48.0
+                        },
+                        "absoluteRenderBounds": {
+                            "x": 4258.0,
+                            "y": 1111.0,
+                            "width": 126.0,
+                            "height": 48.0
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "RIGHT"
+                        },
+                        "effects": [],
+                        "interactions": []
+                    }
+                ],
+                "blendMode": "PASS_THROUGH",
+                "clipsContent": true,
+                "background": [],
+                "fills": [],
+                "strokes": [],
+                "strokeWeight": 1.0,
+                "strokeAlign": "INSIDE",
+                "backgroundColor": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 0.0
+                },
+                "absoluteBoundingBox": {
+                    "x": 3040.0,
+                    "y": 1079.0,
+                    "width": 1440.0,
+                    "height": 112.0
+                },
+                "absoluteRenderBounds": {
+                    "x": 3040.0,
+                    "y": 1079.0,
+                    "width": 1440.0,
+                    "height": 112.0
+                },
+                "constraints": {
+                    "vertical": "TOP",
+                    "horizontal": "LEFT_RIGHT"
+                },
+                "effects": [],
+                "interactions": []
+            },
+            "components": {},
+            "componentSets": {},
+            "schemaVersion": 0,
+            "styles": {}
+        }
+    }
 }
