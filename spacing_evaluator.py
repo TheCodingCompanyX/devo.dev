@@ -110,39 +110,87 @@ def calculate_spacing(parent, child, default_padding=0):
             }
         }
     }
+def calculate_sibling_spacing(children):
+    """
+    Computes spacing between consecutive siblings in a parent container.
+    Assumes children are either arranged horizontally (left to right)
+    or vertically (top to bottom).
+    """
+    if not children or len(children) < 2:
+        return {}
+
+    # Sort children by x (left to right) or y (top to bottom)
+    sorted_children_x = sorted(children, key=lambda c: c['x'])
+    sorted_children_y = sorted(children, key=lambda c: c['y'])
+
+    sibling_margins = {}
+
+    # Compute horizontal gaps
+    for i in range(len(sorted_children_x) - 1):
+        left_child = sorted_children_x[i]
+        right_child = sorted_children_x[i + 1]
+        margin_x = right_child['x'] - (left_child['x'] + left_child['width'])
+        sibling_margins[(left_child['name'], right_child['name'])] = {
+            'horizontal_gap': max(margin_x, 0)
+        }
+
+    # Compute vertical gaps
+    for i in range(len(sorted_children_y) - 1):
+        top_child = sorted_children_y[i]
+        bottom_child = sorted_children_y[i + 1]
+        margin_y = bottom_child['y'] - (top_child['y'] + top_child['height'])
+        sibling_margins[(top_child['name'], bottom_child['name'])].update({
+            'vertical_gap': max(margin_y, 0)
+        })
+
+    return sibling_margins
 
 def process_json_file(filename, default_padding=0):
-    # Load JSON file
+    """
+    Processes the JSON file, extracts nodes, calculates spacing relative to parent,
+    and determines sibling spacing between children.
+    """
     with open(filename, 'r') as f:
         figma_data = json.load(f)
-    
-    # Extract nodes recursively, starting from the document node.
+
+    # Extract nodes from the Figma document
     document = list(figma_data["nodes"].values())[0]["document"]
     nodes = extract_nodes(document)
-    
-    # Group nodes by their parent
+
+    # Group children by parent
     parent_to_children = defaultdict(list)
     for node in nodes:
         if node.get('parent') is not None:
             parent_to_children[node['parent']['name']].append(node)
-    
+
     results = []
-    # Calculate spacing for each parent-child relationship
+
+    # Process each parent-child relationship
     for parent_name, children in parent_to_children.items():
         # Find the parent node
         parent_node = next(node for node in nodes if node.get('name') == parent_name)
-        
-        # Calculate the parent's padding based on all children
+
+        # Calculate parent's padding from its children
         parent_padding = calculate_parent_padding(parent_node, children)
-        
-        # Update the parent's padding in the node
         parent_node.update(parent_padding)
-        
-        # Calculate spacing for each child
+
+        parent_result = {
+            'parent_name': parent_name,
+            'parent_padding': parent_padding,
+            'children': []
+        }
+
+        # Calculate child spacing relative to parent
         for child in children:
             spacing = calculate_spacing(parent_node, child, default_padding)
-            results.append(spacing)
-    
+            parent_result['children'].append(spacing)
+
+        # Compute sibling margins (relative spacing between children)
+        sibling_margins = calculate_sibling_spacing(children)
+        parent_result['sibling_margins'] = sibling_margins
+
+        results.append(parent_result)
+
     return results
 
 
