@@ -293,20 +293,6 @@ def remove_keys_with_only_name(data):
         return data
     
 
-def merge_data(tree_structure, figma_data):
-    if isinstance(tree_structure, dict):
-        if 'id' in tree_structure:
-            node_id = tree_structure['id']
-            if node_id in figma_data['nodes']:
-                # Merge the data from figma_data into tree_structure
-                tree_structure.update(figma_data['nodes'][node_id])
-        for key, value in tree_structure.items():
-            if isinstance(value, (dict, list)):
-                tree_structure[key] = merge_data(value, figma_data)
-    elif isinstance(tree_structure, list):
-        return [merge_data(item, figma_data) for item in tree_structure]
-    return tree_structure
-
 if __name__ == '__main__':
     filename = './designer/test_data/cleaned_figma_data.json'
     with open(filename, 'r') as f:
@@ -346,11 +332,18 @@ if __name__ == '__main__':
 
     #Append cleaned figma data with data from tree_structure node by node
 
-    from merge_trees3 import merge_space_data
+    from merge import merge_space_data
+    document = list(figma_data["nodes"].values())[0]["document"]
 
-    result = merge_space_data(tree_structure, figma_data)
+    result = merge_space_data(document,tree_structure)
+
+    from clean_json import move_children_to_last
+
+    result = move_children_to_last(result)
 
     with open('./designer/test_data/merged_figma_data.json', 'w') as f:
         json.dump(result, f, indent=4)
+
+    
 
     print("Merged data saved to merged_figma_data.json")
