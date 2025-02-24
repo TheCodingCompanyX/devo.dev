@@ -1,5 +1,5 @@
 import base64, openai
-from utils import encode_image
+from tester.utils import encode_image
 import os
 import time
 from playwright.sync_api import sync_playwright

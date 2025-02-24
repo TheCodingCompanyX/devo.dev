@@ -1,4 +1,4 @@
-from file_parser import parse_chatgpt_output
+from developer.file_parser import parse_chatgpt_output
 
 def test_parse_chatgpt_output():
     # Test Case 1: Single File with Long Path

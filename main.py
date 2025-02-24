@@ -1,9 +1,9 @@
 from openai import OpenAI
-from write_code import write_code
+from developer.write_code import write_code
 import os, json
-from figma_apis import parse_figma_url, fetch_figma_data, fetch_figma_image, download_and_save_images
-from clean_json import process_json, remove_children_by_ids
-from test_UI import test_UI
+from designer.figma_apis import parse_figma_url, fetch_figma_data, fetch_figma_image, download_and_save_images
+from designer.clean_json import process_json, remove_children_by_ids
+from tester.test_UI import test_UI
 
 global figma_url
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     if not os.path.exists('./'+route):
         os.makedirs('./'+route)
     
-    from config_initial import config
+    from designer.config_initial import config
     print("Press Enter to download images, or type any other key to skip")
     if input() == "":
         node_ids_of_images = download_and_save_images('./'+route, figma_url)

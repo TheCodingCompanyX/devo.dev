@@ -1,9 +1,9 @@
 
-from utils import encode_image 
+from tester.utils import encode_image 
 from openai import OpenAI
 client = OpenAI()
 import os
-from file_parser import parse_chatgpt_output
+from developer.file_parser import parse_chatgpt_output
 
 framework = 'Next.js'
 style_framework = 'Tailwinds Css'

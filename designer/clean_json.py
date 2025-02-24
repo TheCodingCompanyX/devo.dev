@@ -32,16 +32,16 @@ def round_floats(data):
     else:
         return data
     
-def clean_json(data):
+def merge_singles(data):
     # Remove dictionaries with a single key-value pair and replace with the value
     if isinstance(data, dict):
        
         if len(data.values()) == 1:
-            return clean_json(next(iter(data.values())))
+            return merge_singles(next(iter(data.values())))
         else:
-            return {key: clean_json(value) for key, value in data.items()}
+            return {key: merge_singles(value) for key, value in data.items()}
     elif isinstance(data, list):
-        return [clean_json(item) for item in data]
+        return [merge_singles(item) for item in data]
     else:
         return data
 
@@ -107,8 +107,6 @@ def remove_key_value_pairs(data, config):
     else:
         # Return scalar values as is
         return data
-    
-
 
 def remove_children_by_ids(json_data, target_ids):
     """
@@ -224,38 +222,17 @@ def process_json(data, config):
 
 
 if __name__ == "__main__":
-    figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-79&t=lfRV7L5YpT1WEhOn-0"
-    figma_url = "https://www.figma.com/design/Q1nZ4assLAHsrKaHlBf5Po/Untitled?node-id=4-33&t=O7tq2a5w21t3SRwh-0"
-    from figma_apis import parse_figma_url, fetch_figma_data
-
-    try:
-        file_key, node_id = parse_figma_url(figma_url)
-        print(f"File Key: {file_key}, Node ID: {node_id}")  
-        
-        # Fetch data from Figma API
-        figma_data = fetch_figma_data(file_key, node_id)
-        print("Figma Data Retrieved")
-
-        with open('figma_data.json', 'w') as f:
-            f.write(json.dumps(figma_data, indent=4))
-        
-       
-
-    except Exception as e:
-        print(f"Error: {e}")
-
-
     # Load the JSON data
-    with open("figma_data.json", "r") as json_file:
+    with open("designer/test_data/figma_data.json", "r") as json_file:
         data = json.load(json_file)
-
-    import config_initial as config
+    
+    from config_for_spacing import config
 
     # Process the JSON data
     cleaned_data = process_json(data, config)
 
     # Save the cleaned JSON data
-    with open("cleaned_figma_data.json", "w") as cleaned_json_file:
+    with open("designer/test_data/cleaned_figma_data.json", "w") as cleaned_json_file:
         json.dump(cleaned_data, cleaned_json_file, indent=2)
     
     formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" 

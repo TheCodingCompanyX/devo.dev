@@ -1,0 +1,895 @@
+{
+  "name": "Car Rent Website Design - Pickolab Studio (Community)",
+  "nodes": {
+    "44:16200": {
+      "document": {
+        "id": "44:16200",
+        "name": "Reviews",
+        "clipsContent": true,
+        "size": {
+          "x": 1392,
+          "y": -625,
+          "width": 1016,
+          "height": 452
+        },
+        "children": [
+          {
+            "id": "44:16201",
+            "name": "Total Review",
+            "layoutMode": "HORIZONTAL",
+            "itemSpacing": 12,
+            "size": {
+              "x": 1416,
+              "y": -601,
+              "width": 136,
+              "height": 28
+            },
+            "layoutSizingHorizontal": "HUG",
+            "layoutSizingVertical": "HUG",
+            "children": [
+              {
+                "id": "44:16202",
+                "name": "Reviews",
+                "size": {
+                  "x": 1416,
+                  "y": -601,
+                  "width": 80,
+                  "height": 28
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "characters": "Reviews"
+              },
+              {
+                "id": "44:16203",
+                "name": "Total Review",
+                "layoutMode": "HORIZONTAL",
+                "counterAxisSizingMode": "FIXED",
+                "itemSpacing": 8,
+                "primaryAxisSizingMode": "FIXED",
+                "counterAxisAlignItems": "CENTER",
+                "primaryAxisAlignItems": "CENTER",
+                "paddingLeft": 20,
+                "paddingRight": 20,
+                "size": {
+                  "x": 1508,
+                  "y": -601,
+                  "width": 44,
+                  "height": 28
+                },
+                "constraints": {
+                  "vertical": "TOP",
+                  "horizontal": "RIGHT"
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "children": [
+                  {
+                    "id": "44:16204",
+                    "name": "13",
+                    "size": {
+                      "x": 1520,
+                      "y": -595,
+                      "width": 20,
+                      "height": 16
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "13"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "44:16205",
+            "name": "Reviews 1",
+            "type": "GROUP",
+            "size": {
+              "x": 1416,
+              "y": -541,
+              "width": 968,
+              "height": 124
+            },
+            "children": [
+              {
+                "id": "44:16206",
+                "name": "Name",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 8,
+                "size": {
+                  "x": 1488,
+                  "y": -541,
+                  "width": 128,
+                  "height": 56
+                },
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "children": [
+                  {
+                    "id": "44:16207",
+                    "name": "Alex Stanton",
+                    "size": {
+                      "x": 1488,
+                      "y": -541,
+                      "width": 128,
+                      "height": 28
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "Alex Stanton"
+                  },
+                  {
+                    "id": "44:16208",
+                    "name": "CEO at Bukalapak",
+                    "size": {
+                      "x": 1488,
+                      "y": -505,
+                      "width": 128,
+                      "height": 20
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "CEO at Bukalapak"
+                  }
+                ]
+              },
+              {
+                "id": "44:16209",
+                "name": "Date",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 8,
+                "counterAxisAlignItems": "MAX",
+                "size": {
+                  "x": 2256,
+                  "y": -541,
+                  "width": 128,
+                  "height": 56
+                },
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "children": [
+                  {
+                    "id": "44:16210",
+                    "name": "21 July 2022",
+                    "size": {
+                      "x": 2256,
+                      "y": -541,
+                      "width": 128,
+                      "height": 28
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "21 July 2022"
+                  },
+                  {
+                    "id": "44:16211",
+                    "name": "Reviews",
+                    "clipsContent": true,
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 2,
+                    "counterAxisAlignItems": "CENTER",
+                    "size": {
+                      "x": 2276,
+                      "y": -505,
+                      "width": 108,
+                      "height": 20
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "HUG",
+                    "layoutSizingVertical": "HUG",
+                    "children": [
+                      {
+                        "id": "44:16212",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2276,
+                          "y": -505,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16212;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2278,
+                              "y": -503,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16212;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2278,
+                                  "y": -503,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16213",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2298,
+                          "y": -505,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16213;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2300,
+                              "y": -503,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16213;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2300,
+                                  "y": -503,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16214",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2320,
+                          "y": -505,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16214;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2322,
+                              "y": -503,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16214;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2322,
+                                  "y": -503,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16215",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2342,
+                          "y": -505,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16215;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2344,
+                              "y": -503,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16215;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2344,
+                                  "y": -503,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16216",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2364,
+                          "y": -505,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16216;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2366,
+                              "y": -503,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16216;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2366,
+                                  "y": -503,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "44:16217",
+                "name": "Profill",
+                "type": "RECTANGLE",
+                "size": {
+                  "x": 1416,
+                  "y": -541,
+                  "width": 56,
+                  "height": 56
+                },
+                "exportSettings": [
+                  {
+                    "suffix": "",
+                    "format": "PNG",
+                    "constraint": {
+                      "type": "SCALE",
+                      "value": 1
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "44:16218",
+                "name": "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+                "size": {
+                  "x": 1488,
+                  "y": -473,
+                  "width": 896,
+                  "height": 56
+                },
+                "characters": "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite."
+              }
+            ]
+          },
+          {
+            "id": "44:16219",
+            "name": "Reviews 2",
+            "type": "GROUP",
+            "size": {
+              "x": 1416,
+              "y": -393,
+              "width": 968,
+              "height": 128
+            },
+            "children": [
+              {
+                "id": "44:16220",
+                "name": "Name",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 8,
+                "size": {
+                  "x": 1488,
+                  "y": -393,
+                  "width": 128,
+                  "height": 56
+                },
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "children": [
+                  {
+                    "id": "44:16221",
+                    "name": "Skylar Dias",
+                    "size": {
+                      "x": 1488,
+                      "y": -393,
+                      "width": 128,
+                      "height": 28
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "Skylar Dias"
+                  },
+                  {
+                    "id": "44:16222",
+                    "name": "CEO at Amazon",
+                    "size": {
+                      "x": 1488,
+                      "y": -357,
+                      "width": 128,
+                      "height": 20
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "CEO at Amazon"
+                  }
+                ]
+              },
+              {
+                "id": "44:16223",
+                "name": "Date",
+                "layoutMode": "VERTICAL",
+                "itemSpacing": 8,
+                "counterAxisAlignItems": "MAX",
+                "size": {
+                  "x": 2256,
+                  "y": -393,
+                  "width": 128,
+                  "height": 56
+                },
+                "layoutSizingHorizontal": "HUG",
+                "layoutSizingVertical": "HUG",
+                "children": [
+                  {
+                    "id": "44:16224",
+                    "name": "20 July 2022",
+                    "size": {
+                      "x": 2256,
+                      "y": -393,
+                      "width": 128,
+                      "height": 28
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "FIXED",
+                    "layoutSizingVertical": "FIXED",
+                    "characters": "20 July 2022"
+                  },
+                  {
+                    "id": "44:16225",
+                    "name": "Reviews",
+                    "clipsContent": true,
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 2,
+                    "counterAxisAlignItems": "CENTER",
+                    "size": {
+                      "x": 2276,
+                      "y": -357,
+                      "width": 108,
+                      "height": 20
+                    },
+                    "layoutAlign": "INHERIT",
+                    "layoutGrow": 0,
+                    "layoutSizingHorizontal": "HUG",
+                    "layoutSizingVertical": "HUG",
+                    "children": [
+                      {
+                        "id": "44:16226",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2276,
+                          "y": -357,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16226;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2278,
+                              "y": -355,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16226;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2278,
+                                  "y": -355,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16227",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2298,
+                          "y": -357,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16227;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2300,
+                              "y": -355,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16227;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2300,
+                                  "y": -355,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16228",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2320,
+                          "y": -357,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16228;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2322,
+                              "y": -355,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16228;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2322,
+                                  "y": -355,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16229",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2342,
+                          "y": -357,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16229;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2344,
+                              "y": -355,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16229;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2344,
+                                  "y": -355,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "44:16230",
+                        "name": "ic-actions-star",
+                        "clipsContent": true,
+                        "size": {
+                          "x": 2364,
+                          "y": -357,
+                          "width": 20,
+                          "height": 20
+                        },
+                        "layoutAlign": "INHERIT",
+                        "layoutGrow": 0,
+                        "layoutSizingHorizontal": "FIXED",
+                        "layoutSizingVertical": "FIXED",
+                        "children": [
+                          {
+                            "id": "I44:16230;1:1548",
+                            "name": "Layer",
+                            "type": "GROUP",
+                            "size": {
+                              "x": 2366,
+                              "y": -355,
+                              "width": 17,
+                              "height": 16
+                            },
+                            "children": [
+                              {
+                                "id": "I44:16230;1:1549",
+                                "name": "Vector",
+                                "type": "VECTOR",
+                                "size": {
+                                  "x": 2366,
+                                  "y": -355,
+                                  "width": 17,
+                                  "height": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "44:16231",
+                "name": "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+                "size": {
+                  "x": 1488,
+                  "y": -321,
+                  "width": 896,
+                  "height": 56
+                },
+                "characters": "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite."
+              },
+              {
+                "id": "44:16232",
+                "name": "Profill",
+                "type": "RECTANGLE",
+                "size": {
+                  "x": 1416,
+                  "y": -393,
+                  "width": 56,
+                  "height": 56
+                },
+                "exportSettings": [
+                  {
+                    "suffix": "",
+                    "format": "PNG",
+                    "constraint": {
+                      "type": "SCALE",
+                      "value": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "44:16233",
+            "name": "Show All",
+            "layoutMode": "HORIZONTAL",
+            "counterAxisSizingMode": "FIXED",
+            "itemSpacing": 8,
+            "primaryAxisSizingMode": "FIXED",
+            "counterAxisAlignItems": "CENTER",
+            "primaryAxisAlignItems": "CENTER",
+            "paddingLeft": 20,
+            "paddingRight": 20,
+            "size": {
+              "x": 1846,
+              "y": -241,
+              "width": 132,
+              "height": 44
+            },
+            "constraints": {
+              "vertical": "TOP",
+              "horizontal": "RIGHT"
+            },
+            "layoutSizingHorizontal": "FIXED",
+            "layoutSizingVertical": "FIXED",
+            "children": [
+              {
+                "id": "44:16234",
+                "name": "Show All",
+                "size": {
+                  "x": 1866,
+                  "y": -231,
+                  "width": 68,
+                  "height": 24
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "characters": "Show All"
+              },
+              {
+                "id": "44:16235",
+                "name": "vuesax/outline/arrow-down",
+                "size": {
+                  "x": 1942,
+                  "y": -227,
+                  "width": 16,
+                  "height": 16
+                },
+                "layoutAlign": "INHERIT",
+                "layoutGrow": 0,
+                "layoutSizingHorizontal": "FIXED",
+                "layoutSizingVertical": "FIXED",
+                "children": [
+                  {
+                    "id": "I44:16235;1478:6051",
+                    "name": "vuesax/outline/arrow-down",
+                    "type": "GROUP",
+                    "size": {
+                      "x": 1942,
+                      "y": -227,
+                      "width": 16,
+                      "height": 16
+                    },
+                    "children": [
+                      {
+                        "id": "I44:16235;1478:6052",
+                        "name": "arrow-down",
+                        "type": "GROUP",
+                        "size": {
+                          "x": 1942,
+                          "y": -227,
+                          "width": 16,
+                          "height": 16
+                        },
+                        "children": [
+                          {
+                            "id": "I44:16235;1478:6053",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "size": {
+                              "x": 1944,
+                              "y": -222,
+                              "width": 12,
+                              "height": 6
+                            }
+                          },
+                          {
+                            "id": "I44:16235;1478:6054",
+                            "name": "Vector",
+                            "type": "VECTOR",
+                            "size": {
+                              "x": 1942,
+                              "y": -227,
+                              "width": 16,
+                              "height": 16
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
