@@ -1,34 +1,6 @@
 import json
 from collections import defaultdict
 
-def calculate_parent_padding(parent, children):
-    """
-    Calculate the parent's padding based on the positions of all its children.
-    Padding is calculated for all four sides: left, top, right, and bottom.
-    """
-    if not children:
-        return {
-            'paddingLeft': 0,
-            'paddingTop': 0,
-            'paddingRight': 0,
-            'paddingBottom': 0
-        }
-
-    # Calculate left and top padding
-    padding_left = min(child['x'] - parent['x'] for child in children)
-    padding_top = min(child['y'] - parent['y'] for child in children)
-
-    # Calculate right and bottom padding
-    padding_right = min((parent['x'] + parent['width']) - (child['x'] + child['width']) for child in children)
-    padding_bottom = min((parent['y'] + parent['height']) - (child['y'] + child['height']) for child in children)
-
-    return {
-        'paddingLeft': max(padding_left, 0),  # Ensure padding is not negative
-        'paddingTop': max(padding_top, 0),
-        'paddingRight': max(padding_right, 0),
-        'paddingBottom': max(padding_bottom, 0)
-    }
-
 def calculate_spacing(parent, child):
     """
     Calculates spacing between a parent and a child node.
@@ -43,32 +15,21 @@ def calculate_spacing(parent, child):
     child_width = child.get('width', 0)
     child_height = child.get('height', 0)
 
-    # Use parent’s padding if set, otherwise default_padding.
-    parent_padding_left = parent.get('paddingLeft') 
-    parent_padding_top = parent.get('paddingTop') 
-    parent_padding_right = parent.get('paddingRight')
-    parent_padding_bottom = parent.get('paddingBottom') 
-
+   
     # Auto layout margin calculation (normalized relative to parent's padded origin)
-    auto_layout_margin_left = child_x - (parent_x + parent_padding_left)
+    auto_layout_margin_left = child_x - (parent_x)
     auto_layout_margin_left = max(auto_layout_margin_left, 0)  # Ensure non-negative
-    auto_layout_margin_top = child_y - (parent_y + parent_padding_top)
+    auto_layout_margin_top = child_y - (parent_y)
     auto_layout_margin_top = max(auto_layout_margin_top, 0)  # Ensure non-negative
-    auto_layout_margin_right = (parent_x + parent_width - parent_padding_right) - (child_x + child_width)
+    auto_layout_margin_right = (parent_x + parent_width) - (child_x + child_width)
     auto_layout_margin_right = max(auto_layout_margin_right, 0)  # Ensure non-negative
-    auto_layout_margin_bottom = (parent_y + parent_height - parent_padding_bottom) - (child_y + child_height)
+    auto_layout_margin_bottom = (parent_y + parent_height) - (child_y + child_height)
     auto_layout_margin_bottom = max(auto_layout_margin_bottom, 0)  # Ensure non-negative
     
     return {
         'child_name': child.get('name', 'Unnamed'),
         'auto_layout_based': {
-            'parent_padding': {
-                'left': parent_padding_left,
-                'top': parent_padding_top,
-                'right': parent_padding_right,
-                'bottom': parent_padding_bottom
-            },
-            'margin': {
+            'space': {
                 'left': auto_layout_margin_left,
                 'top': auto_layout_margin_top,
                 'right': auto_layout_margin_right,
@@ -191,7 +152,6 @@ def simplify_node(node, parent=None):
         'parent': parent  # simplified parent, if available
     }
 
-def print_tree(node, indent=0):
     """
     Recursively prints a tree of nodes. For each node that has children,
     we first compute its padding (based on its children) and then print the child margins,
@@ -214,11 +174,6 @@ def print_tree(node, indent=0):
                 simplify_node(child, parent=simplified)
                 for child in valid_children
             ]
-            # Calculate parent's padding from its children
-            parent_padding = calculate_parent_padding(simplified, simplified_children)
-            # Update our simplified node for use in margin calculation.
-            simplified.update(parent_padding)
-            print(f"{indent_str}  Padding: {parent_padding}")
             
             child_auto_margins = {}
 
@@ -262,21 +217,6 @@ def print_tree(node, indent=0):
             for child in valid_children:
                 print_tree(child, indent + 4)
                  
-def calculate_parent_padding(parent, children):
-    if not children:
-        return {'paddingLeft': 0, 'paddingTop': 0, 'paddingRight': 0, 'paddingBottom': 0}
-    
-    padding_left = min(child['x'] - parent['x'] for child in children)
-    padding_top = min(child['y'] - parent['y'] for child in children)
-    padding_right = min((parent['x'] + parent['width']) - (child['x'] + child['width']) for child in children)
-    padding_bottom = min((parent['y'] + parent['height']) - (child['y'] + child['height']) for child in children)
-    
-    return {
-        'paddingLeft': max(padding_left, 0),
-        'paddingTop': max(padding_top, 0),
-        'paddingRight': max(padding_right, 0),
-        'paddingBottom': max(padding_bottom, 0)
-    }
 
 def calculate_margins(parent, child):
     return {
@@ -308,31 +248,12 @@ def build_tree(node):
                 simplify_node(child, parent=simplified)
                 for child in valid_children
             ]
-            # Calculate parent's padding from its children
-            parent_padding = calculate_parent_padding(simplified, simplified_children)
             # Update our simplified node for use in margin calculation.
-            simplified.update(parent_padding)
             result = {
                 'id': simplified['id'],
-                'margins': parent_padding,
             }
             
             child_auto_margins = {}
-
-            for child, child_simplified in zip(valid_children, simplified_children):
-                # Calculate auto layout spacing for each child
-                spacing = calculate_spacing(simplified, child_simplified)
-                #print(f"{indent_str}  Child: {child_simplified['name']}")
-                #print(f"{indent_str}    Auto Layout Margin: {spacing['auto_layout_based']['margin']}")
-
-                # Store auto layout margins for this child
-                auto_layout_margin = spacing['auto_layout_based']['margin']
-                child_auto_margins[child_simplified['id']] = {
-                    'left': auto_layout_margin['left'],
-                    'right': auto_layout_margin['right'],
-                    'top': auto_layout_margin['top'],
-                    'bottom': auto_layout_margin['bottom']
-                }
 
             child_margins = compute_individual_margins(simplified, simplified_children)
 
@@ -346,21 +267,14 @@ def build_tree(node):
                 # Retrieve corresponding auto layout margins
                 auto_margins = child_auto_margins.get(child_name, {'left': 0, 'right': 0, 'top': 0, 'bottom': 0})
 
-                # Select the minimum of the margins (individual vs auto layout)
-                min_left = min(lm['value'], auto_margins['left'])
-                min_right = min(rm['value'], auto_margins['right'])
-                min_top = min(tm['value'], auto_margins['top'])
-                min_bottom = min(bm['value'], auto_margins['bottom'])
-
             
                 result = {
                     'id': simplified['id'],
-                    'padding': parent_padding,
-                    'margins' : {
-                        'left': min_left,
-                        'right': min_right,
-                        'top': min_top,
-                        'bottom': min_bottom,
+                    'space' : {
+                        'left': lm['value'],
+                        'right': rm['value'],
+                        'top': tm['value'],
+                        'bottom': bm['value'],
                     },
                     'children': [build_tree(child) for child in valid_children]
                 }
@@ -378,8 +292,23 @@ def remove_keys_with_only_name(data):
     else:
         return data
     
+
+def merge_data(tree_structure, figma_data):
+    if isinstance(tree_structure, dict):
+        if 'id' in tree_structure:
+            node_id = tree_structure['id']
+            if node_id in figma_data['nodes']:
+                # Merge the data from figma_data into tree_structure
+                tree_structure.update(figma_data['nodes'][node_id])
+        for key, value in tree_structure.items():
+            if isinstance(value, (dict, list)):
+                tree_structure[key] = merge_data(value, figma_data)
+    elif isinstance(tree_structure, list):
+        return [merge_data(item, figma_data) for item in tree_structure]
+    return tree_structure
+
 if __name__ == '__main__':
-    filename = './designer/cleaned_figma_data.json'
+    filename = './designer/test_data/cleaned_figma_data.json'
     with open(filename, 'r') as f:
         figma_data = json.load(f)
     
@@ -396,17 +325,11 @@ if __name__ == '__main__':
             "height"
         ],
         "key_value_pairs_to_remove": [
-            {"margins": {
+            {"space": {
                         "left": 0,
                         "right": 0,
                         "top": 0,
                         "bottom": 0
-                    }},
-            {"padding": {
-                        "paddingLeft": 0,
-                        "paddingTop": 0,
-                        "paddingRight": 0,
-                        "paddingBottom": 0
                     }},
             {"parent": None},
         ]
@@ -420,3 +343,14 @@ if __name__ == '__main__':
         json.dump(tree_structure, f, indent=4)
     
     print(f"Tree structure saved to {output_filename}")
+
+    #Append cleaned figma data with data from tree_structure node by node
+
+    from merge_trees3 import merge_space_data
+
+    result = merge_space_data(tree_structure, figma_data)
+
+    with open('./designer/test_data/merged_figma_data.json', 'w') as f:
+        json.dump(result, f, indent=4)
+
+    print("Merged data saved to merged_figma_data.json")
