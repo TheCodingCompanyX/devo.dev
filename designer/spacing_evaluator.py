@@ -179,7 +179,7 @@ def simplify_node(node, parent=None):
     if 'size' not in node:
         return None
     return {
-        'name': node.get('id', 'Unnamed'),
+        'id': node.get('id', 'Unnamed'),
         'x': node['size'].get('x', 0),
         'y': node['size'].get('y', 0),
         'width': node['size'].get('width', 0),
@@ -262,9 +262,6 @@ def print_tree(node, indent=0):
             for child in valid_children:
                 print_tree(child, indent + 4)
                  
-                 
-import json
-
 def calculate_parent_padding(parent, children):
     if not children:
         return {'paddingLeft': 0, 'paddingTop': 0, 'paddingRight': 0, 'paddingBottom': 0}
@@ -289,44 +286,135 @@ def calculate_margins(parent, child):
         'bottom': (parent['y'] + parent['height']) - (child['y'] + child['height'])
     }
 
-def simplify_node(node):
-    if 'size' not in node:
-        return None
-    return {
-        'name': node.get('id', 'Unnamed'),
-        'x': node['size'].get('x', 0),
-        'y': node['size'].get('y', 0),
-        'width': node['size'].get('width', 0),
-        'height': node['size'].get('height', 0)
-    }
-
-def build_tree_structure(node):
+def build_tree(node):
+    """
+    Recursively prints a tree of nodes. For each node that has children,
+    we first compute its padding (based on its children) and then print the child margins,
+    including individual margins with overlap detection.
+    """
     simplified = simplify_node(node)
-    if not simplified:
-        return None
-    
-    children = [build_tree_structure(child) for child in node.get('children', []) if 'size' in child]
-    children = [child for child in children if child]
-    
-    if children:
-        parent_padding = calculate_parent_padding(simplified, children)
-        simplified.update(parent_padding)
-        
-        for child in children:
-            child['margins'] = calculate_margins(simplified, child)
-        
-        simplified['children'] = children
-    
-    return simplified
+    if simplified is None:
+        return
 
+    
+    # If the node has children, process them:
+    if 'children' in node and isinstance(node['children'], list) and node['children']:
+        
+        # Extract only the children with a "size" property (valid nodes)
+        valid_children = [child for child in node['children'] if 'size' in child]
+        if valid_children:
+            # Simplify children
+            simplified_children = [
+                simplify_node(child, parent=simplified)
+                for child in valid_children
+            ]
+            # Calculate parent's padding from its children
+            parent_padding = calculate_parent_padding(simplified, simplified_children)
+            # Update our simplified node for use in margin calculation.
+            simplified.update(parent_padding)
+            result = {
+                'id': simplified['id'],
+                'margins': parent_padding,
+            }
+            
+            child_auto_margins = {}
+
+            for child, child_simplified in zip(valid_children, simplified_children):
+                # Calculate auto layout spacing for each child
+                spacing = calculate_spacing(simplified, child_simplified)
+                #print(f"{indent_str}  Child: {child_simplified['name']}")
+                #print(f"{indent_str}    Auto Layout Margin: {spacing['auto_layout_based']['margin']}")
+
+                # Store auto layout margins for this child
+                auto_layout_margin = spacing['auto_layout_based']['margin']
+                child_auto_margins[child_simplified['id']] = {
+                    'left': auto_layout_margin['left'],
+                    'right': auto_layout_margin['right'],
+                    'top': auto_layout_margin['top'],
+                    'bottom': auto_layout_margin['bottom']
+                }
+
+            child_margins = compute_individual_margins(simplified, simplified_children)
+
+            for margin in child_margins:
+                child_name = margin['child']['id']
+                lm = margin['left']
+                rm = margin['right']
+                tm = margin['top']
+                bm = margin['bottom']
+
+                # Retrieve corresponding auto layout margins
+                auto_margins = child_auto_margins.get(child_name, {'left': 0, 'right': 0, 'top': 0, 'bottom': 0})
+
+                # Select the minimum of the margins (individual vs auto layout)
+                min_left = min(lm['value'], auto_margins['left'])
+                min_right = min(rm['value'], auto_margins['right'])
+                min_top = min(tm['value'], auto_margins['top'])
+                min_bottom = min(bm['value'], auto_margins['bottom'])
+
+            
+                result = {
+                    'id': simplified['id'],
+                    'padding': parent_padding,
+                    'margins' : {
+                        'left': min_left,
+                        'right': min_right,
+                        'top': min_top,
+                        'bottom': min_bottom,
+                    },
+                    'children': [build_tree(child) for child in valid_children]
+                }
+
+                return result
+               
+def remove_keys_with_only_name(data):
+    if isinstance(data, dict):
+        if 'id' in data and len(data) == 1:
+            #remove this key-value pair
+            return None 
+        return {k: remove_keys_with_only_name(v) for k, v in data.items() if remove_keys_with_only_name(v) is not None}
+    elif isinstance(data, list):
+        return [remove_keys_with_only_name(item) for item in data if remove_keys_with_only_name(item) is not None]
+    else:
+        return data
+    
 if __name__ == '__main__':
     filename = './designer/cleaned_figma_data.json'
     with open(filename, 'r') as f:
         figma_data = json.load(f)
     
     document = list(figma_data["nodes"].values())[0]["document"]
-    tree_structure = build_tree_structure(document)
+    tree_structure = build_tree(document)
+
+    from clean_json import remove_key_value_pairs
+
+    config = {
+        "keys_to_remove": [ 
+            "x",
+            "y",
+            "width",
+            "height"
+        ],
+        "key_value_pairs_to_remove": [
+            {"margins": {
+                        "left": 0,
+                        "right": 0,
+                        "top": 0,
+                        "bottom": 0
+                    }},
+            {"padding": {
+                        "paddingLeft": 0,
+                        "paddingTop": 0,
+                        "paddingRight": 0,
+                        "paddingBottom": 0
+                    }},
+            {"parent": None},
+        ]
+    }
+        
+    tree_structure = remove_key_value_pairs(tree_structure, config)
     
+    tree_structure = remove_keys_with_only_name(tree_structure)
     output_filename = './designer/tree_structure.json'
     with open(output_filename, 'w') as f:
         json.dump(tree_structure, f, indent=4)
