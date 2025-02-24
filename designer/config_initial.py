@@ -22,7 +22,6 @@ config = {
       "componentId",
       "componentProperties",
       "styles",
-      "id",
       "characterStyleOverrides",
       "arcData",
       "inheritFillStyleId",

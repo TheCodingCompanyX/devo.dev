@@ -1,895 +1,880 @@
 {
   "name": "Car Rent Website Design - Pickolab Studio (Community)",
   "nodes": {
-    "44:16200": {
-      "document": {
-        "id": "44:16200",
-        "name": "Reviews",
-        "clipsContent": true,
-        "size": {
-          "x": 1392,
-          "y": -625,
-          "width": 1016,
-          "height": 452
-        },
-        "children": [
-          {
-            "id": "44:16201",
-            "name": "Total Review",
-            "layoutMode": "HORIZONTAL",
-            "itemSpacing": 12,
-            "size": {
-              "x": 1416,
-              "y": -601,
-              "width": 136,
-              "height": 28
-            },
-            "layoutSizingHorizontal": "HUG",
-            "layoutSizingVertical": "HUG",
-            "children": [
-              {
-                "id": "44:16202",
-                "name": "Reviews",
-                "size": {
-                  "x": 1416,
-                  "y": -601,
-                  "width": 80,
-                  "height": 28
-                },
-                "layoutAlign": "INHERIT",
-                "layoutGrow": 0,
-                "layoutSizingHorizontal": "FIXED",
-                "layoutSizingVertical": "FIXED",
-                "characters": "Reviews"
+      "44:16200": {
+          "document": {
+              "name": "Reviews",
+              "clipsContent": true,
+              "cornerRadius": 10,
+              "backgroundColor": "#FFFFFF",
+              "size": {
+                  "x": 1392,
+                  "y": -625,
+                  "width": 1016,
+                  
+                  "height": 452
               },
-              {
-                "id": "44:16203",
-                "name": "Total Review",
-                "layoutMode": "HORIZONTAL",
-                "counterAxisSizingMode": "FIXED",
-                "itemSpacing": 8,
-                "primaryAxisSizingMode": "FIXED",
-                "counterAxisAlignItems": "CENTER",
-                "primaryAxisAlignItems": "CENTER",
-                "paddingLeft": 20,
-                "paddingRight": 20,
-                "size": {
-                  "x": 1508,
-                  "y": -601,
-                  "width": 44,
-                  "height": 28
-                },
-                "constraints": {
-                  "vertical": "TOP",
-                  "horizontal": "RIGHT"
-                },
-                "layoutAlign": "INHERIT",
-                "layoutGrow": 0,
-                "layoutSizingHorizontal": "FIXED",
-                "layoutSizingVertical": "FIXED",
-                "children": [
+              "fillColor": "#FFFFFF",
+              "children": [
                   {
-                    "id": "44:16204",
-                    "name": "13",
-                    "size": {
-                      "x": 1520,
-                      "y": -595,
-                      "width": 20,
-                      "height": 16
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "13"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "44:16205",
-            "name": "Reviews 1",
-            "type": "GROUP",
-            "size": {
-              "x": 1416,
-              "y": -541,
-              "width": 968,
-              "height": 124
-            },
-            "children": [
-              {
-                "id": "44:16206",
-                "name": "Name",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 8,
-                "size": {
-                  "x": 1488,
-                  "y": -541,
-                  "width": 128,
-                  "height": 56
-                },
-                "layoutSizingHorizontal": "HUG",
-                "layoutSizingVertical": "HUG",
-                "children": [
-                  {
-                    "id": "44:16207",
-                    "name": "Alex Stanton",
-                    "size": {
-                      "x": 1488,
-                      "y": -541,
-                      "width": 128,
-                      "height": 28
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "Alex Stanton"
-                  },
-                  {
-                    "id": "44:16208",
-                    "name": "CEO at Bukalapak",
-                    "size": {
-                      "x": 1488,
-                      "y": -505,
-                      "width": 128,
-                      "height": 20
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "CEO at Bukalapak"
-                  }
-                ]
-              },
-              {
-                "id": "44:16209",
-                "name": "Date",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 8,
-                "counterAxisAlignItems": "MAX",
-                "size": {
-                  "x": 2256,
-                  "y": -541,
-                  "width": 128,
-                  "height": 56
-                },
-                "layoutSizingHorizontal": "HUG",
-                "layoutSizingVertical": "HUG",
-                "children": [
-                  {
-                    "id": "44:16210",
-                    "name": "21 July 2022",
-                    "size": {
-                      "x": 2256,
-                      "y": -541,
-                      "width": 128,
-                      "height": 28
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "21 July 2022"
-                  },
-                  {
-                    "id": "44:16211",
-                    "name": "Reviews",
-                    "clipsContent": true,
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 2,
-                    "counterAxisAlignItems": "CENTER",
-                    "size": {
-                      "x": 2276,
-                      "y": -505,
-                      "width": 108,
-                      "height": 20
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "HUG",
-                    "layoutSizingVertical": "HUG",
-                    "children": [
-                      {
-                        "id": "44:16212",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2276,
-                          "y": -505,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16212;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2278,
-                              "y": -503,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16212;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2278,
-                                  "y": -503,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
+                      "name": "Total Review",
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 12,
+                      "size": {
+                          "x": 1416,
+                          "y": -601,
+                          "width": 136,
+                          "height": 28
                       },
-                      {
-                        "id": "44:16213",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2298,
-                          "y": -505,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
+                      "layoutSizingHorizontal": "HUG",
+                      "layoutSizingVertical": "HUG",
+                      "children": [
                           {
-                            "id": "I44:16213;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2300,
-                              "y": -503,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16213;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2300,
-                                  "y": -503,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16214",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2320,
-                          "y": -505,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16214;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2322,
-                              "y": -503,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16214;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2322,
-                                  "y": -503,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16215",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2342,
-                          "y": -505,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16215;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2344,
-                              "y": -503,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16215;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2344,
-                                  "y": -503,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16216",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2364,
-                          "y": -505,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16216;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2366,
-                              "y": -503,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16216;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2366,
-                                  "y": -503,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "44:16217",
-                "name": "Profill",
-                "type": "RECTANGLE",
-                "size": {
-                  "x": 1416,
-                  "y": -541,
-                  "width": 56,
-                  "height": 56
-                },
-                "exportSettings": [
-                  {
-                    "suffix": "",
-                    "format": "PNG",
-                    "constraint": {
-                      "type": "SCALE",
-                      "value": 1
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "44:16218",
-                "name": "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
-                "size": {
-                  "x": 1488,
-                  "y": -473,
-                  "width": 896,
-                  "height": 56
-                },
-                "characters": "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite."
-              }
-            ]
-          },
-          {
-            "id": "44:16219",
-            "name": "Reviews 2",
-            "type": "GROUP",
-            "size": {
-              "x": 1416,
-              "y": -393,
-              "width": 968,
-              "height": 128
-            },
-            "children": [
-              {
-                "id": "44:16220",
-                "name": "Name",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 8,
-                "size": {
-                  "x": 1488,
-                  "y": -393,
-                  "width": 128,
-                  "height": 56
-                },
-                "layoutSizingHorizontal": "HUG",
-                "layoutSizingVertical": "HUG",
-                "children": [
-                  {
-                    "id": "44:16221",
-                    "name": "Skylar Dias",
-                    "size": {
-                      "x": 1488,
-                      "y": -393,
-                      "width": 128,
-                      "height": 28
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "Skylar Dias"
-                  },
-                  {
-                    "id": "44:16222",
-                    "name": "CEO at Amazon",
-                    "size": {
-                      "x": 1488,
-                      "y": -357,
-                      "width": 128,
-                      "height": 20
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "CEO at Amazon"
-                  }
-                ]
-              },
-              {
-                "id": "44:16223",
-                "name": "Date",
-                "layoutMode": "VERTICAL",
-                "itemSpacing": 8,
-                "counterAxisAlignItems": "MAX",
-                "size": {
-                  "x": 2256,
-                  "y": -393,
-                  "width": 128,
-                  "height": 56
-                },
-                "layoutSizingHorizontal": "HUG",
-                "layoutSizingVertical": "HUG",
-                "children": [
-                  {
-                    "id": "44:16224",
-                    "name": "20 July 2022",
-                    "size": {
-                      "x": 2256,
-                      "y": -393,
-                      "width": 128,
-                      "height": 28
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "FIXED",
-                    "layoutSizingVertical": "FIXED",
-                    "characters": "20 July 2022"
-                  },
-                  {
-                    "id": "44:16225",
-                    "name": "Reviews",
-                    "clipsContent": true,
-                    "layoutMode": "HORIZONTAL",
-                    "itemSpacing": 2,
-                    "counterAxisAlignItems": "CENTER",
-                    "size": {
-                      "x": 2276,
-                      "y": -357,
-                      "width": 108,
-                      "height": 20
-                    },
-                    "layoutAlign": "INHERIT",
-                    "layoutGrow": 0,
-                    "layoutSizingHorizontal": "HUG",
-                    "layoutSizingVertical": "HUG",
-                    "children": [
-                      {
-                        "id": "44:16226",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2276,
-                          "y": -357,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16226;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2278,
-                              "y": -355,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16226;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2278,
-                                  "y": -355,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16227",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2298,
-                          "y": -357,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16227;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2300,
-                              "y": -355,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16227;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2300,
-                                  "y": -355,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16228",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2320,
-                          "y": -357,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16228;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2322,
-                              "y": -355,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16228;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2322,
-                                  "y": -355,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16229",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2342,
-                          "y": -357,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16229;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2344,
-                              "y": -355,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16229;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2344,
-                                  "y": -355,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "44:16230",
-                        "name": "ic-actions-star",
-                        "clipsContent": true,
-                        "size": {
-                          "x": 2364,
-                          "y": -357,
-                          "width": 20,
-                          "height": 20
-                        },
-                        "layoutAlign": "INHERIT",
-                        "layoutGrow": 0,
-                        "layoutSizingHorizontal": "FIXED",
-                        "layoutSizingVertical": "FIXED",
-                        "children": [
-                          {
-                            "id": "I44:16230;1:1548",
-                            "name": "Layer",
-                            "type": "GROUP",
-                            "size": {
-                              "x": 2366,
-                              "y": -355,
-                              "width": 17,
-                              "height": 16
-                            },
-                            "children": [
-                              {
-                                "id": "I44:16230;1:1549",
-                                "name": "Vector",
-                                "type": "VECTOR",
-                                "size": {
-                                  "x": 2366,
-                                  "y": -355,
-                                  "width": 17,
-                                  "height": 16
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "id": "44:16231",
-                "name": "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
-                "size": {
-                  "x": 1488,
-                  "y": -321,
-                  "width": 896,
-                  "height": 56
-                },
-                "characters": "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite."
-              },
-              {
-                "id": "44:16232",
-                "name": "Profill",
-                "type": "RECTANGLE",
-                "size": {
-                  "x": 1416,
-                  "y": -393,
-                  "width": 56,
-                  "height": 56
-                },
-                "exportSettings": [
-                  {
-                    "suffix": "",
-                    "format": "PNG",
-                    "constraint": {
-                      "type": "SCALE",
-                      "value": 1
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "44:16233",
-            "name": "Show All",
-            "layoutMode": "HORIZONTAL",
-            "counterAxisSizingMode": "FIXED",
-            "itemSpacing": 8,
-            "primaryAxisSizingMode": "FIXED",
-            "counterAxisAlignItems": "CENTER",
-            "primaryAxisAlignItems": "CENTER",
-            "paddingLeft": 20,
-            "paddingRight": 20,
-            "size": {
-              "x": 1846,
-              "y": -241,
-              "width": 132,
-              "height": 44
-            },
-            "constraints": {
-              "vertical": "TOP",
-              "horizontal": "RIGHT"
-            },
-            "layoutSizingHorizontal": "FIXED",
-            "layoutSizingVertical": "FIXED",
-            "children": [
-              {
-                "id": "44:16234",
-                "name": "Show All",
-                "size": {
-                  "x": 1866,
-                  "y": -231,
-                  "width": 68,
-                  "height": 24
-                },
-                "layoutAlign": "INHERIT",
-                "layoutGrow": 0,
-                "layoutSizingHorizontal": "FIXED",
-                "layoutSizingVertical": "FIXED",
-                "characters": "Show All"
-              },
-              {
-                "id": "44:16235",
-                "name": "vuesax/outline/arrow-down",
-                "size": {
-                  "x": 1942,
-                  "y": -227,
-                  "width": 16,
-                  "height": 16
-                },
-                "layoutAlign": "INHERIT",
-                "layoutGrow": 0,
-                "layoutSizingHorizontal": "FIXED",
-                "layoutSizingVertical": "FIXED",
-                "children": [
-                  {
-                    "id": "I44:16235;1478:6051",
-                    "name": "vuesax/outline/arrow-down",
-                    "type": "GROUP",
-                    "size": {
-                      "x": 1942,
-                      "y": -227,
-                      "width": 16,
-                      "height": 16
-                    },
-                    "children": [
-                      {
-                        "id": "I44:16235;1478:6052",
-                        "name": "arrow-down",
-                        "type": "GROUP",
-                        "size": {
-                          "x": 1942,
-                          "y": -227,
-                          "width": 16,
-                          "height": 16
-                        },
-                        "children": [
-                          {
-                            "id": "I44:16235;1478:6053",
-                            "name": "Vector",
-                            "type": "VECTOR",
-                            "size": {
-                              "x": 1944,
-                              "y": -222,
-                              "width": 12,
-                              "height": 6
-                            }
+                              "name": "Reviews",
+                              "size": {
+                                  "x": 1416,
+                                  "y": -601,
+                                  "width": 80,
+                                  "height": 28
+                              },
+                              "layoutAlign": "INHERIT",
+                              "layoutGrow": 0,
+                              "layoutSizingHorizontal": "FIXED",
+                              "layoutSizingVertical": "FIXED",
+                              "characters": "Reviews",
+                              "style": {
+                                  "fontFamily": "Plus Jakarta Sans",
+                                  "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                                  "fontStyle": "SemiBold",
+                                  "fontWeight": 600,
+                                  "fontSize": 20,
+                                  "textAlignHorizontal": "LEFT",
+                                  "textAlignVertical": "CENTER",
+                                  "letterSpacing": 0,
+                                  "lineHeightPx": 25,
+                                  "lineHeightPercent": 100,
+                                  "lineHeightUnit": "INTRINSIC_%"
+                              },
+                              "fillColor": "#1A202C"
                           },
                           {
-                            "id": "I44:16235;1478:6054",
-                            "name": "Vector",
-                            "type": "VECTOR",
-                            "size": {
-                              "x": 1942,
-                              "y": -227,
-                              "width": 16,
-                              "height": 16
-                            }
+                              "name": "Total Review",
+                              "cornerRadius": 4,
+                              "strokeWeight": 2,
+                              "backgroundColor": "#3563E9",
+                              "layoutMode": "HORIZONTAL",
+                              "counterAxisSizingMode": "FIXED",
+                              "itemSpacing": 8,
+                              "primaryAxisSizingMode": "FIXED",
+                              "counterAxisAlignItems": "CENTER",
+                              "primaryAxisAlignItems": "CENTER",
+                              "paddingLeft": 20,
+                              "paddingRight": 20,
+                              "size": {
+                                  "x": 1508,
+                                  "y": -601,
+                                  "width": 44,
+                                  "height": 28
+                              },
+                              "constraints": {
+                                  "vertical": "TOP",
+                                  "horizontal": "RIGHT"
+                              },
+                              "layoutAlign": "INHERIT",
+                              "layoutGrow": 0,
+                              "layoutSizingHorizontal": "FIXED",
+                              "layoutSizingVertical": "FIXED",
+                              "fillColor": "#3563E9",
+                              "children": [
+                                  {
+                                      "name": "13",
+                                      "size": {
+                                          "x": 1520,
+                                          "y": -595,
+                                          "width": 20,
+                                          "height": 16
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FIXED",
+                                      "layoutSizingVertical": "FIXED",
+                                      "characters": "13",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Bold",
+                                          "fontStyle": "Bold",
+                                          "fontWeight": 700,
+                                          "fontSize": 14,
+                                          "textAlignHorizontal": "CENTER",
+                                          "textAlignVertical": "CENTER",
+                                          "lineHeightPx": 18,
+                                          "lineHeightPercent": 100,
+                                          "lineHeightUnit": "INTRINSIC_%"
+                                      },
+                                      "fillColor": "#FFFFFF"
+                                  }
+                              ]
                           }
-                        ]
-                      }
-                    ]
+                      ]
+                  },
+                  {
+                      "name": "Reviews 1",
+                      "size": {
+                          "x": 1416,
+                          "y": -541,
+                          "width": 968,
+                          "height": 124
+                      },
+                      "children": [
+                          {
+                              "name": "Name",
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "size": {
+                                  "x": 1488,
+                                  "y": -541,
+                                  "width": 128,
+                                  "height": 56
+                              },
+                              "layoutSizingHorizontal": "HUG",
+                              "layoutSizingVertical": "HUG",
+                              "children": [
+                                  {
+                                      "name": "Alex Stanton",
+                                      "size": {
+                                          "x": 1488,
+                                          "y": -541,
+                                          "width": 128,
+                                          "height": 28
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FIXED",
+                                      "layoutSizingVertical": "FIXED",
+                                      "characters": "Alex Stanton",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Bold",
+                                          "fontStyle": "Bold",
+                                          "fontWeight": 700,
+                                          "fontSize": 20,
+                                          "textAlignHorizontal": "LEFT",
+                                          "textAlignVertical": "CENTER",
+                                          "letterSpacing": -1,
+                                          "lineHeightPx": 30,
+                                          "lineHeightPercent": 119,
+                                          "lineHeightPercentFontSize": 150
+                                      },
+                                      "fillColor": "#1A202C"
+                                  },
+                                  {
+                                      "name": "CEO at Bukalapak",
+                                      "size": {
+                                          "x": 1488,
+                                          "y": -505,
+                                          "width": 128,
+                                          "height": 20
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FIXED",
+                                      "layoutSizingVertical": "FIXED",
+                                      "characters": "CEO at Bukalapak",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Medium",
+                                          "fontStyle": "Medium",
+                                          "fontWeight": 500,
+                                          "fontSize": 14,
+                                          "textAlignHorizontal": "LEFT",
+                                          "textAlignVertical": "CENTER",
+                                          "letterSpacing": 0,
+                                          "lineHeightPx": 21,
+                                          "lineHeightPercent": 119,
+                                          "lineHeightPercentFontSize": 150
+                                      },
+                                      "fillColor": "#90A3BF"
+                                  }
+                              ]
+                          },
+                          {
+                              "name": "Date",
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "MAX",
+                              "size": {
+                                  "x": 2256,
+                                  "y": -541,
+                                  "width": 128,
+                                  "height": 56
+                              },
+                              "layoutSizingHorizontal": "HUG",
+                              "layoutSizingVertical": "HUG",
+                              "children": [
+                                  {
+                                      "name": "21 July 2022",
+                                      "size": {
+                                          "x": 2256,
+                                          "y": -541,
+                                          "width": 128,
+                                          "height": 28
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FIXED",
+                                      "layoutSizingVertical": "FIXED",
+                                      "characters": "21 July 2022",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Medium",
+                                          "fontStyle": "Medium",
+                                          "fontWeight": 500,
+                                          "fontSize": 14,
+                                          "textAlignHorizontal": "RIGHT",
+                                          "textAlignVertical": "CENTER",
+                                          "letterSpacing": 0,
+                                          "lineHeightPx": 21,
+                                          "lineHeightPercent": 119,
+                                          "lineHeightPercentFontSize": 150
+                                      },
+                                      "fillColor": "#90A3BF"
+                                  },
+                                  {
+                                      "name": "Reviews",
+                                      "clipsContent": true,
+                                      "layoutMode": "HORIZONTAL",
+                                      "itemSpacing": 2,
+                                      "counterAxisAlignItems": "CENTER",
+                                      "size": {
+                                          "x": 2276,
+                                          "y": -505,
+                                          "width": 108,
+                                          "height": 20
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "HUG",
+                                      "layoutSizingVertical": "HUG",
+                                      "children": [
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2276,
+                                                  "y": -505,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2278,
+                                                          "y": -503,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2298,
+                                                  "y": -505,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2300,
+                                                          "y": -503,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2320,
+                                                  "y": -505,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2322,
+                                                          "y": -503,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2342,
+                                                  "y": -505,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2344,
+                                                          "y": -503,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2364,
+                                                  "y": -505,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2366,
+                                                          "y": -503,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "name": "Profill",
+                              "fills": [
+                                  {
+                                      "scaleMode": "FILL",
+                                      "imageRef": "9b76706a6ff04d2c5ee05f69f07eda85ba8c1846"
+                                  }
+                              ],
+                              "cornerRadius": 60,
+                              "size": {
+                                  "x": 1416,
+                                  "y": -541,
+                                  "width": 56,
+                                  "height": 56
+                              },
+                              "exportSettings": [
+                                  {
+                                      "suffix": "",
+                                      "format": "PNG",
+                                      "constraint": {
+                                          "value": 1
+                                      }
+                                  }
+                              ]
+                          },
+                          {
+                              "name": "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+                              "size": {
+                                  "x": 1488,
+                                  "y": -473,
+                                  "width": 896,
+                                  "height": 56
+                              },
+                              "characters": "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+                              "style": {
+                                  "fontFamily": "Plus Jakarta Sans",
+                                  "fontPostScriptName": "PlusJakartaSans-Regular",
+                                  "fontStyle": "Regular",
+                                  "fontWeight": 400,
+                                  "paragraphSpacing": 6,
+                                  "textAutoResize": "HEIGHT",
+                                  "fontSize": 14,
+                                  "textAlignHorizontal": "LEFT",
+                                  "textAlignVertical": "TOP",
+                                  "letterSpacing": 0,
+                                  "lineHeightPx": 28,
+                                  "lineHeightPercent": 159,
+                                  "lineHeightPercentFontSize": 200
+                              },
+                              "fillColor": "#596780"
+                          }
+                      ]
+                  },
+                  {
+                      "name": "Reviews 2",
+                      "size": {
+                          "x": 1416,
+                          "y": -393,
+                          "width": 968,
+                          "height": 128
+                      },
+                      "children": [
+                          {
+                              "name": "Name",
+                              "layoutMode": "VERTICAL",
+                              "counterAxisSizingMode": "FIXED",
+                              "itemSpacing": 8,
+                              "size": {
+                                  "x": 1488,
+                                  "y": -393,
+                                  "width": 427,
+                                  "height": 58
+                              },
+                              "layoutSizingHorizontal": "FIXED",
+                              "layoutSizingVertical": "HUG",
+                              "children": [
+                                  {
+                                      "name": "Skylar Dias",
+                                      "size": {
+                                          "x": 1488,
+                                          "y": -393,
+                                          "width": 427,
+                                          "height": 30
+                                      },
+                                      "layoutAlign": "STRETCH",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FILL",
+                                      "layoutSizingVertical": "HUG",
+                                      "characters": "Skylar Dias",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Bold",
+                                          "fontStyle": "Bold",
+                                          "fontWeight": 700,
+                                          "textAutoResize": "HEIGHT",
+                                          "fontSize": 20,
+                                          "textAlignHorizontal": "LEFT",
+                                          "textAlignVertical": "CENTER",
+                                          "letterSpacing": -1,
+                                          "lineHeightPx": 30,
+                                          "lineHeightPercent": 119,
+                                          "lineHeightPercentFontSize": 150
+                                      },
+                                      "fillColor": "#1A202C"
+                                  },
+                                  {
+                                      "name": "CEO at Amazon",
+                                      "size": {
+                                          "x": 1488,
+                                          "y": -355,
+                                          "width": 427,
+                                          "height": 20
+                                      },
+                                      "layoutAlign": "STRETCH",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FILL",
+                                      "layoutSizingVertical": "FIXED",
+                                      "characters": "CEO at Amazon",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Medium",
+                                          "fontStyle": "Medium",
+                                          "fontWeight": 500,
+                                          "fontSize": 14,
+                                          "textAlignHorizontal": "LEFT",
+                                          "textAlignVertical": "CENTER",
+                                          "letterSpacing": 0,
+                                          "lineHeightPx": 21,
+                                          "lineHeightPercent": 119,
+                                          "lineHeightPercentFontSize": 150
+                                      },
+                                      "fillColor": "#90A3BF"
+                                  }
+                              ]
+                          },
+                          {
+                              "name": "Date",
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "MAX",
+                              "size": {
+                                  "x": 2256,
+                                  "y": -393,
+                                  "width": 128,
+                                  "height": 56
+                              },
+                              "layoutSizingHorizontal": "HUG",
+                              "layoutSizingVertical": "HUG",
+                              "children": [
+                                  {
+                                      "name": "20 July 2022",
+                                      "size": {
+                                          "x": 2256,
+                                          "y": -393,
+                                          "width": 128,
+                                          "height": 28
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "FIXED",
+                                      "layoutSizingVertical": "FIXED",
+                                      "characters": "20 July 2022",
+                                      "style": {
+                                          "fontFamily": "Plus Jakarta Sans",
+                                          "fontPostScriptName": "PlusJakartaSans-Medium",
+                                          "fontStyle": "Medium",
+                                          "fontWeight": 500,
+                                          "fontSize": 14,
+                                          "textAlignHorizontal": "RIGHT",
+                                          "textAlignVertical": "CENTER",
+                                          "letterSpacing": 0,
+                                          "lineHeightPx": 21,
+                                          "lineHeightPercent": 119,
+                                          "lineHeightPercentFontSize": 150
+                                      },
+                                      "fillColor": "#90A3BF"
+                                  },
+                                  {
+                                      "name": "Reviews",
+                                      "clipsContent": true,
+                                      "layoutMode": "HORIZONTAL",
+                                      "itemSpacing": 2,
+                                      "counterAxisAlignItems": "CENTER",
+                                      "size": {
+                                          "x": 2276,
+                                          "y": -357,
+                                          "width": 108,
+                                          "height": 20
+                                      },
+                                      "layoutAlign": "INHERIT",
+                                      "layoutGrow": 0,
+                                      "layoutSizingHorizontal": "HUG",
+                                      "layoutSizingVertical": "HUG",
+                                      "children": [
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2276,
+                                                  "y": -357,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2278,
+                                                          "y": -355,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2298,
+                                                  "y": -357,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2300,
+                                                          "y": -355,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2320,
+                                                  "y": -357,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2322,
+                                                          "y": -355,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2342,
+                                                  "y": -357,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2344,
+                                                          "y": -355,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "name": "ic-actions-star",
+                                              "clipsContent": true,
+                                              "size": {
+                                                  "x": 2364,
+                                                  "y": -357,
+                                                  "width": 20,
+                                                  "height": 20
+                                              },
+                                              "layoutAlign": "INHERIT",
+                                              "layoutGrow": 0,
+                                              "layoutSizingHorizontal": "FIXED",
+                                              "layoutSizingVertical": "FIXED",
+                                              "backgroundColor": "#FFFFFF",
+                                              "fillColor": "#FFFFFF",
+                                              "children": [
+                                                  {
+                                                      "name": "Layer",
+                                                      "size": {
+                                                          "x": 2366,
+                                                          "y": -355,
+                                                          "width": 17,
+                                                          "height": 16
+                                                      }
+                                                  }
+                                              ]
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "name": "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+                              "size": {
+                                  "x": 1488,
+                                  "y": -321,
+                                  "width": 896,
+                                  "height": 56
+                              },
+                              "characters": "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+                              "style": {
+                                  "fontFamily": "Plus Jakarta Sans",
+                                  "fontPostScriptName": "PlusJakartaSans-Regular",
+                                  "fontStyle": "Regular",
+                                  "fontWeight": 400,
+                                  "paragraphSpacing": 6,
+                                  "textAutoResize": "HEIGHT",
+                                  "fontSize": 14,
+                                  "textAlignHorizontal": "LEFT",
+                                  "textAlignVertical": "TOP",
+                                  "letterSpacing": 0,
+                                  "lineHeightPx": 28,
+                                  "lineHeightPercent": 159,
+                                  "lineHeightPercentFontSize": 200
+                              },
+                              "fillColor": "#596780"
+                          },
+                          {
+                              "name": "Profill",
+                              "fills": [
+                                  {
+                                      "scaleMode": "FILL",
+                                      "imageRef": "1f592390d69545d7cf9ff5be12e2248ebf54993a"
+                                  }
+                              ],
+                              "cornerRadius": 60,
+                              "size": {
+                                  "x": 1416,
+                                  "y": -393,
+                                  "width": 56,
+                                  "height": 56
+                              },
+                              "exportSettings": [
+                                  {
+                                      "suffix": "",
+                                      "format": "PNG",
+                                      "constraint": {
+                                          "value": 1
+                                      }
+                                  }
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "name": "Show All",
+                      "cornerRadius": 4,
+                      "strokeWeight": 2,
+                      "layoutMode": "HORIZONTAL",
+                      "counterAxisSizingMode": "FIXED",
+                      "itemSpacing": 8,
+                      "primaryAxisSizingMode": "FIXED",
+                      "counterAxisAlignItems": "CENTER",
+                      "primaryAxisAlignItems": "CENTER",
+                      "paddingLeft": 20,
+                      "paddingRight": 20,
+                      "size": {
+                          "x": 1846,
+                          "y": -241,
+                          "width": 132,
+                          "height": 44
+                      },
+                      "constraints": {
+                          "vertical": "TOP",
+                          "horizontal": "RIGHT"
+                      },
+                      "layoutSizingHorizontal": "FIXED",
+                      "layoutSizingVertical": "FIXED",
+                      "children": [
+                          {
+                              "name": "Show All",
+                              "size": {
+                                  "x": 1866,
+                                  "y": -231,
+                                  "width": 68,
+                                  "height": 24
+                              },
+                              "layoutAlign": "INHERIT",
+                              "layoutGrow": 0,
+                              "layoutSizingHorizontal": "FIXED",
+                              "layoutSizingVertical": "FIXED",
+                              "characters": "Show All",
+                              "style": {
+                                  "fontFamily": "Plus Jakarta Sans",
+                                  "fontPostScriptName": "PlusJakartaSans-SemiBold",
+                                  "fontStyle": "SemiBold",
+                                  "fontWeight": 600,
+                                  "fontSize": 16,
+                                  "textAlignHorizontal": "CENTER",
+                                  "textAlignVertical": "CENTER",
+                                  "letterSpacing": 0,
+                                  "lineHeightPx": 24,
+                                  "lineHeightPercent": 119,
+                                  "lineHeightPercentFontSize": 150
+                              },
+                              "fillColor": "#90A3BF"
+                          },
+                          {
+                              "name": "vuesax/outline/arrow-down",
+                              "size": {
+                                  "x": 1942,
+                                  "y": -227,
+                                  "width": 16,
+                                  "height": 16
+                              },
+                              "layoutAlign": "INHERIT",
+                              "layoutGrow": 0,
+                              "layoutSizingHorizontal": "FIXED",
+                              "layoutSizingVertical": "FIXED",
+                              "backgroundColor": "#FFFFFF",
+                              "fillColor": "#FFFFFF",
+                              "children": [
+                                  {
+                                      "name": "vuesax/outline/arrow-down",
+                                      "size": {
+                                          "x": 1942,
+                                          "y": -227,
+                                          "width": 16,
+                                          "height": 16
+                                      },
+                                      "children": [
+                                          {
+                                              "name": "arrow-down",
+                                              "size": {
+                                                  "x": 1942,
+                                                  "y": -227,
+                                                  "width": 16,
+                                                  "height": 16
+                                              }
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ]
                   }
-                ]
-              }
-            ]
+              ]
           }
-        ]
       }
-    }
   }
 }

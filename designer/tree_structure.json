@@ -1,5 +1,5 @@
 {
-    "id": "44:16200",
+    "id": "Unnamed",
     "padding": {
         "paddingLeft": 24,
         "paddingTop": 24,
@@ -7,23 +7,17 @@
         "paddingBottom": 24
     },
     "margins": {
-        "left": 0,
-        "right": 832,
-        "top": 0,
-        "bottom": 32
+        "left": 24,
+        "right": 406,
+        "top": 24,
+        "bottom": 0
     },
     "children": [
         {
-            "id": "44:16201",
-            "margins": {
-                "left": 0,
-                "right": 12,
-                "top": 0,
-                "bottom": 0
-            },
+            "id": "Unnamed",
             "children": [
                 {
-                    "id": "44:16203",
+                    "id": "Unnamed",
                     "padding": {
                         "paddingLeft": 12,
                         "paddingTop": 6,
@@ -35,116 +29,73 @@
             ]
         },
         {
-            "id": "44:16205",
+            "id": "Unnamed",
             "margins": {
                 "left": 16,
-                "right": 640,
+                "right": 0,
                 "top": 0,
-                "bottom": 12
+                "bottom": 0
             },
             "children": [
                 {
-                    "id": "44:16206",
-                    "margins": {
-                        "left": 0,
-                        "right": 0,
-                        "top": 0,
-                        "bottom": 8
-                    },
+                    "id": "Unnamed",
                     "children": []
                 },
                 {
-                    "id": "44:16209",
-                    "margins": {
-                        "left": 0,
-                        "right": 0,
-                        "top": 0,
-                        "bottom": 8
-                    },
+                    "id": "Unnamed",
                     "children": [
                         {
-                            "id": "44:16211",
-                            "margins": {
-                                "left": 0,
-                                "right": 2,
-                                "top": 0,
-                                "bottom": 0
-                            },
+                            "id": "Unnamed",
                             "children": [
                                 {
-                                    "id": "44:16212",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16212;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16213",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16213;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16214",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16214;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16215",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16215;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16216",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16216;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 }
                             ]
                         }
@@ -153,116 +104,73 @@
             ]
         },
         {
-            "id": "44:16219",
+            "id": "Unnamed",
             "margins": {
-                "left": 16,
-                "right": 640,
+                "left": 0,
+                "right": 341,
                 "top": 0,
-                "bottom": 16
+                "bottom": 14
             },
             "children": [
                 {
-                    "id": "44:16220",
-                    "margins": {
-                        "left": 0,
-                        "right": 0,
-                        "top": 0,
-                        "bottom": 8
-                    },
+                    "id": "Unnamed",
                     "children": []
                 },
                 {
-                    "id": "44:16223",
-                    "margins": {
-                        "left": 0,
-                        "right": 0,
-                        "top": 0,
-                        "bottom": 8
-                    },
+                    "id": "Unnamed",
                     "children": [
                         {
-                            "id": "44:16225",
-                            "margins": {
-                                "left": 0,
-                                "right": 2,
-                                "top": 0,
-                                "bottom": 0
-                            },
+                            "id": "Unnamed",
                             "children": [
                                 {
-                                    "id": "44:16226",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16226;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16227",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16227;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16228",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16228;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16229",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16229;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 },
                                 {
-                                    "id": "44:16230",
+                                    "id": "Unnamed",
                                     "padding": {
                                         "paddingLeft": 2,
                                         "paddingTop": 2,
                                         "paddingRight": 1,
                                         "paddingBottom": 2
                                     },
-                                    "children": [
-                                        {
-                                            "id": "I44:16230;1:1548",
-                                            "children": []
-                                        }
-                                    ]
+                                    "children": []
                                 }
                             ]
                         }
@@ -271,7 +179,7 @@
             ]
         },
         {
-            "id": "44:16233",
+            "id": "Unnamed",
             "padding": {
                 "paddingLeft": 20,
                 "paddingTop": 10,
@@ -279,29 +187,18 @@
                 "paddingBottom": 10
             },
             "margins": {
-                "left": 0,
-                "right": 8,
-                "top": 0,
-                "bottom": 0
+                "left": 20,
+                "right": 0,
+                "top": 4,
+                "bottom": 4
             },
             "children": [
                 {
-                    "id": "44:16235",
+                    "id": "Unnamed",
                     "children": [
                         {
-                            "id": "I44:16235;1478:6051",
-                            "children": [
-                                {
-                                    "id": "I44:16235;1478:6052",
-                                    "margins": {
-                                        "left": 2,
-                                        "right": 2,
-                                        "top": 5,
-                                        "bottom": 5
-                                    },
-                                    "children": []
-                                }
-                            ]
+                            "id": "Unnamed",
+                            "children": []
                         }
                     ]
                 }

@@ -222,20 +222,27 @@ def process_json(data, config):
 
 
 if __name__ == "__main__":
-    # Load the JSON data
-    with open("designer/test_data/figma_data.json", "r") as json_file:
-        data = json.load(json_file)
+    figma_url = "https://www.figma.com/design/11ZXUkb3k0dVKWlPswUKZg/Car-Rent-Website-Design---Pickolab-Studio-(Community)?node-id=44-16200&t=25dHcVNVuMpKaWSr-4"
+    
+    from figma_apis import parse_figma_url, fetch_figma_data, download_and_save_images
+    
+    file_key, node_id = parse_figma_url(figma_url)
+    figma_data = fetch_figma_data(file_key, node_id)
+
+    with open('figma_data.json', 'w') as f:
+        f.write(json.dumps(figma_data, indent=4))
+    
+    node_ids_of_images = download_and_save_images('./test', figma_url)
+
+    #Convert - to :  in node_ids_of_images
+    node_ids_of_images = [node_id.replace("-", ":") for node_id in node_ids_of_images]  
+    processed_json = remove_children_by_ids(figma_data, node_ids_of_images)
     
     from config_for_spacing import config
 
-    # Process the JSON data
-    cleaned_data = process_json(data, config)
+    processed_json = process_json(processed_json, config)
 
     # Save the cleaned JSON data
     with open("designer/test_data/cleaned_figma_data.json", "w") as cleaned_json_file:
-        json.dump(cleaned_data, cleaned_json_file, indent=2)
+        json.dump(processed_json, cleaned_json_file, indent=2)
     
-    formatted_str = ", ".join(f"{key}: {value}" if isinstance(value, int) else f"{key}: {value}" 
-                          for key, value in cleaned_data.items())
-    
-    print(formatted_str.replace(",", "").replace("'", ""))
